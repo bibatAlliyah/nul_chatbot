@@ -1,0 +1,66 @@
+DATA SOURCES AND CREDITS
+NU Laguna IT Helpdesk Chatbot Project
+
+This file credits every external dataset used to build the training data,
+responses, and text-normalization dictionary for this chatbot.
+
+
+1. UNIVERSITY CHATBOT DATASET (base for general student info intents)
+--------------------------------------------------------------------
+Used for: fees, admission, library, hostel, scholarship, events, course
+info, and other general university FAQ intents in intents_merged.json.
+
+Source: Kaggle
+Author: niraliivaghani
+URL: https://www.kaggle.com/datasets/niraliivaghani/chatbot-dataset
+
+Suggested citation:
+niraliivaghani. (2023). Chatbot dataset [Data set]. Kaggle.
+https://www.kaggle.com/datasets/niraliivaghani/chatbot-dataset
+
+
+2. FILIPINO SLANG NORMALIZATION DATASET (base for normalization_dict.csv)
+--------------------------------------------------------------------
+Used for: expanding the slang/abbreviation normalization dictionary
+(e.g. "pano" -> "paano"), so the chatbot can understand shortened or
+misspelled Filipino words.
+
+Source: GitHub (original), also mirrored on Hugging Face
+Authors: Lorenzo Jaime Flores and Dragomir Radev
+GitHub: https://github.com/ljyflores/efficient-spelling-normalization-filipino
+Hugging Face mirror: https://huggingface.co/datasets/SEACrowd/filipino_slang_norm
+
+Citation (BibTeX):
+@inproceedings{flores-radev-2022-look,
+    title = "Look Ma, Only 400 Samples! Revisiting the Effectiveness of Automatic N-Gram Rule Generation for Spelling Normalization in {F}ilipino",
+    author = "Flores, Lorenzo Jaime  and
+      Radev, Dragomir",
+    booktitle = "Proceedings of The Third Workshop on Simple and Efficient Natural Language Processing (SustaiNLP)",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates (Hybrid)",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.sustainlp-1.5",
+    pages = "29--35",
+}
+
+Note: two files from this same source (annotator.csv and tl-en.txt) were
+downloaded but NOT used in the final chatbot. annotator.csv was the raw,
+pre-consensus annotation data (redundant once train/test_words.csv already
+have the agreed-upon answers). tl-en.txt is a separate ~35,000-word
+Tagalog-to-English translation dictionary, not slang normalization, and
+was outside the scope of this project.
+
+
+3. ORIGINAL/SELF-AUTHORED DATA (not an external dataset, listed for
+transparency)
+--------------------------------------------------------------------
+The following were written directly by the project team, not sourced
+from any dataset:
+- All campus IT support intents (portal_login, wifi_connection,
+  lms_access, student_email, check_grades, enrollment_registration)
+  and their example questions
+- All Tagalog/Taglish paraphrase examples added across the 41 intents
+- All NU Laguna-specific response text (contact numbers, office names,
+  portal links), based on publicly available information from
+  national-u.edu.ph and nu-laguna.edu.ph
