@@ -52,7 +52,28 @@ Tagalog-to-English translation dictionary, not slang normalization, and
 was outside the scope of this project.
 
 
-3. ORIGINAL/SELF-AUTHORED DATA (not an external dataset, listed for
+3. PARAPHRASE-MULTILINGUAL-MINILM-L12-V2 (semantic similarity model)
+--------------------------------------------------------------------
+Used for: understanding the MEANING of a user's question (not just exact
+word matches), so the chatbot can catch paraphrased, Tagalog, and Taglish
+questions it wasn't trained on word-for-word.
+
+Source: Hugging Face / sentence-transformers library
+Model page: https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+
+Citation (BibTeX):
+@inproceedings{reimers-2019-sentence-bert,
+    title = "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    author = "Reimers, Nils and Gurevych, Iryna",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing",
+    month = "11",
+    year = "2019",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/1908.10084",
+}
+
+
+4. ORIGINAL/SELF-AUTHORED DATA (not an external dataset, listed for
 transparency)
 --------------------------------------------------------------------
 The following were written directly by the project team, not sourced

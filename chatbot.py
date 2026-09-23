@@ -1,16 +1,15 @@
 # Finals Chatbot: IT Helpdesk Chatbot for NU Laguna Students
 
-# command gto run chatbot: python chatbot.py
+# command to run chatbot: python chatbot.py
 
 import json
 import random
 
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
+from sentence_transformers import SentenceTransformer, util
 
 DATA_PATH = "."
-MIN_GAP = 0.03  # how much clearer the top guess needs to be vs the runner-up
+SIMILARITY_THRESHOLD = 0.55  # 0 to 1, higher = stricter matching
 
 
 def load_dataset(data_path):
@@ -38,53 +37,97 @@ def normalize_text(text, normalization_dict):
     return " ".join(normalized_words)
 
 
-def load_responses(data_path):
+def load_intents_data(data_path):
     with open(f"{data_path}/intents_merged.json") as f:
-        intents_data = json.load(f)
+        return json.load(f)
+
+
+def build_response_lookup(intents_data):
     return {intent["tag"]: intent["responses"] for intent in intents_data["intents"]}
 
 
-def chat_loop(model, tfidf_vectorizer, normalization_dict, response_lookup):
-    print("Chatbot ready. Type 'quit' or 'exit' to stop.\n")
+def build_guide_list(intents_data):
+    """One example question per intent, used for the 'guide' command."""
+    guide = []
+    for intent in intents_data["intents"]:
+        if intent["patterns"]:
+            guide.append(intent["patterns"][0])
+    return guide
+
+
+def print_guide(guide_questions):
+    print("\n--- Guide: things you can ask ---")
+    for i, question in enumerate(guide_questions, start=1):
+        print(f"{i}. {question}")
+    print("\nType the NUMBER of a question to ask it, or just type your own question.\n")
+
+
+def print_startup_banner():
+    print("Chatbot ready.")
+    print("Type 'guide' to see example questions you can ask.")
+    print("Type 'quit' or 'exit' to stop.\n")
+
+
+def get_best_match(user_text, embedder, pattern_embeddings, pattern_intents):
+    user_embedding = embedder.encode(user_text, convert_to_tensor=True)
+    similarities = util.cos_sim(user_embedding, pattern_embeddings)[0]
+    best_index = similarities.argmax().item()
+    best_score = similarities[best_index].item()
+    best_intent = pattern_intents[best_index]
+    return best_intent, best_score
+
+
+def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
+              response_lookup, guide_questions):
+    print_startup_banner()
+
     while True:
-        user_input = input("You: ")
+        user_input = input("You: ").strip()
+
         if user_input.lower() in ["quit", "exit"]:
             print("Bot: Bye! Ingat.")
             break
 
+        if user_input.lower() == "guide":
+            print_guide(guide_questions)
+            continue
+
+        if user_input.isdigit():
+            index = int(user_input)
+            if 1 <= index <= len(guide_questions):
+                user_input = guide_questions[index - 1]
+                print(f"You picked: {user_input}")
+            else:
+                print(f"Bot: That number isn't on the list. Type 'guide' to see it again.")
+                continue
+
         cleaned_input = normalize_text(user_input, normalization_dict)
-        input_vector = tfidf_vectorizer.transform([cleaned_input])
+        best_intent, score = get_best_match(cleaned_input, embedder, pattern_embeddings, pattern_intents)
 
-        probabilities = model.predict_proba(input_vector)[0]
-        sorted_indices = probabilities.argsort()[::-1]
-        best_index = sorted_indices[0]
-        second_index = sorted_indices[1]
-
-        best_intent = model.classes_[best_index]
-        confidence = probabilities[best_index]
-        gap = confidence - probabilities[second_index]
-
-        if gap < MIN_GAP:
-            print("Bot: Sorry, hindi ko masyadong naintindihan. Can you rephrase that?")
+        if score < SIMILARITY_THRESHOLD:
+            print("Bot: Sorry, hindi ko masyadong naintindihan. Type 'guide' to see example questions, or try rephrasing.")
         else:
             reply = random.choice(response_lookup[best_intent])
             print(f"Bot: {reply}")
 
 
 def main():
+    print("Loading model and data, this can take a bit the first time...")
+
     df = load_dataset(DATA_PATH)
     normalization_dict = build_normalization_dict(DATA_PATH)
     df["text"] = df["text"].apply(lambda t: normalize_text(t, normalization_dict))
 
-    tfidf_vectorizer = TfidfVectorizer()
-    X_tfidf = tfidf_vectorizer.fit_transform(df["text"])
+    intents_data = load_intents_data(DATA_PATH)
+    response_lookup = build_response_lookup(intents_data)
+    guide_questions = build_guide_list(intents_data)
 
-    model = LogisticRegression(max_iter=1000)
-    model.fit(X_tfidf, df["intent"])
+    embedder = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+    pattern_embeddings = embedder.encode(df["text"].tolist(), convert_to_tensor=True)
+    pattern_intents = df["intent"].tolist()
 
-    response_lookup = load_responses(DATA_PATH)
-
-    chat_loop(model, tfidf_vectorizer, normalization_dict, response_lookup)
+    chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
+              response_lookup, guide_questions)
 
 
 if __name__ == "__main__":
