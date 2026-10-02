@@ -4,12 +4,15 @@
 
 import json
 import random
+import re
 
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 
 DATA_PATH = "."
 SIMILARITY_THRESHOLD = 0.55  # 0 to 1, higher = stricter matching
+MIN_GAP = 0.03  # top guess must beat the runner-up by at least this much
+MIN_INPUT_LENGTH = 3  # inputs shorter than this (after cleanup) are too vague to trust
 
 
 def load_dataset(data_path):
@@ -32,6 +35,7 @@ def build_normalization_dict(data_path):
 
 def normalize_text(text, normalization_dict):
     text = text.lower()
+    text = re.sub(r"[^\w\s]", "", text)  # strip punctuation like ? , . !
     words = text.split()
     normalized_words = [normalization_dict.get(w, w) for w in words]
     return " ".join(normalized_words)
@@ -71,10 +75,17 @@ def print_startup_banner():
 def get_best_match(user_text, embedder, pattern_embeddings, pattern_intents):
     user_embedding = embedder.encode(user_text, convert_to_tensor=True)
     similarities = util.cos_sim(user_embedding, pattern_embeddings)[0]
-    best_index = similarities.argmax().item()
+    sorted_indices = similarities.argsort(descending=True)
+
+    best_index = sorted_indices[0].item()
+    second_index = sorted_indices[1].item()
+
     best_score = similarities[best_index].item()
+    second_score = similarities[second_index].item()
     best_intent = pattern_intents[best_index]
-    return best_intent, best_score
+    gap = best_score - second_score
+
+    return best_intent, best_score, gap
 
 
 def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
@@ -102,9 +113,14 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
                 continue
 
         cleaned_input = normalize_text(user_input, normalization_dict)
-        best_intent, score = get_best_match(cleaned_input, embedder, pattern_embeddings, pattern_intents)
 
-        if score < SIMILARITY_THRESHOLD:
+        if len(cleaned_input) < MIN_INPUT_LENGTH:
+            print("Bot: That's too short for me to work with, can you ask a full question?")
+            continue
+
+        best_intent, score, gap = get_best_match(cleaned_input, embedder, pattern_embeddings, pattern_intents)
+
+        if score < SIMILARITY_THRESHOLD or gap < MIN_GAP:
             print("Bot: Sorry, I do not understand. Type 'guide' to see example questions, or try rephrasing.")
         else:
             reply = random.choice(response_lookup[best_intent])
