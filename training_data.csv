@@ -156,31 +156,6 @@ location,location
 Saan po ang NU Laguna,location
 Ano address ng campus,location
 Paano pumunta dun,location
-hostel facility,hostel
-hostel servive,hostel
-hostel location,hostel
-hostel address,hostel
-hostel facilities,hostel
-hostel fees,hostel
-Does college provide hostel,hostel
-Is there any hostel,hostel
-Where is hostel,hostel
-do you have hostel,hostel
-do you guys have hostel,hostel
-hostel,hostel
-hostel capacity,hostel
-what is the hostel fee,hostel
-how to get in hostel,hostel
-what is the hostel address,hostel
-how far is hostel from college,hostel
-hostel college distance,hostel
-where is the hostel,hostel
-how big is the hostel,hostel
-distance between college and hostel,hostel
-distance between hostel and college,hostel
-May dorm ba,hostel
-Meron bang tirahan sa campus,hostel
-Paano mag-apply sa dorm,hostel
 events organised,event
 list of events,event
 list of events organised in college,event
@@ -247,11 +222,6 @@ how many libraries,library
 Anong oras bukas ang library,library
 Paano mangutang ng libro,library
 San po yung LRC,library
-how is college infrastructure,infrastructure
-infrastructure,infrastructure
-college infrastructure,infrastructure
-Anong facilities meron,infrastructure
-May gym ba dito,infrastructure
 food facilities,canteen
 canteen facilities,canteen
 canteen facility,canteen
@@ -265,15 +235,6 @@ Food,canteen
 Cafetaria,canteen
 Anong oras bukas ang canteen,canteen
 Saan pwede kumain,canteen
-food menu,menu
-food in canteen,menu
-Whats there on menu,menu
-what is available in college canteen,menu
-what foods can we get in college canteen,menu
-food variety,menu
-What is there to eat?,menu
-Anong pagkain meron sa canteen,menu
-May menu ba,menu
 What is college placement,placement
 Which companies visit in college,placement
 What is average package,placement
@@ -285,30 +246,6 @@ recruitment,placement
 companies,placement
 May tulong ba sa paghahanap ng trabaho,placement
 Paano mag-apply sa OJT,placement
-Who is HOD,ithod
-Where is HOD,ithod
-it hod,ithod
-name of it hod,ithod
-Sino po ang IT head,ithod
-Sino chairperson ng IT department,ithod
-Who is computer HOD,computerhod
-Where is computer HOD,computerhod
-computer hod,computerhod
-name of computer hod,computerhod
-Sino head ng computer science,computerhod
-Who is extc HOD,extchod
-Where is  extc HOD,extchod
-extc hod,extchod
-name of extc hod,extchod
-Sino head ng ECE department,extchod
-what is the name of principal,principal
-whatv is the principal name,principal
-principal name,principal
-Who is college principal,principal
-Where is principal's office,principal
-principal,principal
-name of principal,principal
-Sino po ang principal,principal
 exam dates,sem
 exam schedule,sem
 When is semester exam,sem
@@ -322,15 +259,6 @@ exam dates,sem
 when is semester,sem
 Kailan magsisimula ang sem,sem
 Ilang units bawat sem,sem
-what is the process of admission,admission
-what is the admission process,admission
-How to take admission in your college,admission
-What is the process for admission,admission
-admission,admission
-admission process,admission
-Paano mag-apply,admission
-Anong requirements sa pag-enroll,admission
-Pwede pa po bang mag-enroll,admission
 scholarship,scholarship
 Is scholarship available,scholarship
 scholarship engineering,scholarship
@@ -360,22 +288,6 @@ fourth year scholarship,scholarship
 May scholarship ba,scholarship
 Paano mag-apply ng iskolarship,scholarship
 Sino pwede mag-apply ng scholarship,scholarship
-What facilities college provide,facilities
-College facility,facilities
-What are college facilities,facilities
-facilities,facilities
-facilities provided,facilities
-Anong pasilidad meron dito,facilities
-max number of students,college intake
-number of seats per branch,college intake
-number of seats in each branch,college intake
-maximum number of seats,college intake
-maximum students intake,college intake
-What is college intake,college intake
-how many stundent are taken in each branch,college intake
-seat allotment,college intake
-seats,college intake
-Ilan estudyante tinatanggap,college intake
 college dress code,uniform
 college dresscode,uniform
 what is the uniform,uniform
@@ -394,6 +306,9 @@ Give me committee details,committee
 committee,committee
 how many committee are there in college,committee
 Sino nasa committee,committee
+Paano sumali sa isang committee?,committee
+List of student committees,committee
+Is there a student council committee?,committee
 holidays,vacation
 when will semester starts,vacation
 when will semester end,vacation
@@ -417,21 +332,6 @@ Sports activities,sports
 please provide sports and games information,sports
 Anong sports meron,sports
 May varsity ba,sports
-okk,salutaion
-okie,salutaion
-nice work,salutaion
-well done,salutaion
-good job,salutaion
-thanks for the help,salutaion
-Thank You,salutaion
-its ok,salutaion
-Thanks,salutaion
-Good work,salutaion
-k,salutaion
-ok,salutaion
-okay,salutaion
-Ok salamat po,salutaion
-"Ayos, thank you",salutaion
 what can you do,task
 what are the thing you can do,task
 things you can do,task
@@ -440,22 +340,6 @@ how u can help me,task
 why i should use you,task
 Ano kaya mong gawin,task
 Anong tulong pwede mo ibigay,task
-ragging,ragging
-is ragging practice active in college,ragging
-does college have any antiragging facility,ragging
-is there any ragging cases,ragging
-is ragging done here,ragging
-ragging against,ragging
-antiragging facility,ragging
-ragging juniors,ragging
-ragging history,ragging
-ragging incidents,ragging
-May hazing ba dito,ragging
-Paano mag-report ng bullying,ragging
-hod,hod
-hod name,hod
-who is the hod,hod
-Sino head ng department,hod
 How do I log into the student portal,portal_login
 I forgot my student portal password,portal_login
 How to reset my portal password,portal_login
@@ -508,3 +392,125 @@ Kailan ang huling araw ng enrollment,enrollment_registration
 Paano mag-drop ng subject,enrollment_registration
 Pwede pa po ba mag-enroll late,enrollment_registration
 Saan mag-enroll online,enrollment_registration
+what is the name of principal,dean
+whatv is the principal name,dean
+principal name,dean
+Who is college principal,dean
+Where is principal's office,dean
+principal,dean
+name of principal,dean
+Sino po ang principal,dean
+Sino ang dean ng college?,dean
+How do I reach the dean's office?,dean
+ragging,hazing_policy
+is ragging practice active in college,hazing_policy
+does college have any antiragging facility,hazing_policy
+is there any ragging cases,hazing_policy
+is ragging done here,hazing_policy
+ragging against,hazing_policy
+antiragging facility,hazing_policy
+ragging juniors,hazing_policy
+ragging history,hazing_policy
+ragging incidents,hazing_policy
+May hazing ba dito,hazing_policy
+Paano mag-report ng bullying,hazing_policy
+Paano mag-report ng hazing?,hazing_policy
+Anti-hazing policy ng school,hazing_policy
+okk,salutation
+okie,salutation
+nice work,salutation
+well done,salutation
+good job,salutation
+thanks for the help,salutation
+Thank You,salutation
+its ok,salutation
+Thanks,salutation
+Good work,salutation
+k,salutation
+ok,salutation
+okay,salutation
+Ok salamat po,salutation
+"Ayos, thank you",salutation
+hostel facility,dormitory
+hostel servive,dormitory
+hostel location,dormitory
+hostel address,dormitory
+hostel facilities,dormitory
+hostel fees,dormitory
+Does college provide hostel,dormitory
+Is there any hostel,dormitory
+Where is hostel,dormitory
+do you have hostel,dormitory
+do you guys have hostel,dormitory
+hostel,dormitory
+hostel capacity,dormitory
+what is the hostel fee,dormitory
+how to get in hostel,dormitory
+what is the hostel address,dormitory
+how far is hostel from college,dormitory
+hostel college distance,dormitory
+where is the hostel,dormitory
+how big is the hostel,dormitory
+distance between college and hostel,dormitory
+distance between hostel and college,dormitory
+May dorm ba,dormitory
+Meron bang tirahan sa campus,dormitory
+Paano mag-apply sa dorm,dormitory
+Who is HOD,department_contact
+Where is HOD,department_contact
+it hod,department_contact
+name of it hod,department_contact
+Sino po ang IT head,department_contact
+Sino chairperson ng IT department,department_contact
+Who is computer HOD,department_contact
+Where is computer HOD,department_contact
+computer hod,department_contact
+name of computer hod,department_contact
+Sino head ng computer science,department_contact
+Who is extc HOD,department_contact
+Where is  extc HOD,department_contact
+extc hod,department_contact
+name of extc hod,department_contact
+Sino head ng ECE department,department_contact
+hod,department_contact
+hod name,department_contact
+who is the hod,department_contact
+Sino head ng department,department_contact
+Who's the department chair for IT?,department_contact
+Sino po ang chairperson ng Computer Science department?,department_contact
+How do I contact my program chair?,department_contact
+Paano makontak ang department head?,department_contact
+department chair contact,department_contact
+What facilities college provide,facilities
+College facility,facilities
+What are college facilities,facilities
+facilities,facilities
+facilities provided,facilities
+Anong pasilidad meron dito,facilities
+how is college infrastructure,facilities
+infrastructure,facilities
+college infrastructure,facilities
+Anong facilities meron,facilities
+May gym ba dito,facilities
+May clinic ba sa campus?,facilities
+Does the campus have a gym?,facilities
+What labs are available?,facilities
+what is the process of admission,admission
+what is the admission process,admission
+How to take admission in your college,admission
+What is the process for admission,admission
+admission,admission
+admission process,admission
+Paano mag-apply,admission
+Anong requirements sa pag-enroll,admission
+Pwede pa po bang mag-enroll,admission
+max number of students,admission
+number of seats per branch,admission
+number of seats in each branch,admission
+maximum number of seats,admission
+maximum students intake,admission
+What is college intake,admission
+how many stundent are taken in each branch,admission
+seat allotment,admission
+seats,admission
+Ilan estudyante tinatanggap,admission
