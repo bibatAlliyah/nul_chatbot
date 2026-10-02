@@ -1,0 +1,106 @@
+text,intent
+how do i apply to nu laguna po,admission
+pano po mag apply for new students,admission
+ano requirements para makapasok as freshman,admission
+san pwede bumili ng lunch sa school,canteen
+may kainan ba dito sa campus,canteen
+is there a place to eat inside nu laguna,canteen
+kelan ko makikita yung final grades ko,check_grades
+where do i see my grade for last term,check_grades
+paano kumuha ng copy ng tor,check_grades
+anu-ano mga student org committees,committee
+how to join a school committee,committee
+sino po ang members ng committee,committee
+what programs do you offer,course
+anong mga kurso meron sa nu laguna,course
+do u have bsit and bscs,course
+who is the dean of the college,dean
+where can i find the dean's office,dean
+sino po yung dean natin,dean
+who is the head of the cs department,department_contact
+sino po chair ng it dept,department_contact
+how do i contact the department head,department_contact
+ano ano dapat dalhin na papers sa admission,document
+what papers do i need to submit,document
+requirements na documents po para sa enrollment,document
+is there a dorm near the school,dormitory
+may dorm ba ang nu laguna,dormitory
+where can i stay if i live far,dormitory
+pano mag enroll for the next term,enrollment_registration
+until when can i add or drop subjects,enrollment_registration
+pano mag sign up ng subjects this sem,enrollment_registration
+may events ba this month,event
+what activities are happening on campus,event
+anu mga upcoming school events,event
+what facilities does the campus have,facilities
+may gym o clinic ba sa school,facilities
+anu anong pasilidad meron kayo,facilities
+magkano po tuition per semester,fees
+how much do i need to pay for tuition,fees
+ano po ang bayad sa school,fees
+ilang palapag ang building,floors
+how many floors is the main building,floors
+what floor is the registrar on,floors
+sige po alis na ko,goodbye
+ok bye for now,goodbye
+"gotta go, thanks bye",goodbye
+hello po,greeting
+hey there,greeting
+kumusta po kayo,greeting
+is hazing allowed in nu laguna,hazing_policy
+how do i report bullying in school,hazing_policy
+may anti hazing ba kayo,hazing_policy
+what time does school open,hours
+anong oras po ang pasok,hours
+is the campus open on weekends,hours
+where can i borrow books,library
+may library ba sa campus,library
+pwede ba manghiram ng libro sa library,library
+i cant open my lms class,lms_access
+paano mag log in sa lms,lms_access
+where do i upload my assignment online,lms_access
+where is nu laguna located,location
+pano pumunta sa school,location
+saan po banda ang nu laguna,location
+anong tawag sayo,name
+can i know ur name please,name
+pakilala ka naman,name
+what is the school phone number,number
+pano ko macocontact ang school,number
+may landline ba kayo,number
+do companies hire graduates from here,placement
+paano maghanap ng ojt,placement
+what is the job placement like,placement
+forgot my portal pass,portal_login
+hindi ako maka login sa student portal,portal_login
+my portal account got locked what do i do,portal_login
+thank you so much,salutation
+ok po salamat,salutation
+"great, thanks",salutation
+may scholarship ba kayo,scholarship
+how can i get a scholarship,scholarship
+paano mag apply ng scholarship po,scholarship
+when are the finals,sem
+kelan po ang exam week,sem
+what is the exam schedule this sem,sem
+what sports can i join,sports
+may varsity team ba kayo,sports
+anong mga laro meron sa school,sports
+how do i get my school email,student_email
+di ko ma open ang student email ko,student_email
+forgot my nu email password,student_email
+where can i download the syllabus,syllabus
+pano makita ang syllabus ng subject,syllabus
+do you have a course syllabus,syllabus
+what can you help me with,task
+anong pwede mong gawin,task
+ano purpose mo bot,task
+do we need to wear a uniform,uniform
+anong dress code po sa school,uniform
+saan makakabili ng school uniform,uniform
+when is the christmas break,vacation
+kelan ang holidays,vacation
+may pasok ba sa holiday,vacation
+wifi not working in campus,wifi_connection
+paano maconnect sa school wifi,wifi_connection
+what is the wifi password here,wifi_connection

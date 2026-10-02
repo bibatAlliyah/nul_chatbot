@@ -40,7 +40,6 @@ who are you,name
 who is this,name
 what am i chatting to,name
 who am i taking to,name
-what are you,name
 Ano pangalan mo,name
 Sino ka,name
 Meron ka bang pangalan,name
@@ -59,7 +58,6 @@ what is the college  hours,hours
 when should i come to college,hours
 when should i attend college,hours
 what is my college time,hours
-college timing,hours
 timing college,hours
 Anong oras bukas ang opisina,hours
 Hanggang kailan bukas ang school,hours
@@ -101,9 +99,7 @@ can you tell me the courses available in UNI?,course
 can you tell me the branches available in UNI?,course
 computer engineering?,course
 computer,course
-Computer engineering?,course
 it,course
-IT,course
 Information Technology,course
 AI/Ml,course
 Mechanical engineering,course
@@ -127,7 +123,6 @@ fees,fees
 about the fees,fees
 tell me something about the fees,fees
 What is the fees of hostel,fees
-how much is the fees,fees
 hostel fees,fees
 fees for AC room,fees
 fees for non-AC room,fees
@@ -190,7 +185,6 @@ size of campus,floors
 building size,floors
 How many floors does college have,floors
 floors in college,floors
-floors in college,floors
 how tall is UNI's College of Engineering college building,floors
 floors,floors
 Saang floor ang library,floors
@@ -201,7 +195,6 @@ what is the Information Technology syllabus,syllabus
 syllabus,syllabus
 timetable,syllabus
 what is IT syllabus,syllabus
-syllabus,syllabus
 What is next lecture,syllabus
 Saan makuha ang syllabus,syllabus
 Meron bang syllabus online,syllabus
@@ -255,7 +248,6 @@ semester,sem
 exam,sem
 when is exam,sem
 exam timetable,sem
-exam dates,sem
 when is semester,sem
 Kailan magsisimula ang sem,sem
 Ilang units bawat sem,sem
@@ -436,7 +428,6 @@ hostel servive,dormitory
 hostel location,dormitory
 hostel address,dormitory
 hostel facilities,dormitory
-hostel fees,dormitory
 Does college provide hostel,dormitory
 Is there any hostel,dormitory
 Where is hostel,dormitory
