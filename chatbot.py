@@ -105,7 +105,7 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
         best_intent, score = get_best_match(cleaned_input, embedder, pattern_embeddings, pattern_intents)
 
         if score < SIMILARITY_THRESHOLD:
-            print("Bot: Sorry, hindi ko masyadong naintindihan. Type 'guide' to see example questions, or try rephrasing.")
+            print("Bot: Sorry, I do not understand. Type 'guide' to see example questions, or try rephrasing.")
         else:
             reply = random.choice(response_lookup[best_intent])
             print(f"Bot: {reply}")
