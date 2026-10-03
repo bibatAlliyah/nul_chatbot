@@ -71,10 +71,9 @@
         "Meron ka bang pangalan"
       ],
       "responses": [
-        "You can call me Mind Reader.",
-        "I'm Mind Reader",
+        "I am an NU Laguna Chatbot",
         "I am a Chatbot.",
-        "I am your helper"
+        "I am an IT Helpdesk chatbot."
       ]
     },
     {
@@ -171,7 +170,7 @@
         "Ano available na programs"
       ],
       "responses": [
-        "Our university offers Information Technology, computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
+        "Our university offers Information Technology, Computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
       ]
     },
     {
@@ -280,7 +279,7 @@
         "requirements"
       ],
       "responses": [
-        "To know more about enrollment requirements, please visit the NU Laguna online portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php. Once there, go to the NU QUEST tab if you're a new enrollee, the NUIS tab if you're already an enrolled student, or NU BILLS if you want to pay online."
+        "To know more about enrollment requirements, please visit https://www.national-u.edu.ph/nu-laguna/admissions/."
       ]
     },
     {
@@ -560,7 +559,7 @@
         "login"
       ],
       "responses": [
-        "Go to the NU Laguna student portal at onlineapp.nu-laguna.edu.ph and use the password reset option. If your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "Go to the NU Laguna student portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php and use the password reset option. If your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
       ]
     },
     {
@@ -579,7 +578,7 @@
         "wifi password"
       ],
       "responses": [
-        "Campus wifi is available across NU Laguna. If you have trouble connecting, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "Campus wifi is available across NU Laguna. To know about the wifi password, you may go to the Learning Resource Center(LRC)."
       ]
     },
     {
