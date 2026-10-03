@@ -99,7 +99,10 @@
         "timing college",
         "Anong oras bukas ang opisina",
         "Hanggang kailan bukas ang school",
-        "Kailan sarado ang office"
+        "Kailan sarado ang office",
+        "hours",
+        "office hours",
+        "schedule"
       ],
       "responses": [
         "NU Laguna offices are open Monday to Friday, 8:00 AM to 4:00 PM."
@@ -125,7 +128,9 @@
         "call",
         "Anong contact number ng school",
         "Paano ko kayo matatawagan",
-        "Meron bang number na pwede tawagan"
+        "Meron bang number na pwede tawagan",
+        "contact",
+        "contact number"
       ],
       "responses": [
         "You can reach NU Laguna at (049) 572-3356. For Admissions, call local 3147 or 0919-082-1494. For the Registrar, call local 3106. For IT concerns, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph."
@@ -198,7 +203,9 @@
         "Magkano ang tuition",
         "Paano magbayad ng fees",
         "Saan magbayad ng tuition",
-        "Pwede po bang installment ang bayad"
+        "Pwede po bang installment ang bayad",
+        "tuition",
+        "payment"
       ],
       "responses": [
         "For questions about tuition and fees, contact the Treasury Office at treasury@nu-laguna.edu.ph, or pay online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
@@ -269,7 +276,8 @@
         "documents needed",
         "Anong requirements kailangan",
         "Saan kumuha ng TOR",
-        "Paano mag-request ng document"
+        "Paano mag-request ng document",
+        "requirements"
       ],
       "responses": [
         "To know more about enrollment requirements, please visit the NU Laguna online portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php. Once there, go to the NU QUEST tab if you're a new enrollee, the NUIS tab if you're already an enrolled student, or NU BILLS if you want to pay online."
@@ -329,7 +337,9 @@
         "how many libraries",
         "Anong oras bukas ang library",
         "Paano mangutang ng libro",
-        "San po yung LRC"
+        "San po yung LRC",
+        "library",
+        "lrc"
       ],
       "responses": [
         "The library is officially called the Learning Resource Center (LRC). You can reach them at lrc@nu-laguna.edu.ph or call (049) 572-3356 local 3149."
@@ -490,7 +500,7 @@
         "Kailan magsisimula ang semestral break"
       ],
       "responses": [
-        "Academic calender is given to you by your class-soordinators after you join your respective classes"
+        "Academic calender is given to you by your class-coordinators after you join your respective classes"
       ]
     },
     {
@@ -537,7 +547,10 @@
         "What do I do if my portal account is locked",
         "Paano mag-login sa portal",
         "Nakalimutan ko po password ko",
-        "Hindi ako makapasok sa account ko"
+        "Hindi ako makapasok sa account ko",
+        "portal",
+        "student portal",
+        "login"
       ],
       "responses": [
         "Go to the NU Laguna student portal at onlineapp.nu-laguna.edu.ph and use the password reset option. If your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
@@ -553,7 +566,10 @@
         "I cant connect to the university network",
         "Paano kumonekta sa wifi",
         "Bakit ayaw kumonekta ang wifi",
-        "Anong password ng wifi"
+        "Anong password ng wifi",
+        "wifi",
+        "internet",
+        "wifi password"
       ],
       "responses": [
         "Campus wifi is available across NU Laguna. If you have trouble connecting, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
@@ -569,7 +585,10 @@
         "How do I submit an assignment online",
         "Paano makita ang klase online",
         "Bakit di ko makita yung subject ko",
-        "Paano mag-submit ng assignment online"
+        "Paano mag-submit ng assignment online",
+        "lms",
+        "online class",
+        "online classes"
       ],
       "responses": [
         "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. If a class isn't showing up, check with your instructor in MS Teams, or contact the ITSO at itso@nu-laguna.edu.ph."
@@ -585,7 +604,9 @@
         "How do I access my university email on my phone",
         "Paano gawin ang student email",
         "Nakalimutan ko po password ng email ko",
-        "Bakit hindi gumagana yung email ko"
+        "Bakit hindi gumagana yung email ko",
+        "email",
+        "student email"
       ],
       "responses": [
         "You can reset your student email password through the account recovery page, or contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
@@ -603,7 +624,9 @@
         "Saan makikita ang grades ko",
         "Kailan lalabas ang grades",
         "Paano makuha ang TOR ko",
-        "May pasok ba ang grades online"
+        "May pasok ba ang grades online",
+        "grades",
+        "grade"
       ],
       "responses": [
         "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. You can check your grades in NUIS > Students > View Grades. For more questions regarding your grades, please contact your course professor for a grade consultation."
@@ -621,7 +644,11 @@
         "Kailan ang huling araw ng enrollment",
         "Paano mag-drop ng subject",
         "Pwede pa po ba mag-enroll late",
-        "Saan mag-enroll online"
+        "Saan mag-enroll online",
+        "reg",
+        "registration",
+        "enroll",
+        "enrollment"
       ],
       "responses": [
         "For new transfers, you can enroll or register for classes at https://onlineapp.nu-laguna.edu.ph/portal/services.php in the NU QUEST tab. For continuing students, please log in to your NUIS account and go to Students > Online Class Registration / Online Enrollment to enroll for the next semester. For deadlines or add/drop concerns, please contact the Registrar's Office at registrar@nu-laguna.edu.ph or call (049) 572-3356 local 3106."
@@ -720,7 +747,9 @@
         "distance between hostel and college",
         "May dorm ba",
         "Meron bang tirahan sa campus",
-        "Paano mag-apply sa dorm"
+        "Paano mag-apply sa dorm",
+        "dorm",
+        "dormitory"
       ],
       "responses": [
         "NU Laguna's Hostel is located inside the campus, just beside the main campus building itself."
@@ -803,7 +832,8 @@
         "how many stundent are taken in each branch",
         "seat allotment",
         "seats",
-        "Ilan estudyante tinatanggap"
+        "Ilan estudyante tinatanggap",
+        "apply"
       ],
       "responses": [
         "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, or call (049) 572-3356 local 3147 / 0919-082-1494. You can also apply online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph.",

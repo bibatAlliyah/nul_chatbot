@@ -12,7 +12,7 @@ from sentence_transformers import SentenceTransformer, util
 DATA_PATH = "."
 SIMILARITY_THRESHOLD = 0.55  # 0 to 1, higher = stricter matching
 MIN_GAP = 0.03  # top guess must beat the runner-up by at least this much
-MIN_INPUT_LENGTH = 3  # inputs shorter than this (after cleanup) are too vague to trust
+MIN_INPUT_LENGTH = 2  # inputs shorter than this (after cleanup) are too vague to trust
 
 
 def load_dataset(data_path):
@@ -75,14 +75,19 @@ def print_startup_banner():
 def get_best_match(user_text, embedder, pattern_embeddings, pattern_intents):
     user_embedding = embedder.encode(user_text, convert_to_tensor=True)
     similarities = util.cos_sim(user_embedding, pattern_embeddings)[0]
-    sorted_indices = similarities.argsort(descending=True)
 
-    best_index = sorted_indices[0].item()
-    second_index = sorted_indices[1].item()
+    # Take the best score PER INTENT first. Otherwise, two similar example
+    # questions from the SAME correct intent look like a "too close to call"
+    # situation, even when the match is actually completely unambiguous.
+    best_per_intent = {}
+    for idx, intent in enumerate(pattern_intents):
+        score = similarities[idx].item()
+        if intent not in best_per_intent or score > best_per_intent[intent]:
+            best_per_intent[intent] = score
 
-    best_score = similarities[best_index].item()
-    second_score = similarities[second_index].item()
-    best_intent = pattern_intents[best_index]
+    ranked = sorted(best_per_intent.items(), key=lambda x: x[1], reverse=True)
+    best_intent, best_score = ranked[0]
+    second_score = ranked[1][1] if len(ranked) > 1 else 0.0
     gap = best_score - second_score
 
     return best_intent, best_score, gap
@@ -96,17 +101,19 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
         user_input = input("You: ").strip()
 
         if user_input.lower() in ["quit", "exit"]:
-            print("Bot: Bye! Ingat.")
+            print("Bot: Bye!")
             break
 
         if user_input.lower() == "guide":
             print_guide(guide_questions)
             continue
 
+        picked_from_guide = False
         if user_input.isdigit():
             index = int(user_input)
             if 1 <= index <= len(guide_questions):
                 user_input = guide_questions[index - 1]
+                picked_from_guide = True
                 print(f"You picked: {user_input}")
             else:
                 print(f"Bot: That number isn't on the list. Type 'guide' to see it again.")
@@ -114,7 +121,7 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
 
         cleaned_input = normalize_text(user_input, normalization_dict)
 
-        if len(cleaned_input) < MIN_INPUT_LENGTH:
+        if not picked_from_guide and len(cleaned_input) < MIN_INPUT_LENGTH:
             print("Bot: That's too short for me to work with, can you ask a full question?")
             continue
 
