@@ -438,10 +438,12 @@
         "fourth year scholarship",
         "May scholarship ba",
         "Paano mag-apply ng iskolarship",
-        "Sino pwede mag-apply ng scholarship"
+        "Sino pwede mag-apply ng scholarship",
+        "scholar",
+        "scholarship"
       ],
       "responses": [
-        "Many government scholarships are supported by our university. For details and updates visit <a target=\"_blank\" href=\"(SCHOLARSHIP DETAILS the NU Laguna portal (onlineapp.nu-laguna.edu.ph))\">here</a>"
+        "In here is the list of scholarship programs: https://www.national-u.edu.ph/nu-laguna/scholarships/"
       ]
     },
     {
@@ -457,11 +459,12 @@
         "what about uniform",
         "do we have to wear uniform",
         "Ano po ang uniform",
-        "Saan bibili ng uniform"
+        "Saan bibili ng uniform",
+        "unif"
       ],
       "responses": [
-        "NU Laguna has a prescribed uniform for most programs, worn on designated uniform days. [TODO: confirm current uniform policy/days and where uniforms are sold with the Student Affairs Office].",
-        "Casual/civilian clothes are usually allowed outside uniform days, following the student dress code. [TODO: confirm exact dress code policy]."
+        "NU Laguna has a prescribed uniform for most programs, worn on designated uniform days. You can buy uniforms at NU Bulldogs Exchange on Campus.",
+        "Casual/civilian clothes are allowed during wash days (Wednesday and Saturday). Just make sure to follow the student dress code. You can buy uniforms at NU Bulldogs Exchange on Campus."
       ]
     },
     {
