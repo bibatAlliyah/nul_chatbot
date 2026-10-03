@@ -360,7 +360,8 @@
         "Food",
         "Cafetaria",
         "Anong oras bukas ang canteen",
-        "Saan pwede kumain"
+        "Saan pwede kumain",
+        "caf"
       ],
       "responses": [
         "NU Laguna has food stalls in Sampaloc Lane as well as a Cafetaria right next to the Main Campus Building."
@@ -379,7 +380,8 @@
         "recruitment",
         "companies",
         "May tulong ba sa paghahanap ng trabaho",
-        "Paano mag-apply sa OJT"
+        "Paano mag-apply sa OJT",
+        "ojt"
       ],
       "responses": [
         "You can apply for a job at https://www.nu.edu.ph/talent-hub for any NU campuses."
@@ -475,7 +477,10 @@
         "Sino nasa committee",
         "Paano sumali sa isang committee?",
         "List of student committees",
-        "Is there a student council committee?"
+        "Is there a student council committee?",
+        "committee",
+        "commitee",
+        "student council"
       ],
       "responses": [
         "Student committees and organizations are coordinated through the Student Affairs Office. [TODO: insert Student Affairs/OSA contact number or email]."
@@ -530,7 +535,9 @@
         "how u can help me",
         "why i should use you",
         "Ano kaya mong gawin",
-        "Anong tulong pwede mo ibigay"
+        "Anong tulong pwede mo ibigay",
+        "para saan ka",
+        "what are you for"
       ],
       "responses": [
         "I can answer to low-intermediate questions regarding college",
@@ -588,7 +595,8 @@
         "Paano mag-submit ng assignment online",
         "lms",
         "online class",
-        "online classes"
+        "online classes",
+        "olc"
       ],
       "responses": [
         "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. If a class isn't showing up, check with your instructor in MS Teams, or contact the ITSO at itso@nu-laguna.edu.ph."
@@ -749,7 +757,10 @@
         "Meron bang tirahan sa campus",
         "Paano mag-apply sa dorm",
         "dorm",
-        "dormitory"
+        "dormitory",
+        "hostle",
+        "drom",
+        "domr"
       ],
       "responses": [
         "NU Laguna's Hostel is located inside the campus, just beside the main campus building itself."
@@ -805,7 +816,8 @@
         "May gym ba dito",
         "May clinic ba sa campus?",
         "Does the campus have a gym?",
-        "What labs are available?"
+        "What labs are available?",
+        "labs?"
       ],
       "responses": [
         "NU Laguna's campus facilities include IT labs, a library, and student lounges. [TODO: confirm current facility list, e.g. gym, clinic, labs, with the Facilities Office]."
@@ -833,7 +845,8 @@
         "seat allotment",
         "seats",
         "Ilan estudyante tinatanggap",
-        "apply"
+        "apply",
+        "admision"
       ],
       "responses": [
         "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, or call (049) 572-3356 local 3147 / 0919-082-1494. You can also apply online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph.",
