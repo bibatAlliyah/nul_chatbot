@@ -132,7 +132,7 @@
         "contact number"
       ],
       "responses": [
-        "You can reach NU Laguna at (049) 572-3356. For Admissions, call local 3147 or 0919-082-1494. For the Registrar, call local 3106. For IT concerns, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph."
+        "You can reach NU Laguna at (049) 572-3356 / (+63) 919-082-1494 \nEmail: admissions@nu-laguna.edu.ph \nFB Page: https://www.facebook.com/NULagunaPH"
       ]
     },
     {
@@ -170,7 +170,7 @@
         "Ano available na programs"
       ],
       "responses": [
-        "Our university offers Information Technology, Computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
+        "(needs update)NU Laguna offers Information Technology, Computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
       ]
     },
     {
@@ -207,7 +207,7 @@
         "payment"
       ],
       "responses": [
-        "For questions about tuition and fees, contact the Treasury Office at treasury@nu-laguna.edu.ph, or pay online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
+        "For questions about tuition and fees, contact the Treasury Office at treasury@nu-laguna.edu.ph, \nor pay online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
       ]
     },
     {
@@ -254,7 +254,7 @@
         "Kailan susunod na event"
       ],
       "responses": [
-        "For event details, please visit NU Laguna FB Page and/or the School's calendar in the NUIS."
+        "For event details, please visit the NU Laguna FB Page at https://www.facebook.com/NULagunaPH and/or the School's calendar in the NUIS."
       ]
     },
     {
@@ -291,13 +291,10 @@
         "floors in college",
         "floors in college",
         "how tall is UNI's College of Engineering college building",
-        "floors",
-        "Saang floor ang library",
-        "Anong nasa second floor",
-        "San po ang registrar"
+        "floors"
       ],
       "responses": [
-        "My College has total 5 floors "
+        "NU Laguna has total 5 floors"
       ]
     },
     {
@@ -341,7 +338,7 @@
         "lrc"
       ],
       "responses": [
-        "The library is officially called the Learning Resource Center (LRC). You can reach them at lrc@nu-laguna.edu.ph or call (049) 572-3356 local 3149."
+        "The library is officially called the Learning Resource Center (LRC). \nYou can reach them at lrc@nu-laguna.edu.ph or call (049) 572-3356 local 3149."
       ]
     },
     {
@@ -404,7 +401,7 @@
         "Ilang units bawat sem"
       ],
       "responses": [
-        "Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>"
+        "(needs update)Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>"
       ]
     },
     {
@@ -463,8 +460,8 @@
         "unif"
       ],
       "responses": [
-        "NU Laguna has a prescribed uniform for most programs, worn on designated uniform days. You can buy uniforms at NU Bulldogs Exchange on Campus.",
-        "Casual/civilian clothes are allowed during wash days (Wednesday and Saturday). Just make sure to follow the student dress code. You can buy uniforms at NU Bulldogs Exchange on Campus."
+        "NU Laguna has a prescribed uniform for most programs, worn on designated uniform days. \nYou can buy uniforms at NU Bulldogs Exchange on Campus.",
+        "Casual/Civilian clothes are allowed during wash days (Wednesday and Saturday). Just make sure to follow the student dress code. \nYou can buy uniforms at NU Bulldogs Exchange on Campus."
       ]
     },
     {
@@ -485,7 +482,7 @@
         "student council"
       ],
       "responses": [
-        "Student committees and organizations are coordinated through the Student Affairs Office. [TODO: insert Student Affairs/OSA contact number or email]."
+        "(needs update)Student committees and organizations are coordinated through the Student Affairs Office. [TODO: insert Student Affairs/OSA contact number or email]."
       ]
     },
     {
@@ -507,7 +504,7 @@
         "Kailan magsisimula ang semestral break"
       ],
       "responses": [
-        "Academic calender is given to you by your class-coordinators after you join your respective classes"
+        "(needs update)Academic calender is given to you by your class-coordinators after you join your respective classes"
       ]
     },
     {
@@ -524,7 +521,7 @@
         "May varsity ba"
       ],
       "responses": [
-        "Our university encourages all-round development of students and hence provides sports facilities in the campus. Please visit https://www.nu.edu.ph/campus-page/nu-laguna for more details."
+        "(needs update)Our university encourages all-round development of students and hence provides sports facilities in the campus. Please visit https://www.nu.edu.ph/campus-page/nu-laguna for more details."
       ]
     },
     {
@@ -542,8 +539,8 @@
         "what are you for"
       ],
       "responses": [
-        "I can answer to low-intermediate questions regarding college",
-        "You can ask me questions regarding college, and I will try to answer them"
+        "I can answer to low-intermediate questions regarding NU Laguna.",
+        "You can ask me questions regarding NU Laguna, and I will try to answer them."
       ]
     },
     {
@@ -562,7 +559,7 @@
         "login"
       ],
       "responses": [
-        "Go to the NU Laguna student portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php and use the password reset option. If your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "Go to the NU Laguna student portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php and use the password reset option. \nIf your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
       ]
     },
     {
@@ -601,7 +598,7 @@
         "olc"
       ],
       "responses": [
-        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. If a class isn't showing up, check with your instructor in MS Teams, or contact the ITSO at itso@nu-laguna.edu.ph."
+        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nIf a class isn't showing up, check with your instructor in MS Teams, or contact the ITSO at itso@nu-laguna.edu.ph."
       ]
     },
     {
@@ -616,10 +613,12 @@
         "Nakalimutan ko po password ng email ko",
         "Bakit hindi gumagana yung email ko",
         "email",
-        "student email"
+        "student email",
+        "email password",
+        "email acc"
       ],
       "responses": [
-        "You can reset your student email password through the account recovery page, or contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "You can reset your student email password through the account recovery page, \nor contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
       ]
     },
     {
@@ -639,7 +638,7 @@
         "grade"
       ],
       "responses": [
-        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. You can check your grades in NUIS > Students > View Grades. For more questions regarding your grades, please contact your course professor for a grade consultation."
+        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nYou can check your grades in NUIS > Students > View Grades. \nFor more questions regarding your grades, please contact your course professor on MS Teams for a grade consultation."
       ]
     },
     {
@@ -661,25 +660,7 @@
         "enrollment"
       ],
       "responses": [
-        "For new transfers, you can enroll or register for classes at https://onlineapp.nu-laguna.edu.ph/portal/services.php in the NU QUEST tab. For continuing students, please log in to your NUIS account and go to Students > Online Class Registration / Online Enrollment to enroll for the next semester. For deadlines or add/drop concerns, please contact the Registrar's Office at registrar@nu-laguna.edu.ph or call (049) 572-3356 local 3106."
-      ]
-    },
-    {
-      "tag": "dean",
-      "patterns": [
-        "what is the name of principal",
-        "whatv is the principal name",
-        "principal name",
-        "Who is college principal",
-        "Where is principal's office",
-        "principal",
-        "name of principal",
-        "Sino po ang principal",
-        "Sino ang dean ng college?",
-        "How do I reach the dean's office?"
-      ],
-      "responses": [
-        "The Dean's Office handles academic and student concerns for each college. [TODO: insert current Dean's name/contact per college, confirm with the Registrar]."
+        "For new transfers, you can enroll or register for classes at https://onlineapp.nu-laguna.edu.ph/quest/home.php. \nFor continuing students, please log in to your NUIS account and go to Students > Online Class Registration / Online Enrollment to enroll for the next semester. \nFor deadlines or add/drop concerns, please contact the Registrar's Office at registrar@nu-laguna.edu.ph or call (049) 572-3356 local 3106."
       ]
     },
     {
@@ -698,11 +679,13 @@
         "May hazing ba dito",
         "Paano mag-report ng bullying",
         "Paano mag-report ng hazing?",
-        "Anti-hazing policy ng school"
+        "Anti-hazing policy ng school",
+        "bullying",
+        "bully"
       ],
       "responses": [
-        "NU Laguna enforces a strict anti-hazing policy in line with RA 8049 (Anti-Hazing Law). If you want to report hazing or bullying, please contact the Guidance Office.",
-        "We maintain a zero-tolerance policy on hazing. Report any incidents to the Guidance Office."
+        "NU Laguna enforces a strict anti-hazing policy in line with RA 8049 (Anti-Hazing Law). \nIf you want to report hazing or bullying, please contact the Guidance Office (gso@nu-laguna.edu.ph).",
+        "We maintain a zero-tolerance policy on hazing. Report any incidents to the Guidance Office (gso@nu-laguna.edu.ph)"
       ]
     },
     {
@@ -761,7 +744,8 @@
         "dormitory",
         "hostle",
         "drom",
-        "domr"
+        "domr",
+        "host"
       ],
       "responses": [
         "NU Laguna's Hostel is located inside the campus, just beside the main campus building itself."
@@ -794,7 +778,24 @@
         "Sino po ang chairperson ng Computer Science department?",
         "How do I contact my program chair?",
         "Paano makontak ang department head?",
-        "department chair contact"
+        "department chair contact",
+        "scs hod?",
+        "sea hod?",
+        "sabm hod?",
+        "IT hod?",
+        "CS hod?",
+        "IS hod?",
+        "engineer hod?",
+        "mma hod?",
+        "program chair",
+        "archi hod?",
+        "architecture hod?",
+        "eng hod?",
+        "psych hod?",
+        "psychology hod?",
+        "ba comm hod?",
+        "tm hod?",
+        "tourism hod"
       ],
       "responses": [
         "\nProgram Chairs per College Department: \nSCS: Vincent S. Rivera (vsrivera@nu-laguna.edu.ph) \nSAS: Dr. Carlito Loyola (coloyola@nu-laguna.edu.ph) \nSEA: Bryan L. De Guzman (bldeguzman@nu-laguna.edu.ph) \nSABM: Joel M. Cuadra (jmcuadra@nu-laguna.edu.ph) "
@@ -820,7 +821,7 @@
         "labs?"
       ],
       "responses": [
-        "NU Laguna's campus facilities include ComLabs, a Library(LRC), a clinic, and student lounges. [TODO: confirm current facility list, e.g. gym, clinic, labs, with the Facilities Office]."
+        "(needs update)NU Laguna's campus facilities include ComLabs, a Library(LRC), a clinic, and student lounges. [TODO: confirm current facility list, e.g. gym, clinic, labs, with the Facilities Office]."
       ]
     },
     {
@@ -849,7 +850,8 @@
         "admision"
       ],
       "responses": [
-        "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, or call (049) 572-3356 local 3147 / 0919-082-1494. You can also apply online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
+        "You can contact Admissions Office with admissions@nu-laguna.edu.ph, \nor you may fill out a form at https://www.nu.edu.ph/admissions/inquire?campus_id=nu-laguna \nor call (+63) 919-082-1494",
+        "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, \nor call (049) 572-3356 local 3147 / 0919-082-1494. \nYou can also apply online through the NU Laguna portal at https://onlineapp.nu-laguna.edu.ph/quest/home.php"
       ]
     }
   ]
