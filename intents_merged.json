@@ -679,8 +679,7 @@
         "How do I reach the dean's office?"
       ],
       "responses": [
-        "The Dean's Office handles academic and student concerns for each college. [TODO: insert current Dean's name/contact per college, confirm with the Registrar].",
-        "You can reach your college Dean's Office through the department secretary. [TODO: insert office location/contact details]."
+        "The Dean's Office handles academic and student concerns for each college. [TODO: insert current Dean's name/contact per college, confirm with the Registrar]."
       ]
     },
     {
@@ -703,7 +702,7 @@
       ],
       "responses": [
         "NU Laguna enforces a strict anti-hazing policy in line with RA 8049 (Anti-Hazing Law). If you want to report hazing or bullying, please contact the Guidance Office.",
-        "We maintain a zero-tolerance policy on hazing. Report any incidents to the Guidance and Counseling Office. [TODO: confirm office contact/location]."
+        "We maintain a zero-tolerance policy on hazing. Report any incidents to the Guidance Office."
       ]
     },
     {
@@ -798,8 +797,7 @@
         "department chair contact"
       ],
       "responses": [
-        "Please specify which department you're asking about (e.g. IT, Computer Science, ECE) and I can point you to the right program chair.",
-        "Department chairs differ per program. [TODO: insert current program chair names/contacts per department, confirm with the Registrar or department office]."
+        "\nProgram Chairs per College Department: \nSCS: Vincent S. Rivera (vsrivera@nu-laguna.edu.ph) \nSAS: Dr. Carlito Loyola (coloyola@nu-laguna.edu.ph) \nSEA: Bryan L. De Guzman (bldeguzman@nu-laguna.edu.ph) \nSABM: Joel M. Cuadra (jmcuadra@nu-laguna.edu.ph) "
       ]
     },
     {
@@ -822,7 +820,7 @@
         "labs?"
       ],
       "responses": [
-        "NU Laguna's campus facilities include IT labs, a library, and student lounges. [TODO: confirm current facility list, e.g. gym, clinic, labs, with the Facilities Office]."
+        "NU Laguna's campus facilities include ComLabs, a Library(LRC), a clinic, and student lounges. [TODO: confirm current facility list, e.g. gym, clinic, labs, with the Facilities Office]."
       ]
     },
     {
@@ -851,8 +849,7 @@
         "admision"
       ],
       "responses": [
-        "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, or call (049) 572-3356 local 3147 / 0919-082-1494. You can also apply online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph.",
-        "For IT, Computer and extc 60 per branch and seat may be differ for different department."
+        "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, or call (049) 572-3356 local 3147 / 0919-082-1494. You can also apply online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
       ]
     }
   ]
