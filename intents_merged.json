@@ -254,7 +254,7 @@
         "Kailan susunod na event"
       ],
       "responses": [
-        "For event details, please visit the NU Laguna FB Page at https://www.facebook.com/NULagunaPH and/or the School's calendar in the NUIS."
+        "For event details, please visit the NU Laguna FB Page at https://www.facebook.com/NULagunaPH \nand/or the School's calendar in the NUIS."
       ]
     },
     {
@@ -308,7 +308,8 @@
         "syllabus",
         "What is next lecture",
         "Saan makuha ang syllabus",
-        "Meron bang syllabus online"
+        "Meron bang syllabus online",
+        "course sched"
       ],
       "responses": [
         "Please visit the NUIS tab at the NU Laguna online portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php to check your schedule there."
@@ -357,7 +358,8 @@
         "Cafetaria",
         "Anong oras bukas ang canteen",
         "Saan pwede kumain",
-        "caf"
+        "caf",
+        "cantten"
       ],
       "responses": [
         "NU Laguna has food stalls in Sampaloc Lane as well as a Cafetaria right next to the Main Campus Building."
@@ -461,7 +463,7 @@
       ],
       "responses": [
         "NU Laguna has a prescribed uniform for most programs, worn on designated uniform days. \nYou can buy uniforms at NU Bulldogs Exchange on Campus.",
-        "Casual/Civilian clothes are allowed during wash days (Wednesday and Saturday). Just make sure to follow the student dress code. \nYou can buy uniforms at NU Bulldogs Exchange on Campus."
+        "Casual/Civilian clothes are allowed during wash days (Wednesday and Saturday). \nJust make sure to follow the student dress code. \nYou can buy uniforms at NU Bulldogs Exchange on Campus."
       ]
     },
     {
@@ -479,7 +481,8 @@
         "Is there a student council committee?",
         "committee",
         "commitee",
-        "student council"
+        "student council",
+        "comitee"
       ],
       "responses": [
         "(needs update)Student committees and organizations are coordinated through the Student Affairs Office. [TODO: insert Student Affairs/OSA contact number or email]."
@@ -638,7 +641,7 @@
         "grade"
       ],
       "responses": [
-        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nYou can check your grades in NUIS > Students > View Grades. \nFor more questions regarding your grades, please contact your course professor on MS Teams for a grade consultation."
+        "Log into your NUIS account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nYou can check your grades in NUIS > Students > View Grades. \nFor more questions regarding your grades, please contact your course professor on MS Teams for a grade consultation."
       ]
     },
     {
