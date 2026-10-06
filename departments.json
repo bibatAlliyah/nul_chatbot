@@ -4,7 +4,7 @@
       "name": "School of Computer Studies",
       "programs": [
         "scs", "it", "cs", "is", "information technology", "computer science",
-        "information systems", "entertainment and multimedia computing", "emc"
+        "information systems"
       ],
       "hod_name": "Vincent S. Rivera",
       "contact": "vsrivera@nu-laguna.edu.ph"
@@ -14,7 +14,7 @@
       "programs": [
         "sas", "psych", "psychology", "ba comm", "communication",
         "political science", "arts and sciences",
-        "mma", "multimedia arts", "bmma"
+        "mma", "multimedia arts", "bmma","polsci"
       ],
       "hod_name": "Dr. Carlito Loyola",
       "contact": "coloyola@nu-laguna.edu.ph"
