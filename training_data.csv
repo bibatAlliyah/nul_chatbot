@@ -201,9 +201,6 @@ floors in college,floors
 floors in college,floors
 how tall is UNI's College of Engineering college building,floors
 floors,floors
-Saang floor ang library,floors
-Anong nasa second floor,floors
-San po ang registrar,floors
 Syllabus for IT,syllabus
 what is the Information Technology syllabus,syllabus
 syllabus,syllabus
@@ -213,6 +210,7 @@ syllabus,syllabus
 What is next lecture,syllabus
 Saan makuha ang syllabus,syllabus
 Meron bang syllabus online,syllabus
+course sched,syllabus
 is there any library,library
 library facility,library
 library facilities,library
@@ -245,6 +243,8 @@ Food,canteen
 Cafetaria,canteen
 Anong oras bukas ang canteen,canteen
 Saan pwede kumain,canteen
+caf,canteen
+cantten,canteen
 What is college placement,placement
 Which companies visit in college,placement
 What is average package,placement
@@ -256,6 +256,8 @@ recruitment,placement
 companies,placement
 May tulong ba sa paghahanap ng trabaho,placement
 Paano mag-apply sa OJT,placement
+ojt,placement
+job,placement
 exam dates,sem
 exam schedule,sem
 When is semester exam,sem
@@ -298,6 +300,8 @@ fourth year scholarship,scholarship
 May scholarship ba,scholarship
 Paano mag-apply ng iskolarship,scholarship
 Sino pwede mag-apply ng scholarship,scholarship
+scholar,scholarship
+scholarship,scholarship
 college dress code,uniform
 college dresscode,uniform
 what is the uniform,uniform
@@ -309,6 +313,7 @@ what about uniform,uniform
 do we have to wear uniform,uniform
 Ano po ang uniform,uniform
 Saan bibili ng uniform,uniform
+unif,uniform
 what are the different committe in college,committee
 different committee in college,committee
 Are there any committee in college,committee
@@ -319,6 +324,10 @@ Sino nasa committee,committee
 Paano sumali sa isang committee?,committee
 List of student committees,committee
 Is there a student council committee?,committee
+committee,committee
+commitee,committee
+student council,committee
+comitee,committee
 holidays,vacation
 when will semester starts,vacation
 when will semester end,vacation
@@ -350,6 +359,9 @@ how u can help me,task
 why i should use you,task
 Ano kaya mong gawin,task
 Anong tulong pwede mo ibigay,task
+para saan ka,task
+what are you for,task
+task,task
 How do I log into the student portal,portal_login
 I forgot my student portal password,portal_login
 How to reset my portal password,portal_login
@@ -383,6 +395,7 @@ Paano mag-submit ng assignment online,lms_access
 lms,lms_access
 online class,lms_access
 online classes,lms_access
+olc,lms_access
 How do I set up my student email,student_email
 I forgot my student email password,student_email
 How to reset my school email account,student_email
@@ -393,6 +406,8 @@ Nakalimutan ko po password ng email ko,student_email
 Bakit hindi gumagana yung email ko,student_email
 email,student_email
 student email,student_email
+email password,student_email
+email acc,student_email
 How do I check my grades,check_grades
 Where can I see my exam results,check_grades
 How to view my transcript,check_grades
@@ -419,16 +434,6 @@ reg,enrollment_registration
 registration,enrollment_registration
 enroll,enrollment_registration
 enrollment,enrollment_registration
-what is the name of principal,dean
-whatv is the principal name,dean
-principal name,dean
-Who is college principal,dean
-Where is principal's office,dean
-principal,dean
-name of principal,dean
-Sino po ang principal,dean
-Sino ang dean ng college?,dean
-How do I reach the dean's office?,dean
 ragging,hazing_policy
 is ragging practice active in college,hazing_policy
 does college have any antiragging facility,hazing_policy
@@ -443,6 +448,8 @@ May hazing ba dito,hazing_policy
 Paano mag-report ng bullying,hazing_policy
 Paano mag-report ng hazing?,hazing_policy
 Anti-hazing policy ng school,hazing_policy
+bullying,hazing_policy
+bully,hazing_policy
 okk,salutation
 okie,salutation
 nice work,salutation
@@ -485,6 +492,10 @@ Meron bang tirahan sa campus,dormitory
 Paano mag-apply sa dorm,dormitory
 dorm,dormitory
 dormitory,dormitory
+hostle,dormitory
+drom,dormitory
+domr,dormitory
+host,dormitory
 Who is HOD,department_contact
 Where is HOD,department_contact
 it hod,department_contact
@@ -510,6 +521,23 @@ Sino po ang chairperson ng Computer Science department?,department_contact
 How do I contact my program chair?,department_contact
 Paano makontak ang department head?,department_contact
 department chair contact,department_contact
+scs hod?,department_contact
+sea hod?,department_contact
+sabm hod?,department_contact
+IT hod?,department_contact
+CS hod?,department_contact
+IS hod?,department_contact
+engineer hod?,department_contact
+mma hod?,department_contact
+program chair,department_contact
+archi hod?,department_contact
+architecture hod?,department_contact
+eng hod?,department_contact
+psych hod?,department_contact
+psychology hod?,department_contact
+ba comm hod?,department_contact
+tm hod?,department_contact
+tourism hod,department_contact
 What facilities college provide,facilities
 College facility,facilities
 What are college facilities,facilities
@@ -524,6 +552,7 @@ May gym ba dito,facilities
 May clinic ba sa campus?,facilities
 Does the campus have a gym?,facilities
 What labs are available?,facilities
+labs?,facilities
 what is the process of admission,admission
 what is the admission process,admission
 How to take admission in your college,admission
@@ -544,3 +573,4 @@ seat allotment,admission
 seats,admission
 Ilan estudyante tinatanggap,admission
 apply,admission
+admision,admission
