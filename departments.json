@@ -1,43 +1,90 @@
 {
   "schools": {
-    "SCS": {
-      "name": "School of Computer Studies",
+    "SEA": {
+      "name": "School of Engineering and Architecture",
+      "hod_name": "Engr. Bryan L. De Guzman",
+      "contact": "bldeguzman@nu-laguna.edu.ph",
       "programs": [
-        "scs", "it", "cs", "is", "information technology", "computer science",
-        "information systems"
-      ],
-      "hod_name": "Vincent S. Rivera",
-      "contact": "vsrivera@nu-laguna.edu.ph"
-    },
-    "SAS": {
-      "name": "School of Arts and Sciences",
-      "programs": [
-        "sas", "psych", "psychology", "ba comm", "communication",
-        "political science", "arts and sciences",
-        "mma", "multimedia arts", "bmma","polsci"
-      ],
-      "hod_name": "Dr. Carlito Loyola",
-      "contact": "coloyola@nu-laguna.edu.ph"
+        "sea",
+        "civil engineering",
+        "bs civil engineering",
+        "computer engineering",
+        "bs computer engineering",
+        "architecture",
+        "bs architecture",
+        "archi",
+        "eng"
+      ]
     },
     "SABM": {
       "name": "School of Accountancy, Business, and Management",
-      "programs": [
-        "sabm", "tm", "tourism", "accountancy", "accounting",
-        "business", "business administration", "management",
-        "marketing", "entrepreneurship"
-      ],
       "hod_name": "Joel M. Cuadra",
-      "contact": "jmcuadra@nu-laguna.edu.ph"
-    },
-    "SEA": {
-      "name": "School of Engineering and Architecture",
+      "contact": "jmcuadra@nu-laguna.edu.ph",
       "programs": [
-        "sea", "engineer", "eng", "engineering", "architecture", "archi",
-        "civil engineering", "mechanical engineering", "electronics engineering",
-        "electrical engineering", "computer engineering", "extc"
-      ],
-      "hod_name": "Bryan L. De Guzman",
-      "contact": "bldeguzman@nu-laguna.edu.ph"
+        "sabm",
+        "accountancy",
+        "bs accountancy",
+        "accounting information system",
+        "ais",
+        "business administration",
+        "bs business administration",
+        "tourism management",
+        "bs tourism management",
+        "tm",
+        "tourism"
+      ]
+    },
+    "SCS": {
+      "name": "School of Computing Studies",
+      "hod_name": "Vincent S. Rivera",
+      "contact": "vsrivera@nu-laguna.edu.ph",
+      "programs": [
+        "scs",
+        "computer science",
+        "bs computer science",
+        "bscs",
+        "information systems",
+        "bs information systems",
+        "bsis",
+        "information technology",
+        "bs information technology",
+        "bsit"
+      ]
+    },
+    "SAS": {
+      "name": "School of Arts and Sciences",
+      "hod_name": "Dr. Carlito Loyola",
+      "contact": "coloyola@nu-laguna.edu.ph",
+      "programs": [
+        "sas",
+        "ab communication",
+        "ba comm",
+        "ab comm",
+        "communication",
+        "criminology",
+        "bs criminology",
+        "exercise and sports science",
+        "ess",
+        "psychology",
+        "bs psychology",
+        "psych",
+        "multimedia arts",
+        "bs multimedia arts",
+        "mma"
+      ]
+    },
+    "SHS": {
+      "name": "Senior High School",
+      "hod_name": "Dr. Larra Marie A. Bernardo",
+      "contact": "[TODO: confirm SHS office contact email]",
+      "programs": [
+        "shs",
+        "senior high",
+        "stem",
+        "humss",
+        "abm",
+        "gas"
+      ]
     }
   }
 }

@@ -87,65 +87,6 @@ Paano ko kayo matatawagan,number
 Meron bang number na pwede tawagan,number
 contact,number
 contact number,number
-list of courses,course
-list of courses offered,course
-list of courses offered in,course
-what are the courses offered in your college?,course
-courses?,course
-courses offered,course
-courses offered in (your univrsity(UNI) name),course
-courses you offer,course
-branches?,course
-courses available at UNI?,course
-branches available at your college?,course
-what are the courses in UNI?,course
-what are branches in UNI?,course
-what are courses in UNI?,course
-branches available in UNI?,course
-can you tell me the courses available in UNI?,course
-can you tell me the branches available in UNI?,course
-computer engineering?,course
-computer,course
-Computer engineering?,course
-it,course
-IT,course
-Information Technology,course
-AI/Ml,course
-Mechanical engineering,course
-Chemical engineering,course
-Civil engineering,course
-Anong mga kurso meron,course
-Anong course pwede kunin,course
-Ano available na programs,course
-information about fee,fees
-information on fee,fees
-tell me the fee,fees
-college fee,fees
-fee per semester,fees
-what is the fee of each semester,fees
-what is the fees of each year,fees
-what is fee,fees
-what is the fees,fees
-how much is the fees,fees
-fees for first year,fees
-fees,fees
-about the fees,fees
-tell me something about the fees,fees
-What is the fees of hostel,fees
-how much is the fees,fees
-hostel fees,fees
-fees for AC room,fees
-fees for non-AC room,fees
-fees for Ac room for girls,fees
-fees for non-Ac room for girls,fees
-fees for Ac room for boys,fees
-fees for non-Ac room for boys,fees
-Magkano ang tuition,fees
-Paano magbayad ng fees,fees
-Saan magbayad ng tuition,fees
-Pwede po bang installment ang bayad,fees
-tuition,fees
-payment,fees
 where is the college located,location
 college is located at,location
 where is college,location
@@ -194,23 +135,6 @@ Anong requirements kailangan,document
 Saan kumuha ng TOR,document
 Paano mag-request ng document,document
 requirements,document
-size of campus,floors
-building size,floors
-How many floors does college have,floors
-floors in college,floors
-floors in college,floors
-how tall is UNI's College of Engineering college building,floors
-floors,floors
-Syllabus for IT,syllabus
-what is the Information Technology syllabus,syllabus
-syllabus,syllabus
-timetable,syllabus
-what is IT syllabus,syllabus
-syllabus,syllabus
-What is next lecture,syllabus
-Saan makuha ang syllabus,syllabus
-Meron bang syllabus online,syllabus
-course sched,syllabus
 is there any library,library
 library facility,library
 library facilities,library
@@ -258,19 +182,6 @@ May tulong ba sa paghahanap ng trabaho,placement
 Paano mag-apply sa OJT,placement
 ojt,placement
 job,placement
-exam dates,sem
-exam schedule,sem
-When is semester exam,sem
-Semester exam timetable,sem
-sem,sem
-semester,sem
-exam,sem
-when is exam,sem
-exam timetable,sem
-exam dates,sem
-when is semester,sem
-Kailan magsisimula ang sem,sem
-Ilang units bawat sem,sem
 scholarship,scholarship
 Is scholarship available,scholarship
 scholarship engineering,scholarship
@@ -302,55 +213,45 @@ Paano mag-apply ng iskolarship,scholarship
 Sino pwede mag-apply ng scholarship,scholarship
 scholar,scholarship
 scholarship,scholarship
-college dress code,uniform
-college dresscode,uniform
-what is the uniform,uniform
-can we wear casuals,uniform
-Does college have an uniform,uniform
-Is there any uniform,uniform
-uniform,uniform
-what about uniform,uniform
-do we have to wear uniform,uniform
-Ano po ang uniform,uniform
-Saan bibili ng uniform,uniform
-unif,uniform
-what are the different committe in college,committee
-different committee in college,committee
-Are there any committee in college,committee
-Give me committee details,committee
-committee,committee
-how many committee are there in college,committee
-Sino nasa committee,committee
-Paano sumali sa isang committee?,committee
-List of student committees,committee
-Is there a student council committee?,committee
-committee,committee
-commitee,committee
-student council,committee
-comitee,committee
-holidays,vacation
-when will semester starts,vacation
-when will semester end,vacation
-when is the holidays,vacation
-list of holidays,vacation
-Holiday in these year,vacation
-holiday list,vacation
-about vacations,vacation
-about holidays,vacation
-When is vacation,vacation
-When is holidays,vacation
-how long will be the vacation,vacation
-Kailan ang bakasyon,vacation
-Kailan magsisimula ang semestral break,vacation
-sports and games,sports
-give sports details,sports
-sports infrastructure,sports
-sports facilities,sports
-information about sports,sports
-Sports activities,sports
-please provide sports and games information,sports
-Anong sports meron,sports
-May varsity ba,sports
+information about fee,fees
+information on fee,fees
+tell me the fee,fees
+college fee,fees
+fee per semester,fees
+what is the fee of each semester,fees
+what is the fees of each year,fees
+what is fee,fees
+what is the fees,fees
+how much is the fees,fees
+fees for first year,fees
+fees,fees
+about the fees,fees
+tell me something about the fees,fees
+What is the fees of hostel,fees
+how much is the fees,fees
+hostel fees,fees
+fees for AC room,fees
+fees for non-AC room,fees
+fees for Ac room for girls,fees
+fees for non-Ac room for girls,fees
+fees for Ac room for boys,fees
+fees for non-Ac room for boys,fees
+Magkano ang tuition,fees
+Paano magbayad ng fees,fees
+Saan magbayad ng tuition,fees
+Pwede po bang installment ang bayad,fees
+tuition,fees
+payment,fees
+Syllabus for IT,syllabus
+what is the Information Technology syllabus,syllabus
+syllabus,syllabus
+timetable,syllabus
+what is IT syllabus,syllabus
+syllabus,syllabus
+What is next lecture,syllabus
+Saan makuha ang syllabus,syllabus
+Meron bang syllabus online,syllabus
+course sched,syllabus
 what can you do,task
 what are the thing you can do,task
 things you can do,task
@@ -362,6 +263,21 @@ Anong tulong pwede mo ibigay,task
 para saan ka,task
 what are you for,task
 task,task
+okk,salutation
+okie,salutation
+nice work,salutation
+well done,salutation
+good job,salutation
+thanks for the help,salutation
+Thank You,salutation
+its ok,salutation
+Thanks,salutation
+Good work,salutation
+k,salutation
+ok,salutation
+okay,salutation
+Ok salamat po,salutation
+"Ayos, thank you",salutation
 How do I log into the student portal,portal_login
 I forgot my student portal password,portal_login
 How to reset my portal password,portal_login
@@ -434,37 +350,126 @@ reg,enrollment_registration
 registration,enrollment_registration
 enroll,enrollment_registration
 enrollment,enrollment_registration
-ragging,hazing_policy
-is ragging practice active in college,hazing_policy
-does college have any antiragging facility,hazing_policy
-is there any ragging cases,hazing_policy
-is ragging done here,hazing_policy
-ragging against,hazing_policy
-antiragging facility,hazing_policy
-ragging juniors,hazing_policy
-ragging history,hazing_policy
-ragging incidents,hazing_policy
-May hazing ba dito,hazing_policy
-Paano mag-report ng bullying,hazing_policy
-Paano mag-report ng hazing?,hazing_policy
-Anti-hazing policy ng school,hazing_policy
-bullying,hazing_policy
-bully,hazing_policy
-okk,salutation
-okie,salutation
-nice work,salutation
-well done,salutation
-good job,salutation
-thanks for the help,salutation
-Thank You,salutation
-its ok,salutation
-Thanks,salutation
-Good work,salutation
-k,salutation
-ok,salutation
-okay,salutation
-Ok salamat po,salutation
-"Ayos, thank you",salutation
+what is the process of admission,admission
+what is the admission process,admission
+How to take admission in your college,admission
+What is the process for admission,admission
+admission,admission
+admission process,admission
+Paano mag-apply,admission
+Anong requirements sa pag-enroll,admission
+Pwede pa po bang mag-enroll,admission
+max number of students,admission
+number of seats per branch,admission
+number of seats in each branch,admission
+maximum number of seats,admission
+maximum students intake,admission
+What is college intake,admission
+how many stundent are taken in each branch,admission
+seat allotment,admission
+seats,admission
+Ilan estudyante tinatanggap,admission
+apply,admission
+admision,admission
+size of campus,building_floors
+building size,building_floors
+How many floors does college have,building_floors
+floors in college,building_floors
+floors in college,building_floors
+how tall is UNI's College of Engineering college building,building_floors
+floors,building_floors
+Who is HOD,program_chair
+Where is HOD,program_chair
+it hod,program_chair
+name of it hod,program_chair
+Sino po ang IT head,program_chair
+Sino chairperson ng IT department,program_chair
+Who is computer HOD,program_chair
+Where is computer HOD,program_chair
+computer hod,program_chair
+name of computer hod,program_chair
+Sino head ng computer science,program_chair
+Who is extc HOD,program_chair
+Where is  extc HOD,program_chair
+extc hod,program_chair
+name of extc hod,program_chair
+Sino head ng ECE department,program_chair
+hod,program_chair
+hod name,program_chair
+who is the hod,program_chair
+Sino head ng department,program_chair
+Who's the department chair for IT?,program_chair
+Sino po ang chairperson ng Computer Science department?,program_chair
+How do I contact my program chair?,program_chair
+Paano makontak ang department head?,program_chair
+department chair contact,program_chair
+scs hod?,program_chair
+sea hod?,program_chair
+sabm hod?,program_chair
+IT hod?,program_chair
+CS hod?,program_chair
+IS hod?,program_chair
+engineer hod?,program_chair
+mma hod?,program_chair
+program chair,program_chair
+archi hod?,program_chair
+architecture hod?,program_chair
+eng hod?,program_chair
+psych hod?,program_chair
+psychology hod?,program_chair
+ba comm hod?,program_chair
+tm hod?,program_chair
+tourism hod,program_chair
+exam dates,sem
+exam schedule,sem
+When is semester exam,sem
+Semester exam timetable,sem
+sem,sem
+semester,sem
+exam,sem
+when is exam,sem
+exam timetable,sem
+exam dates,sem
+when is semester,sem
+Kailan magsisimula ang sem,sem
+Ilang units bawat sem,sem
+holidays,vacation
+when will semester starts,vacation
+when will semester end,vacation
+when is the holidays,vacation
+list of holidays,vacation
+Holiday in these year,vacation
+holiday list,vacation
+about vacations,vacation
+about holidays,vacation
+When is vacation,vacation
+When is holidays,vacation
+how long will be the vacation,vacation
+Kailan ang bakasyon,vacation
+Kailan magsisimula ang semestral break,vacation
+sports and games,sports
+give sports details,sports
+sports infrastructure,sports
+sports facilities,sports
+information about sports,sports
+Sports activities,sports
+please provide sports and games information,sports
+Anong sports meron,sports
+May varsity ba,sports
+what are the different committe in college,committee
+different committee in college,committee
+Are there any committee in college,committee
+Give me committee details,committee
+committee,committee
+how many committee are there in college,committee
+Sino nasa committee,committee
+Paano sumali sa isang committee?,committee
+List of student committees,committee
+Is there a student council committee?,committee
+committee,committee
+commitee,committee
+student council,committee
+comitee,committee
 hostel facility,dormitory
 hostel servive,dormitory
 hostel location,dormitory
@@ -496,48 +501,29 @@ hostle,dormitory
 drom,dormitory
 domr,dormitory
 host,dormitory
-Who is HOD,department_contact
-Where is HOD,department_contact
-it hod,department_contact
-name of it hod,department_contact
-Sino po ang IT head,department_contact
-Sino chairperson ng IT department,department_contact
-Who is computer HOD,department_contact
-Where is computer HOD,department_contact
-computer hod,department_contact
-name of computer hod,department_contact
-Sino head ng computer science,department_contact
-Who is extc HOD,department_contact
-Where is  extc HOD,department_contact
-extc hod,department_contact
-name of extc hod,department_contact
-Sino head ng ECE department,department_contact
-hod,department_contact
-hod name,department_contact
-who is the hod,department_contact
-Sino head ng department,department_contact
-Who's the department chair for IT?,department_contact
-Sino po ang chairperson ng Computer Science department?,department_contact
-How do I contact my program chair?,department_contact
-Paano makontak ang department head?,department_contact
-department chair contact,department_contact
-scs hod?,department_contact
-sea hod?,department_contact
-sabm hod?,department_contact
-IT hod?,department_contact
-CS hod?,department_contact
-IS hod?,department_contact
-engineer hod?,department_contact
-mma hod?,department_contact
-program chair,department_contact
-archi hod?,department_contact
-architecture hod?,department_contact
-eng hod?,department_contact
-psych hod?,department_contact
-psychology hod?,department_contact
-ba comm hod?,department_contact
-tm hod?,department_contact
-tourism hod,department_contact
+college dress code,uniform
+college dresscode,uniform
+what is the uniform,uniform
+can we wear casuals,uniform
+Does college have an uniform,uniform
+Is there any uniform,uniform
+uniform,uniform
+what about uniform,uniform
+do we have to wear uniform,uniform
+Ano po ang uniform,uniform
+Saan bibili ng uniform,uniform
+unif,uniform
+Can I wear sleeveless clothes?,dress_code
+What's the dress code on wash days?,dress_code
+Can boys have piercings or earrings?,dress_code
+Can I dye my hair a bright color?,dress_code
+Is vaping or smoking allowed on campus?,dress_code
+Do I need my COR for PE uniform?,dress_code
+What do I need to show for NSTP uniform?,dress_code
+dress code,dress_code
+Pwede ba mag-vape sa campus,dress_code
+Bawal ba ang piercing,dress_code
+Ano bawal isuot sa school,dress_code
 What facilities college provide,facilities
 College facility,facilities
 What are college facilities,facilities
@@ -548,29 +534,114 @@ how is college infrastructure,facilities
 infrastructure,facilities
 college infrastructure,facilities
 Anong facilities meron,facilities
-May gym ba dito,facilities
 May clinic ba sa campus?,facilities
-Does the campus have a gym?,facilities
-What labs are available?,facilities
-labs?,facilities
-what is the process of admission,admission
-what is the admission process,admission
-How to take admission in your college,admission
-What is the process for admission,admission
-admission,admission
-admission process,admission
-Paano mag-apply,admission
-Anong requirements sa pag-enroll,admission
-Pwede pa po bang mag-enroll,admission
-max number of students,admission
-number of seats per branch,admission
-number of seats in each branch,admission
-maximum number of seats,admission
-maximum students intake,admission
-What is college intake,admission
-how many stundent are taken in each branch,admission
-seat allotment,admission
-seats,admission
-Ilan estudyante tinatanggap,admission
-apply,admission
-admision,admission
+What labs are available?,laboratories
+labs?,laboratories
+What laboratories does NU Laguna have?,laboratories
+Is there a chemistry lab?,laboratories
+Where do I do my drafting work?,laboratories
+Does NU Laguna have a psychology lab?,laboratories
+computer laboratories,laboratories
+Anong laboratories meron,laboratories
+May gym ba dito,sports_facilities
+Does the campus have a gym?,sports_facilities
+What sports facilities does NU Laguna have?,sports_facilities
+Is there a swimming pool?,sports_facilities
+Where can I play basketball?,sports_facilities
+Is there a football field?,sports_facilities
+sports infrastructure,sports_facilities
+Anong sports facilities meron,sports_facilities
+What is Bulldogs Exchange?,bulldogs_exchange
+Where is Bulldogs Exchange?,bulldogs_exchange
+Where can I buy NU merchandise?,bulldogs_exchange
+Where can I buy my uniform?,bulldogs_exchange
+Where can I buy NU shirts?,bulldogs_exchange
+What does Bulldogs Exchange sell?,bulldogs_exchange
+What merchandise does NU Laguna sell?,bulldogs_exchange
+Where is the NU merchandise store?,bulldogs_exchange
+What time does Bulldogs Exchange open?,bulldogs_exchange
+What time does Bulldogs Exchange close?,bulldogs_exchange
+Where can I buy a NU jacket?,bulldogs_exchange
+Saan ang Bulldogs Exchange?,bulldogs_exchange
+Saan bumili ng uniform?,bulldogs_exchange
+Saan pwede bumili ng NU merchandise?,bulldogs_exchange
+Anong tinda sa Bulldogs Exchange?,bulldogs_exchange
+list of courses,program
+list of courses offered,program
+what are the courses offered in your college?,program
+courses?,program
+courses offered,program
+courses you offer,program
+branches?,program
+can you tell me the courses available in UNI?,program
+Anong mga kurso meron,program
+Anong course pwede kunin,program
+Ano available na programs,program
+What programs does NU Laguna offer?,program
+What programs are offered?,program
+list of programs,program
+what programs do you have,program
+what degree programs are there,program
+What programs are under SEA?,sea_programs
+What programs are offered by SEA?,sea_programs
+What programs does SEA offer?,sea_programs
+What courses are under SEA?,sea_programs
+What degrees are under SEA?,sea_programs
+SEA programs,sea_programs
+Programs under School of Engineering and Architecture,sea_programs
+Ano ang programs under SEA?,sea_programs
+Anong programs ang meron sa SEA?,sea_programs
+What programs are under SABM?,sabm_programs
+What programs are offered by SABM?,sabm_programs
+What programs does SABM offer?,sabm_programs
+What degrees are under SABM?,sabm_programs
+SABM programs,sabm_programs
+Programs under School of Accountancy Business and Management,sabm_programs
+Ano ang programs under SABM?,sabm_programs
+Anong programs ang meron sa SABM?,sabm_programs
+What programs are under SCS?,scs_programs
+What programs are offered by SCS?,scs_programs
+What programs does SCS offer?,scs_programs
+What degrees are under SCS?,scs_programs
+SCS programs,scs_programs
+Programs under School of Computing Studies,scs_programs
+Ano ang programs under SCS?,scs_programs
+Anong programs ang meron sa SCS?,scs_programs
+What programs are under SAS?,sas_programs
+What programs are offered by SAS?,sas_programs
+What programs does SAS offer?,sas_programs
+What degrees are under SAS?,sas_programs
+SAS programs,sas_programs
+Programs under School of Arts and Sciences,sas_programs
+Ano ang programs under SAS?,sas_programs
+Anong programs ang meron sa SAS?,sas_programs
+What strands are offered in SHS?,shs_strands
+What strands are under SHS?,shs_strands
+What are the SHS strands?,shs_strands
+SHS strands,shs_strands
+What can I take in senior high school?,shs_strands
+What strands does NU Laguna offer?,shs_strands
+Ano ang strands sa SHS?,shs_strands
+Anong strand ang meron sa NU Laguna?,shs_strands
+ragging,hazing_policy
+is ragging practice active in college,hazing_policy
+does college have any antiragging facility,hazing_policy
+is there any ragging cases,hazing_policy
+is ragging done here,hazing_policy
+ragging against,hazing_policy
+antiragging facility,hazing_policy
+ragging juniors,hazing_policy
+ragging history,hazing_policy
+ragging incidents,hazing_policy
+May hazing ba dito,hazing_policy
+Paano mag-report ng bullying,hazing_policy
+Paano mag-report ng hazing?,hazing_policy
+Anti-hazing policy ng school,hazing_policy
+bullying,hazing_policy
+bully,hazing_policy
+Where is the Discipline Office?,discipline_office
+Where is the Guidance Office?,discipline_office
+How do I report a concern to the Discipline Office?,discipline_office
+Saan ang Discipline Office?,discipline_office
+Saan ang Guidance Office?,discipline_office
+Paano mag-report sa Discipline Office,discipline_office

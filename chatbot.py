@@ -203,7 +203,7 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
         # If we just talked about department chairs, and this message is a bare
         # follow-up naming a program (like just "mma" after "mma hod"), answer
         # it directly instead of forcing the person to repeat "hod" every time.
-        if last_intent == "department_contact" and departments:
+        if last_intent == "program_chair" and departments:
             code, info = detect_school(cleaned_input, departments)
             if code:
                 print(f"Bot: {format_department_reply(code, info)}")
@@ -213,14 +213,14 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
             cleaned_input, embedder, pattern_embeddings, pattern_intents
         )
 
-        if best_intent == "department_contact" and score >= SIMILARITY_THRESHOLD and departments:
+        if best_intent == "program_chair" and score >= SIMILARITY_THRESHOLD and departments:
             code, info = detect_school(cleaned_input, departments)
             if code:
                 print(f"Bot: {format_department_reply(code, info)}")
             else:
                 reply = random.choice(response_lookup[best_intent])
                 print(f"Bot: {reply}")
-            last_intent = "department_contact"
+            last_intent = "program_chair"
             continue
 
         if score < SIMILARITY_THRESHOLD:
