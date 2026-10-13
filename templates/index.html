@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NU Laguna Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2b3990;
+    --navy-deep: #1e2a6e;
+    --gold: #f5c518;
+    --bg: #f3f4f8;
+    --surface: #ffffff;
+    --surface-2: #eceef5;
+    --text: #1b1f33;
+    --muted: #646b85;
+    --border: #dde0ea;
+    --user-bubble: var(--navy);
+    --user-text: #ffffff;
+    --bot-bubble: #ffffff;
+    --ok: #1f8a5b;
+    --warn: #b7791f;
+    --bad: #c2413a;
+    --todo-bg: #fff3c4;
+    --todo-text: #7a5600;
+    --link: #2b3990;
+    --shadow: 0 1px 2px rgba(20, 25, 60, .06), 0 2px 8px rgba(20, 25, 60, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1222;
+      --surface: #171b30;
+      --surface-2: #20253f;
+      --text: #e7e9f3;
+      --muted: #9aa0bd;
+      --border: #2b3150;
+      --user-bubble: #3c4bb0;
+      --bot-bubble: #1c2139;
+      --ok: #4cc38a;
+      --warn: #e2b04a;
+      --bad: #f07a72;
+      --todo-bg: #4a3b0c;
+      --todo-text: #ffe08a;
+      --link: #9fb0ff;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  button { font: inherit; cursor: pointer; }
+
+  /* ---------- header ---------- */
+  header {
+    background: var(--navy);
+    color: #fff;
+    border-bottom: 3px solid var(--gold);
+    flex-shrink: 0;
+  }
+  .header-inner {
+    max-width: 860px; margin: 0 auto;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .logo {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--gold); color: var(--navy-deep);
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 15px; letter-spacing: .5px;
+    flex-shrink: 0;
+  }
+  .title { flex: 1; min-width: 0; }
+  .title h1 { margin: 0; font-size: 17px; font-weight: 700; }
+  .title p { margin: 1px 0 0; font-size: 12.5px; opacity: .78; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .header-actions { display: flex; align-items: center; gap: 6px; }
+  .hbtn {
+    background: rgba(255,255,255,.1); color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 8px; padding: 7px 11px; font-size: 13px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .hbtn:hover { background: rgba(255,255,255,.18); }
+  .hbtn svg { width: 16px; height: 16px; }
+  .switch { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; cursor: pointer; user-select: none; padding: 0 4px; }
+  .switch input { display: none; }
+  .switch .track { width: 32px; height: 18px; border-radius: 9px; background: rgba(255,255,255,.25); position: relative; transition: background .15s; }
+  .switch .track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .15s; }
+  .switch input:checked + .track { background: var(--gold); }
+  .switch input:checked + .track::after { transform: translateX(14px); }
+
+  /* ---------- messages ---------- */
+  main { flex: 1; overflow-y: auto; scroll-behavior: smooth; }
+  .messages { max-width: 860px; margin: 0 auto; padding: 20px 16px 8px; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; flex-direction: column; max-width: 78%; animation: pop .18s ease-out; }
+  .row.user { align-self: flex-end; align-items: flex-end; }
+  .row.bot { align-self: flex-start; align-items: flex-start; }
+  @keyframes pop { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .bubble { padding: 10px 14px; border-radius: 16px; line-height: 1.5; word-wrap: break-word; overflow-wrap: anywhere; box-shadow: var(--shadow); }
+  .user .bubble { background: var(--user-bubble); color: var(--user-text); border-bottom-right-radius: 5px; }
+  .bot .bubble { background: var(--bot-bubble); border: 1px solid var(--border); border-bottom-left-radius: 5px; }
+  .bot.error .bubble { border-color: var(--bad); color: var(--bad); }
+  .bubble a { color: var(--link); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+  .todo { background: var(--todo-bg); color: var(--todo-text); border-radius: 5px; padding: 1px 5px; font-size: 13px; font-weight: 600; }
+
+  .sender { font-size: 11.5px; color: var(--muted); margin: 0 6px 4px; font-weight: 500; }
+
+  /* chips (suggestions / did-you-mean / guide) */
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
+  .chips.scroll { max-height: 260px; overflow-y: auto; padding: 2px; }
+  .chip {
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 7px 13px; font-size: 13.5px; text-align: left; line-height: 1.3;
+    transition: border-color .12s, background .12s;
+  }
+  .chip:hover:not(:disabled) { border-color: var(--navy); background: var(--surface-2); }
+  .chip .num { color: var(--muted); font-weight: 600; margin-right: 6px; font-variant-numeric: tabular-nums; }
+  .chip.choice { border-color: var(--navy); border-width: 1.5px; font-weight: 500; }
+  .chip:disabled { opacity: .45; cursor: default; }
+  .chip.chosen { opacity: 1; background: var(--navy); color: #fff; border-color: var(--navy); }
+  .chip.chosen .num { color: rgba(255,255,255,.7); }
+
+  /* model info line */
+  .meta {
+    margin: 6px 4px 0; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11.5px;
+    color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+  }
+  body.hide-meta .meta { display: none; }
+  .badge { border-radius: 4px; padding: 1px 6px; font-weight: 500; border: 1px solid currentColor; }
+  .badge.ok { color: var(--ok); }
+  .badge.warn { color: var(--warn); }
+  .badge.bad { color: var(--bad); }
+  .badge.neutral { color: var(--muted); }
+  .meta .intent { color: var(--text); font-weight: 500; }
+  .conf { display: inline-flex; align-items: center; gap: 6px; }
+  .bar { position: relative; width: 70px; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: visible; }
+  .bar .fill { position: absolute; inset: 0 auto 0 0; border-radius: 3px; }
+  .bar .mark { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--muted); opacity: .6; }
+
+  /* typing indicator */
+  .typing .bubble { display: inline-flex; gap: 4px; padding: 13px 15px; }
+  .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: .15s; }
+  .typing span:nth-child(3) { animation-delay: .3s; }
+  @keyframes blink { 0%, 60%, 100% { opacity: .25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
+
+  /* ---------- composer ---------- */
+  footer { flex-shrink: 0; background: var(--bg); }
+  .composer { max-width: 860px; margin: 0 auto; padding: 10px 16px 14px; }
+  form { display: flex; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 6px 6px 6px 14px; box-shadow: var(--shadow); }
+  form:focus-within { border-color: var(--navy); }
+  #input { flex: 1; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; font-size: 15px; min-width: 0; }
+  #send { background: var(--navy); color: #fff; border: 0; border-radius: 10px; padding: 0 16px; height: 38px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+  #send:disabled { opacity: .5; cursor: default; }
+  #send svg { width: 16px; height: 16px; }
+  .hint { text-align: center; font-size: 11.5px; color: var(--muted); margin-top: 7px; }
+
+  /* ---------- guide drawer ---------- */
+  .scrim { position: fixed; inset: 0; background: rgba(10, 12, 30, .35); opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 10; }
+  .drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(400px, 100%);
+    background: var(--surface); border-left: 1px solid var(--border);
+    transform: translateX(100%); transition: transform .22s ease; z-index: 11;
+    display: flex; flex-direction: column;
+  }
+  body.guide-open .scrim { opacity: 1; pointer-events: auto; }
+  body.guide-open .drawer { transform: none; }
+  .drawer-head { padding: 16px; border-bottom: 1px solid var(--border); }
+  .drawer-head .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .drawer-head h2 { margin: 0; font-size: 16px; }
+  .drawer-head p { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+  .close { background: none; border: 0; color: var(--muted); font-size: 22px; line-height: 1; padding: 4px 8px; }
+  #guideSearch { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 9px; background: var(--bg); color: var(--text); font: inherit; font-size: 14px; outline: 0; }
+  #guideSearch:focus { border-color: var(--navy); }
+  .guide-list { flex: 1; overflow-y: auto; padding: 8px; }
+  .guide-item { display: flex; gap: 10px; width: 100%; text-align: left; background: none; border: 0; border-radius: 9px; padding: 9px 10px; color: var(--text); font-size: 14px; }
+  .guide-item:hover { background: var(--surface-2); }
+  .guide-item .num { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 22px; font-weight: 600; }
+  .guide-item .tag { display: block; font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .guide-empty { padding: 20px; text-align: center; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 640px) {
+    .row { max-width: 90%; }
+    .hbtn .label, .switch .label { display: none; }
+    .title p { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">NU</div>
+    <div class="title">
+      <h1>NU Laguna Assistant</h1>
+      <p>Student information chatbot &middot; English, Tagalog &amp; Taglish</p>
+    </div>
+    <div class="header-actions">
+      <label class="switch" title="Show matched intent and confidence under each reply">
+        <input type="checkbox" id="metaToggle" checked>
+        <span class="track"></span>
+        <span class="label">Model info</span>
+      </label>
+      <button class="hbtn" id="guideBtn" title="Example questions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg>
+        <span class="label">Guide</span>
+      </button>
+      <button class="hbtn" id="resetBtn" title="Start a new conversation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        <span class="label">New chat</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="scroller">
+  <div class="messages" id="messages"></div>
+</main>
+
+<footer>
+  <div class="composer">
+    <form id="form" autocomplete="off">
+      <input id="input" placeholder="Ask about enrollment, grades, fees, the campus…" maxlength="500" aria-label="Your message">
+      <button id="send" type="submit">
+        Send
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </button>
+    </form>
+    <div class="hint">Matching uses sentence embeddings (cosine similarity), not keywords. Type <b>guide</b> or open the Guide for examples.</div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Guide">
+  <div class="drawer-head">
+    <div class="top">
+      <div>
+        <h2>Things you can ask</h2>
+        <p id="guideCount">One example per intent</p>
+      </div>
+      <button class="close" id="closeGuide" aria-label="Close">&times;</button>
+    </div>
+    <input id="guideSearch" placeholder="Filter questions or intents…">
+  </div>
+  <div class="guide-list" id="guideList"></div>
+</aside>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const messagesEl = $("messages");
+const scroller = $("scroller");
+const input = $("input");
+const sendBtn = $("send");
+
+let CONFIG = { guide: [], thresholds: { similarity: 0.55, min_gap: 0.03, near_miss_gap: 0.08 } };
+let busy = false;
+
+// Intents used for the starter chips in the welcome message (if they exist).
+const STARTER_INTENTS = ["enrollment_registration", "check_grades", "portal_login", "fees", "program", "location"];
+
+/* ---------- helpers ---------- */
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// Turns a reply string into safe HTML: escapes it first, then adds links,
+// highlights [TODO: ...] placeholders, and turns \n into line breaks.
+function formatReply(text) {
+  const lines = text.split("\n").map((l) => l.trim()).filter((l, i, arr) => l || (i > 0 && i < arr.length - 1));
+  let html = escapeHtml(lines.join("\n"));
+  html = html.replace(/(https?:\/\/[^\s<]+[^\s<.,;:!?)])/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+  html = html.replace(/(^|[\s(])([\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g, '$1<a href="mailto:$2">$2</a>');
+  html = html.replace(/\[TODO:([^\]]*)\]/g, '<span class="todo" title="Placeholder: real info still missing">&#9888; TODO:$1</span>');
+  return html.replace(/\n/g, "<br>");
+}
+
+function scrollToBottom() {
+  requestAnimationFrame(() => { scroller.scrollTop = scroller.scrollHeight; });
+}
+
+function addRow(who, extraClass) {
+  const row = document.createElement("div");
+  row.className = `row ${who}` + (extraClass ? ` ${extraClass}` : "");
+  messagesEl.appendChild(row);
+  return row;
+}
+
+function addUserMessage(text) {
+  const row = addRow("user");
+  row.innerHTML = `<div class="bubble">${escapeHtml(text)}</div>`;
+  scrollToBottom();
+}
+
+function addBotBubble(html, extraClass) {
+  const row = addRow("bot", extraClass);
+  row.innerHTML = `<div class="sender">NU Laguna Assistant</div><div class="bubble">${html}</div>`;
+  scrollToBottom();
+  return row;
+}
+
+function showTyping() {
+  const row = addRow("bot", "typing");
+  row.innerHTML = `<div class="bubble"><span></span><span></span><span></span></div>`;
+  scrollToBottom();
+  return row;
+}
+
+/* ---------- model info line ---------- */
+const KIND_BADGES = {
+  answer:       ["ok", "matched"],
+  department:   ["ok", "matched + school"],
+  followup:     ["ok", "follow-up"],
+  picked:       ["ok", "picked option"],
+  did_you_mean: ["warn", "did you mean"],
+  fallback:     ["bad", "not understood"],
+  too_short:    ["neutral", "too short"],
+  invalid_number: ["neutral", "invalid number"],
+};
+
+function buildMeta(r) {
+  const badge = KIND_BADGES[r.kind];
+  if (!badge) return null;
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  const parts = [`<span class="badge ${badge[0]}">${badge[1]}</span>`];
+
+  if (r.intent) {
+    const label = r.kind === "fallback" ? "best guess" : "intent";
+    parts.push(`<span>${label}: <span class="intent">${escapeHtml(r.intent)}</span></span>`);
+  }
+  if (r.score !== null && r.score !== undefined) {
+    const t = CONFIG.thresholds.similarity;
+    const pct = Math.max(0, Math.min(1, r.score)) * 100;
+    const color = r.score >= t ? "var(--ok)" : "var(--bad)";
+    parts.push(`<span class="conf" title="cosine similarity; marker = threshold ${t}">
+      <span class="bar"><span class="fill" style="width:${pct}%;background:${color}"></span><span class="mark" style="left:${t * 100}%"></span></span>
+      ${r.score.toFixed(2)}</span>`);
+  }
+  if (r.second_intent && r.gap !== null && r.gap !== undefined) {
+    parts.push(`<span>runner-up: ${escapeHtml(r.second_intent)} (gap ${r.gap.toFixed(2)})</span>`);
+  }
+  if (r.reason) parts.push(`<span>· ${escapeHtml(r.reason)}</span>`);
+  meta.innerHTML = parts.join("");
+  return meta;
+}
+
+/* ---------- rendering a reply ---------- */
+function renderResult(r) {
+  const row = addBotBubble(formatReply(r.reply));
+
+  if (r.kind === "did_you_mean" && r.options.length) {
+    const box = document.createElement("div");
+    box.className = "chips";
+    r.options.forEach((opt) => {
+      const b = document.createElement("button");
+      b.className = "chip choice";
+      b.innerHTML = `<span class="num">${opt.number}</span>${escapeHtml(opt.question)}`;
+      b.onclick = () => {
+        if (busy) return;
+        box.querySelectorAll("button").forEach((x) => (x.disabled = true));
+        b.classList.add("chosen");
+        // Send the NUMBER (that's what the bot's state expects), but show the question.
+        send(String(opt.number), opt.question);
+      };
+      box.appendChild(b);
+    });
+    row.appendChild(box);
+  }
+
+  if (r.kind === "guide" && r.options.length) {
+    row.appendChild(buildChipList(r.options, true));
+  }
+
+  if (r.kind === "fallback" || r.kind === "too_short" || r.kind === "invalid_number") {
+    const box = document.createElement("div");
+    box.className = "chips";
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.textContent = "Show example questions";
+    b.onclick = openGuide;
+    box.appendChild(b);
+    row.appendChild(box);
+  }
+
+  const meta = buildMeta(r);
+  if (meta) row.appendChild(meta);
+  scrollToBottom();
+}
+
+function buildChipList(options, scroll) {
+  const box = document.createElement("div");
+  box.className = "chips" + (scroll ? " scroll" : "");
+  options.forEach((opt) => {
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.innerHTML = (opt.number && scroll ? `<span class="num">${opt.number}</span>` : "") + escapeHtml(opt.question);
+    b.onclick = () => send(opt.question);
+    box.appendChild(b);
+  });
+  return box;
+}
+
+/* ---------- talking to the server ---------- */
+async function send(message, displayText) {
+  message = message.trim();
+  if (!message || busy) return;
+  busy = true;
+  sendBtn.disabled = true;
+  closeGuide();
+
+  addUserMessage(displayText || message);
+  const typing = showTyping();
+  const started = Date.now();
+
+  try {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message }),
+    });
+    if (!res.ok) throw new Error(`Server returned ${res.status}`);
+    const data = await res.json();
+    // Keep the typing dots up for a moment so fast replies don't just flash.
+    const wait = Math.max(0, 450 - (Date.now() - started));
+    await new Promise((ok) => setTimeout(ok, wait));
+    typing.remove();
+    renderResult(data);
+  } catch (err) {
+    typing.remove();
+    addBotBubble(escapeHtml("I couldn't reach the chatbot server. Is app.py still running? (" + err.message + ")"), "error");
+  } finally {
+    busy = false;
+    sendBtn.disabled = false;
+    input.focus();
+  }
+}
+
+$("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = input.value;
+  input.value = "";
+  send(text);
+});
+
+/* ---------- guide drawer ---------- */
+function renderGuide(filter) {
+  const list = $("guideList");
+  const q = (filter || "").trim().toLowerCase();
+  const items = CONFIG.guide.filter((g) => !q || g.question.toLowerCase().includes(q) || g.intent.toLowerCase().includes(q));
+  list.innerHTML = "";
+  if (!items.length) {
+    list.innerHTML = `<div class="guide-empty">No example matches “${escapeHtml(filter)}”.</div>`;
+    return;
+  }
+  items.forEach((g) => {
+    const b = document.createElement("button");
+    b.className = "guide-item";
+    b.innerHTML = `<span class="num">${g.number}</span><span>${escapeHtml(g.question)}<span class="tag">${escapeHtml(g.intent)}</span></span>`;
+    b.onclick = () => send(g.question);
+    list.appendChild(b);
+  });
+}
+function openGuide() { document.body.classList.add("guide-open"); $("guideSearch").value = ""; renderGuide(""); setTimeout(() => $("guideSearch").focus(), 50); }
+function closeGuide() { document.body.classList.remove("guide-open"); }
+$("guideBtn").onclick = openGuide;
+$("closeGuide").onclick = closeGuide;
+$("scrim").onclick = closeGuide;
+$("guideSearch").oninput = (e) => renderGuide(e.target.value);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeGuide(); });
+
+/* ---------- model info toggle (remembered in this browser) ---------- */
+const metaToggle = $("metaToggle");
+try { if (localStorage.getItem("showMeta") === "0") metaToggle.checked = false; } catch (e) {}
+function applyMeta() {
+  document.body.classList.toggle("hide-meta", !metaToggle.checked);
+  try { localStorage.setItem("showMeta", metaToggle.checked ? "1" : "0"); } catch (e) {}
+}
+metaToggle.onchange = applyMeta;
+applyMeta();
+
+/* ---------- welcome + new chat ---------- */
+function welcome() {
+  messagesEl.innerHTML = "";
+  const row = addBotBubble(formatReply(
+    "Hi! I'm the NU Laguna student information assistant.\nAsk me about enrollment, grades, fees, the student portal, programs, campus facilities and more, in English, Tagalog, or Taglish."
+  ));
+  const starters = STARTER_INTENTS
+    .map((tag) => CONFIG.guide.find((g) => g.intent === tag))
+    .filter(Boolean);
+  if (starters.length) row.appendChild(buildChipList(starters, false));
+}
+
+$("resetBtn").onclick = async () => {
+  if (busy) return;
+  try { await fetch("/api/reset", { method: "POST" }); } catch (e) {}
+  welcome();
+  input.focus();
+};
+
+(async function init() {
+  try {
+    const res = await fetch("/api/config");
+    CONFIG = await res.json();
+    $("guideCount").textContent = `One example per intent · ${CONFIG.guide.length} intents`;
+  } catch (e) { /* page still works; just no chips */ }
+  // A page reload starts a fresh conversation on the server too.
+  try { await fetch("/api/reset", { method: "POST" }); } catch (e) {}
+  welcome();
+  input.focus();
+})();
+</script>
+</body>
+</html>

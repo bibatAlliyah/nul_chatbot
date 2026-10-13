@@ -1,5 +1,4 @@
-before running "python chatbot.py", first run:
-
-pip install pandas
-pip install scikit-learn
-pip install sentence-transformers
+flask>=3.0
+sentence-transformers>=3.0
+pandas
+numpy
