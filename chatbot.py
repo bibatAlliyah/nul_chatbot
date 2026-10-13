@@ -19,6 +19,21 @@ MIN_GAP = 0.03                # top guess must beat the runner-up by at least th
 NEAR_MISS_GAP = 0.08          # if the gap is under this, worth offering "did you mean"
 MIN_INPUT_LENGTH = 2          # inputs shorter than this (after cleanup) are too vague to trust
 
+# The intent tags that list a school's programs/strands. Grouped here so the
+# "remember what we were just talking about" shortcut can tell a programs
+# question apart from a program-chair question.
+PROGRAM_LISTING_TAGS = {
+    "sea_programs", "sabm_programs", "scs_programs", "sas_programs", "shs_strands",
+}
+
+# Which programs-listing intent to use for each department code, used when a
+# bare follow-up like "sabm" needs to be answered with THAT department's
+# program list instead of its program chair.
+DEPARTMENT_TO_PROGRAMS_TAG = {
+    "SEA": "sea_programs", "SABM": "sabm_programs", "SCS": "scs_programs",
+    "SAS": "sas_programs", "SHS": "shs_strands",
+}
+
 
 def build_normalization_dict(data_path):
     import pandas as pd
@@ -29,7 +44,7 @@ def build_normalization_dict(data_path):
         "u": "you", "ur": "your", "pls": "please", "plz": "please",
         "thx": "thanks", "tnx": "thanks", "info": "information",
         "asap": "as soon as possible", "msg": "message", "acc": "account",
-        "reg": "registration",
+        "reg": "registration", "progs": "programs", "prog": "program",
     })
 
     return normalization_dict
@@ -167,10 +182,22 @@ def format_department_reply(code, info):
     return f"The Program Chair for {info['name']} ({code}) is {info['hod_name']}. You can reach them at {info['contact']}."
 
 
+def answer_for_department(code, info, kind, response_lookup):
+    """Gives either the chair info or the programs list for a department,
+    depending on which kind of question this conversation was just about."""
+    if kind == "chair":
+        return format_department_reply(code, info)
+
+    tag = DEPARTMENT_TO_PROGRAMS_TAG.get(code)
+    if tag and tag in response_lookup:
+        return random.choice(response_lookup[tag])
+    return format_department_reply(code, info)  # fallback, shouldn't normally happen
+
+
 def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
               response_lookup, guide_questions, representative_questions, departments):
     print_startup_banner()
-    last_intent = None  # remembers the topic of the last confident answer
+    last_department_kind = None  # "chair", "programs", or None; see note below
 
     while True:
         user_input = input("You: ").strip()
@@ -200,13 +227,18 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
             print("Bot: That's too short for me to work with, can you ask a full question?")
             continue
 
-        # If we just talked about department chairs, and this message is a bare
-        # follow-up naming a program (like just "mma" after "mma hod"), answer
-        # it directly instead of forcing the person to repeat "hod" every time.
-        if last_intent == "program_chair" and departments:
+        # If the last turn was about a department (either its chair or its
+        # programs), and THIS message is just a bare department code on its
+        # own ("sabm", "scs?", "shs"), answer with the SAME kind of info as
+        # before, for the newly named department. This only fires for a bare
+        # code, not a full sentence: a full question like "What programs are
+        # under SABM?" has enough content to be matched correctly on its own,
+        # and should never be hijacked just because it mentions a department.
+        is_bare_code = len(cleaned_input.split()) <= 1
+        if last_department_kind and is_bare_code and departments:
             code, info = detect_school(cleaned_input, departments)
             if code:
-                print(f"Bot: {format_department_reply(code, info)}")
+                print(f"Bot: {answer_for_department(code, info, last_department_kind, response_lookup)}")
                 continue
 
         best_intent, score, second_intent, gap = get_best_match(
@@ -220,15 +252,15 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
             else:
                 reply = random.choice(response_lookup[best_intent])
                 print(f"Bot: {reply}")
-            last_intent = "program_chair"
+            last_department_kind = "chair"
             continue
 
         if score < SIMILARITY_THRESHOLD:
             print("Bot: Sorry, I do not understand. Type 'guide' to see example questions, or try rephrasing.")
-            last_intent = None
+            last_department_kind = None
         elif gap < MIN_GAP:
             print("Bot: Sorry, I do not understand. Type 'guide' to see example questions, or try rephrasing.")
-            last_intent = None
+            last_department_kind = None
         elif gap < NEAR_MISS_GAP and second_intent:
             q1 = representative_questions.get(best_intent, best_intent)
             q2 = representative_questions.get(second_intent, second_intent)
@@ -236,11 +268,11 @@ def chat_loop(embedder, pattern_embeddings, pattern_intents, normalization_dict,
             print(f"  1. {q1}")
             print(f"  2. {q2}")
             print("Type 1 or 2, or just rephrase your question.")
-            last_intent = None
+            last_department_kind = None
         else:
             reply = random.choice(response_lookup[best_intent])
             print(f"Bot: {reply}")
-            last_intent = best_intent
+            last_department_kind = "programs" if best_intent in PROGRAM_LISTING_TAGS else None
 
 
 def main():
