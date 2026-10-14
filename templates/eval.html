@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chatbot Evaluation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2b3990; --navy-deep: #1e2a6e; --gold: #f5c518;
+    --bg: #f3f4f8; --surface: #ffffff; --surface-2: #eceef5;
+    --text: #1b1f33; --muted: #646b85; --border: #dde0ea;
+    --ok: #1f8a5b; --warn: #b7791f; --bad: #c2413a;
+    --diag: 43, 57, 144; --off: 194, 65, 58;
+    --shadow: 0 1px 2px rgba(20,25,60,.06), 0 2px 8px rgba(20,25,60,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1222; --surface: #171b30; --surface-2: #20253f;
+      --text: #e7e9f3; --muted: #9aa0bd; --border: #2b3150;
+      --ok: #4cc38a; --warn: #e2b04a; --bad: #f07a72;
+      --diag: 120, 140, 255; --off: 240, 122, 114;
+      --shadow: 0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Plus Jakarta Sans", system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14.5px; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12.5px; }
+  header { background: var(--navy); color: #fff; border-bottom: 3px solid var(--gold); }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
+  .logo { width: 40px; height: 40px; border-radius: 10px; background: var(--gold); color: var(--navy-deep); display: grid; place-items: center; font-weight: 700; }
+  .title { flex: 1; } .title h1 { margin: 0; font-size: 17px; } .title p { margin: 1px 0 0; font-size: 12.5px; opacity: .78; }
+  .hbtn { color: #fff; text-decoration: none; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 7px 12px; font-size: 13px; font-weight: 500; }
+  .hbtn:hover { background: rgba(255,255,255,.18); }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+  .tabs { display: inline-flex; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 3px; }
+  .tab { border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600; font-size: 13.5px; padding: 8px 14px; border-radius: 7px; cursor: pointer; }
+  .tab.active { background: var(--navy); color: #fff; }
+  .note { color: var(--muted); font-size: 13px; margin: 10px 0 18px; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+  .card .label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .card .value { font-size: 28px; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .card .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; box-shadow: var(--shadow); }
+  section h2 { margin: 0 0 4px; font-size: 15.5px; }
+  section .desc { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+
+  .stack { display: flex; height: 26px; border-radius: 7px; overflow: hidden; margin: 6px 0 10px; }
+  .stack div { display: grid; place-items: center; color: #fff; font-size: 12px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+  .table-wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); font-size: 13.5px; vertical-align: top; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+  th.sortable { cursor: pointer; user-select: none; } th.sortable:hover { color: var(--text); }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; } th.num { text-align: right; }
+  .f1bar { display: inline-block; width: 60px; height: 6px; border-radius: 3px; background: var(--surface-2); margin-right: 8px; vertical-align: middle; position: relative; overflow: hidden; }
+  .f1bar span { position: absolute; inset: 0 auto 0 0; }
+  .tag { font-family: "JetBrains Mono", monospace; font-size: 12px; }
+  .pill { display: inline-block; border: 1px solid currentColor; border-radius: 4px; padding: 0 6px; font-size: 11.5px; font-family: "JetBrains Mono", monospace; }
+  .pill.answer { color: var(--ok); } .pill.did_you_mean { color: var(--warn); } .pill.fallback { color: var(--bad); }
+
+  /* confusion matrix */
+  .cm-wrap { overflow: auto; max-height: 720px; }
+  .cm { border-collapse: separate; border-spacing: 1px; width: auto; }
+  .cm td, .cm th { padding: 0; border: 0; }
+  .cm td.cell { width: 17px; height: 17px; min-width: 17px; font-size: 9.5px; text-align: center; font-variant-numeric: tabular-nums; border-radius: 2px; background: var(--surface-2); cursor: default; }
+  .cm th.row { text-align: right; padding-right: 6px; font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text); text-transform: none; letter-spacing: 0; font-weight: 400; white-space: nowrap; }
+  .cm th.col { height: 120px; vertical-align: bottom; padding-bottom: 4px; }
+  .cm th.col span { display: block; writing-mode: vertical-rl; transform: rotate(180deg); font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text); text-transform: none; letter-spacing: 0; font-weight: 400; white-space: nowrap; margin: 0 auto; }
+  .cm-axis { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .cm-hover { min-height: 20px; font-size: 13px; margin-top: 8px; color: var(--muted); }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .empty { color: var(--muted); font-size: 13.5px; padding: 6px 0; }
+  .error-box { background: var(--surface); border: 1px solid var(--bad); color: var(--bad); border-radius: 12px; padding: 16px; }
+  .loading { color: var(--muted); padding: 30px 0; text-align: center; }
+  @media (max-width: 800px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">NU</div>
+    <div class="title">
+      <h1>Model Evaluation</h1>
+      <p id="subtitle">Sentence-embedding intent classifier</p>
+    </div>
+    <a class="hbtn" href="/">&larr; Back to chat</a>
+  </div>
+</header>
+
+<main>
+  <div class="tabs">
+    <button class="tab active" data-mode="test">Held-out test set</button>
+    <button class="tab" data-mode="loo">Leave-one-out</button>
+  </div>
+  <div class="note" id="note"></div>
+  <div id="content"><div class="loading">Running evaluation…</div></div>
+
+  <section>
+    <h2>Unmatched questions from real chats</h2>
+    <p class="desc">Messages from logs/chat_log.csv that got "did you mean" or "not understood", plus anything given a thumbs-down. Use these for error analysis, or add them as new patterns and test rows.</p>
+    <div id="unmatched"><div class="empty">Loading…</div></div>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pct = (x) => x === null || x === undefined ? "–" : (x * 100).toFixed(1) + "%";
+const f3 = (x) => x === null || x === undefined ? "–" : x.toFixed(3);
+const scoreColor = (x) => x >= 0.85 ? "var(--ok)" : x >= 0.6 ? "var(--warn)" : "var(--bad)";
+const NOTES = {
+  test: "Questions the bot has never seen (test_data.csv). This is the number to report. Add more rows to make it stronger.",
+  loo: "Each training pattern is hidden and classified using the other patterns. Usually a bit optimistic, since many patterns are near-copies.",
+};
+let current = "test";
+let sortKey = "f1", sortAsc = true;
+let lastResult = null;
+
+document.querySelectorAll(".tab").forEach((b) => b.onclick = () => {
+  document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("active", x === b));
+  load(b.dataset.mode);
+});
+
+async function load(mode) {
+  current = mode;
+  $("note").textContent = NOTES[mode];
+  $("content").innerHTML = `<div class="loading">Running evaluation…</div>`;
+  try {
+    const res = await fetch(`/api/eval?mode=${mode}`);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || res.status);
+    if (current !== mode) return;
+    lastResult = data;
+    render(data);
+  } catch (e) {
+    $("content").innerHTML = `<div class="error-box">Couldn't run the evaluation: ${esc(e.message)}</div>`;
+  }
+}
+
+function render(r) {
+  $("subtitle").textContent = `${r.model} · ${r.note}`;
+  const b = r.behaviour, t = r.thresholds;
+  const parts = [
+    ["Answered", b.answered_rate, "var(--ok)"],
+    ["Did you mean", b.did_you_mean_rate, "var(--warn)"],
+    ["Not understood", b.fallback_rate, "var(--bad)"],
+  ];
+  $("content").innerHTML = `
+    <div class="cards">
+      <div class="card"><div class="label">Accuracy</div><div class="value">${pct(r.accuracy)}</div><div class="sub">top-1, ${r.n} questions</div></div>
+      <div class="card"><div class="label">Macro F1</div><div class="value">${f3(r.macro.f1)}</div><div class="sub">every intent counts equally</div></div>
+      <div class="card"><div class="label">Macro precision</div><div class="value">${f3(r.macro.precision)}</div><div class="sub">weighted: ${f3(r.weighted.precision)}</div></div>
+      <div class="card"><div class="label">Macro recall</div><div class="value">${f3(r.macro.recall)}</div><div class="sub">weighted: ${f3(r.weighted.recall)}</div></div>
+      <div class="card"><div class="label">Weighted F1</div><div class="value">${f3(r.weighted.f1)}</div><div class="sub">by number of questions</div></div>
+    </div>
+
+    <section>
+      <h2>How the bot actually responds</h2>
+      <p class="desc">With the real thresholds (similarity ≥ ${t.similarity}, gap ≥ ${t.min_gap}, "did you mean" below gap ${t.near_miss_gap}).</p>
+      <div class="stack">${parts.map(([l, v, c]) => v > 0 ? `<div style="width:${v * 100}%;background:${c}" title="${l}: ${pct(v)}">${v > .07 ? pct(v) : ""}</div>` : "").join("")}</div>
+      <div class="legend">
+        ${parts.map(([l, v, c]) => `<span><span class="dot" style="background:${c}"></span>${l}: <b>${pct(v)}</b></span>`).join("")}
+        <span>Correct when answered: <b>${pct(b.answered_accuracy)}</b></span>
+        <span>"Did you mean" includes the right intent: <b>${pct(b.did_you_mean_contains_correct)}</b></span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Per-intent precision, recall and F1</h2>
+      <p class="desc">Click a column to sort. Low F1 at the top shows where the bot needs better patterns.</p>
+      <div class="table-wrap"><table id="perIntent"></table></div>
+    </section>
+
+    <section>
+      <h2>Confusion matrix</h2>
+      <p class="desc">Rows are the true intent, columns are what the bot predicted. The diagonal is correct; anything off the diagonal is a mistake. Hover a cell for details.</p>
+      <div class="cm-wrap" id="cm"></div>
+      <div class="cm-hover" id="cmHover">&nbsp;</div>
+    </section>
+
+    <div class="grid2">
+      <section>
+        <h2>Most confused pairs</h2>
+        <p class="desc">True intent → what the bot predicted instead.</p>
+        <div id="confused"></div>
+      </section>
+      <section>
+        <h2>Error summary</h2>
+        <p class="desc">${r.errors.length} of ${r.n} questions misclassified (top-1). ${b.fallback_but_top1_correct} more were right at top-1 but fell below the threshold.</p>
+        <div class="desc">Saved as <span class="mono">eval_output/${r.mode}_errors.csv</span> when you run <span class="mono">python evaluate.py</span>.</div>
+      </section>
+    </div>
+
+    <section>
+      <h2>Misclassified questions</h2>
+      <p class="desc">"Matched pattern" is the training example the question was closest to, usually the reason for the mistake.</p>
+      <div class="table-wrap"><table id="errors"></table></div>
+    </section>`;
+
+  renderPerIntent();
+  renderMatrix(r);
+  $("confused").innerHTML = r.most_confused.length
+    ? `<table>${r.most_confused.map((c) => `<tr><td class="tag">${esc(c.true)}</td><td>→</td><td class="tag">${esc(c.predicted)}</td><td class="num">×${c.count}</td></tr>`).join("")}</table>`
+    : `<div class="empty">No confusions. Every question was classified correctly.</div>`;
+  $("errors").innerHTML = r.errors.length
+    ? `<tr><th>Question</th><th>True</th><th>Predicted</th><th class="num">Score</th><th>Bot would</th><th>Matched pattern</th></tr>` +
+      r.errors.map((e) => `<tr>
+        <td>${esc(e.text)}${e.normalized && e.normalized !== e.text.toLowerCase() ? `<div class="mono" style="color:var(--muted)">→ ${esc(e.normalized)}</div>` : ""}</td>
+        <td class="tag">${esc(e.true)}</td><td class="tag">${esc(e.predicted)}</td>
+        <td class="num">${e.score.toFixed(2)}</td>
+        <td><span class="pill ${e.decision}">${e.decision.replace(/_/g, " ")}</span></td>
+        <td style="color:var(--muted)">${esc(e.matched_pattern)}</td></tr>`).join("")
+    : `<tr><td class="empty">No misclassified questions.</td></tr>`;
+}
+
+function renderPerIntent() {
+  const rows = lastResult.per_intent.filter((m) => m.support > 0).slice();
+  rows.sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    const c = typeof x === "string" ? x.localeCompare(y) : x - y;
+    return sortAsc ? c : -c;
+  });
+  const head = [["intent", "Intent", ""], ["precision", "Precision", "num"], ["recall", "Recall", "num"], ["f1", "F1", ""], ["support", "Questions", "num"]];
+  $("perIntent").innerHTML =
+    `<tr>${head.map(([k, l, c]) => `<th class="sortable ${c}" data-k="${k}">${l}${sortKey === k ? (sortAsc ? " ▲" : " ▼") : ""}</th>`).join("")}</tr>` +
+    rows.map((m) => `<tr>
+      <td class="tag">${esc(m.intent)}</td>
+      <td class="num">${m.precision.toFixed(2)}</td>
+      <td class="num">${m.recall.toFixed(2)}</td>
+      <td><span class="f1bar"><span style="width:${m.f1 * 100}%;background:${scoreColor(m.f1)}"></span></span>${m.f1.toFixed(2)}</td>
+      <td class="num">${m.support}</td></tr>`).join("");
+  $("perIntent").querySelectorAll("th.sortable").forEach((th) => th.onclick = () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = k === "f1" || k === "intent"; }
+    renderPerIntent();
+  });
+}
+
+function renderMatrix(r) {
+  const L = r.labels, M = r.confusion_matrix;
+  const rowMax = M.map((row) => Math.max(1, row.reduce((a, b) => a + b, 0)));
+  let html = `<div class="cm-axis">↓ true intent &nbsp; · &nbsp; predicted intent →</div><table class="cm"><tr><th></th>`;
+  html += L.map((l) => `<th class="col"><span>${esc(l)}</span></th>`).join("") + "</tr>";
+  M.forEach((row, i) => {
+    html += `<tr><th class="row">${esc(L[i])}</th>`;
+    row.forEach((v, j) => {
+      let style = "";
+      if (v) {
+        const a = 0.18 + 0.82 * (v / rowMax[i]);
+        const rgb = i === j ? "var(--diag)" : "var(--off)";
+        style = `background: rgba(${rgb}, ${a.toFixed(2)}); color: ${a > .55 ? "#fff" : "var(--text)"};`;
+      }
+      html += `<td class="cell" style="${style}" data-i="${i}" data-j="${j}">${v || ""}</td>`;
+    });
+    html += "</tr>";
+  });
+  $("cm").innerHTML = html + "</table>";
+  $("cm").onmouseover = (e) => {
+    const c = e.target.closest("td.cell");
+    if (!c) return;
+    const i = +c.dataset.i, j = +c.dataset.j, v = M[i][j];
+    $("cmHover").innerHTML = i === j
+      ? `<b>${esc(L[i])}</b>: ${v} of ${rowMax[i]} classified correctly`
+      : `<b>${esc(L[i])}</b> predicted as <b>${esc(L[j])}</b>: ${v} time${v === 1 ? "" : "s"}`;
+  };
+}
+
+async function loadUnmatched() {
+  try {
+    const rows = await (await fetch("/api/logs/unmatched")).json();
+    $("unmatched").innerHTML = rows.length
+      ? `<div class="table-wrap"><table><tr><th>Time</th><th>Message</th><th>Bot did</th><th>Best guess</th><th class="num">Score</th></tr>` +
+        rows.map((r) => `<tr><td class="mono" style="white-space:nowrap;color:var(--muted)">${esc(r.time.replace("T", " "))}</td>
+          <td>${esc(r.message)}${r.downvoted ? ` <span class="pill fallback">👎</span>` : ""}</td>
+          <td><span class="pill ${esc(r.kind)}">${esc(r.kind.replace(/_/g, " "))}</span></td>
+          <td class="tag">${esc(r.intent)}</td><td class="num">${r.score ? (+r.score).toFixed(2) : ""}</td></tr>`).join("") + `</table></div>`
+      : `<div class="empty">Nothing yet. Questions the bot struggles with in the chat will show up here.</div>`;
+  } catch (e) {
+    $("unmatched").innerHTML = `<div class="empty">Couldn't load the chat log.</div>`;
+  }
+}
+
+load("test");
+loadUnmatched();
+</script>
+</body>
+</html>

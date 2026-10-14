@@ -27,11 +27,11 @@
     {
       "tag": "goodbye",
       "patterns": [
+        "Goodbye",
         "cya",
         "see you",
         "bye bye",
         "See you later",
-        "Goodbye",
         "I am Leaving",
         "Bye",
         "Have a Good day",
@@ -53,11 +53,11 @@
     {
       "tag": "name",
       "patterns": [
+        "what is your name",
         "name",
         "your name",
         "do you have a name",
         "what are you called",
-        "what is your name",
         "what should I call you",
         "whats your name?",
         "what are you",
@@ -73,17 +73,17 @@
       "responses": [
         "I am an NU Laguna Chatbot",
         "I am a Chatbot.",
-        "I am an IT Helpdesk chatbot."
+        "I'm the NU Laguna student information assistant."
       ]
     },
     {
       "tag": "hours",
       "patterns": [
+        "what are your hours",
         "timing of college",
         "what is college timing",
         "working days",
         "when are you guys open",
-        "what are your hours",
         "hours of operation",
         "when is the college open",
         "college timing",
@@ -110,13 +110,13 @@
     {
       "tag": "number",
       "patterns": [
+        "Contact number?",
         "more info",
         "contact info",
         "how to contact college",
         "college telephone number",
         "college number",
         "What is your contact no",
-        "Contact number?",
         "how to call you",
         "College phone no?",
         "how can i contact you",
@@ -132,7 +132,7 @@
         "contact number"
       ],
       "responses": [
-        "You can reach NU Laguna at (049) 572-3356 / (+63) 919-082-1494 \nEmail: admissions@nu-laguna.edu.ph \nFB Page: https://www.facebook.com/NULagunaPH"
+        "You can reach NU Laguna through:\n- **Phone:** (049) 572-3356\n- **Mobile:** (+63) 919-082-1494\n- **Email:** admissions@nu-laguna.edu.ph\n- **Facebook:** https://www.facebook.com/NULagunaPH"
       ]
     },
     {
@@ -163,6 +163,7 @@
     {
       "tag": "event",
       "patterns": [
+        "what are the events",
         "events organised",
         "list of events",
         "list of events organised in college",
@@ -171,7 +172,6 @@
         "Are there any event held at college",
         "Events?",
         "functions",
-        "what are the events",
         "tell me about events",
         "what about events",
         "Anong mga event ngayon",
@@ -179,12 +179,13 @@
         "Kailan susunod na event"
       ],
       "responses": [
-        "For event details, please visit the NU Laguna FB Page at https://www.facebook.com/NULagunaPH \nand/or the School's calendar in the NUIS."
+        "For event details, check:\n- The NU Laguna Facebook page: https://www.facebook.com/NULagunaPH\n- The school calendar in your NUIS account"
       ]
     },
     {
       "tag": "document",
       "patterns": [
+        "what documents do I need for admission",
         "document to bring",
         "documents needed for admision",
         "documents needed at the time of admission",
@@ -196,7 +197,6 @@
         "Which document to bring for admission",
         "documents",
         "what documents do i need",
-        "what documents do I need for admission",
         "documents needed",
         "Anong requirements kailangan",
         "Saan kumuha ng TOR",
@@ -231,19 +231,19 @@
         "lrc"
       ],
       "responses": [
-        "The library is officially called the Learning Resource Center (LRC). \nYou can reach them at lrc@nu-laguna.edu.ph or call (049) 572-3356 local 3149."
+        "The library is officially called the **Learning Resource Center (LRC)**. You can reach them through:\n- **Email:** lrc@nu-laguna.edu.ph\n- **Phone:** (049) 572-3356 local 3149"
       ]
     },
     {
       "tag": "canteen",
       "patterns": [
+        "Where is canteen",
         "food facilities",
         "canteen facilities",
         "canteen facility",
         "is there any canteen",
         "Is there a cafetaria in college",
         "Does college have canteen",
-        "Where is canteen",
         "where is cafetaria",
         "canteen",
         "Food",
@@ -254,17 +254,14 @@
         "cantten"
       ],
       "responses": [
-        "NU Laguna has food stalls in Sampaloc Lane as well as a Cafetaria right next to the Main Campus Building."
+        "Here's where you can eat on campus:\n- The **Sampaloc Lane** food stalls\n- The **Cafeteria** right next to the Main Campus Building"
       ]
     },
     {
       "tag": "placement",
       "patterns": [
+        "How do I find an internship",
         "What is college placement",
-        "Which companies visit in college",
-        "What is average package",
-        "companies visit",
-        "package",
         "About placement",
         "placement",
         "recruitment",
@@ -272,7 +269,10 @@
         "May tulong ba sa paghahanap ng trabaho",
         "Paano mag-apply sa OJT",
         "ojt",
-        "job"
+        "job",
+        "Is there a job fair",
+        "career services",
+        "Where can I apply for a job at NU"
       ],
       "responses": [
         "You can apply for a job at https://www.nu.edu.ph/talent-hub for any NU campuses."
@@ -281,28 +281,20 @@
     {
       "tag": "scholarship",
       "patterns": [
-        "scholarship",
         "Is scholarship available",
+        "scholarship",
         "scholarship engineering",
         "scholarship it",
         "scholarship ce",
-        "scholarship mechanical",
         "scholarship civil",
-        "scholarship chemical",
-        "scholarship for AI/ML",
         "available scholarships",
         "scholarship for computer engineering",
         "scholarship for IT engineering",
-        "scholarship for mechanical engineering",
         "scholarship for civil engineering",
-        "scholarship for chemical engineering",
         "list of scholarship",
         "comps scholarship",
         "IT scholarship",
-        "mechanical scholarship",
         "civil scholarship",
-        "chemical scholarship",
-        "automobile scholarship",
         "first year scholarship",
         "second year scholarship",
         "third year scholarship",
@@ -311,7 +303,13 @@
         "Paano mag-apply ng iskolarship",
         "Sino pwede mag-apply ng scholarship",
         "scholar",
-        "scholarship"
+        "scholarship",
+        "scholarship for computer science",
+        "scholarship for architecture",
+        "academic scholarship",
+        "athletic scholarship",
+        "May scholarship ba para sa varsity",
+        "scholarship for psychology"
       ],
       "responses": [
         "In here is the list of scholarship programs: https://www.national-u.edu.ph/nu-laguna/scholarships/"
@@ -320,6 +318,7 @@
     {
       "tag": "fees",
       "patterns": [
+        "how much is the tuition per semester",
         "information about fee",
         "information on fee",
         "tell me the fee",
@@ -334,24 +333,20 @@
         "fees",
         "about the fees",
         "tell me something about the fees",
-        "What is the fees of hostel",
         "how much is the fees",
-        "hostel fees",
-        "fees for AC room",
-        "fees for non-AC room",
-        "fees for Ac room for girls",
-        "fees for non-Ac room for girls",
-        "fees for Ac room for boys",
-        "fees for non-Ac room for boys",
         "Magkano ang tuition",
         "Paano magbayad ng fees",
         "Saan magbayad ng tuition",
         "Pwede po bang installment ang bayad",
         "tuition",
-        "payment"
+        "payment",
+        "Magkano ang miscellaneous fee",
+        "May downpayment ba sa tuition",
+        "Where do I pay my tuition",
+        "Pwede bang magbayad online ng tuition"
       ],
       "responses": [
-        "For questions about tuition and fees, contact the Treasury Office at treasury@nu-laguna.edu.ph, \nor pay online through the NU Laguna portal at onlineapp.nu-laguna.edu.ph."
+        "For tuition and fees:\n- **Questions:** contact the Treasury Office at treasury@nu-laguna.edu.ph\n- **Online payment:** use the NU Laguna portal at https://onlineapp.nu-laguna.edu.ph"
       ]
     },
     {
@@ -388,13 +383,14 @@
         "task"
       ],
       "responses": [
-        "I can answer to low-intermediate questions regarding NU Laguna.",
+        "I can answer common questions about NU Laguna, like:\n- Enrollment, admission, and requirements\n- Grades, the student portal, and student email\n- Tuition, fees, and scholarships\n- Programs, program chairs, and campus facilities\n\nType **guide** to see example questions.",
         "You can ask me questions regarding NU Laguna, and I will try to answer them."
       ]
     },
     {
       "tag": "salutation",
       "patterns": [
+        "Thanks",
         "okk",
         "okie",
         "nice work",
@@ -403,7 +399,6 @@
         "thanks for the help",
         "Thank You",
         "its ok",
-        "Thanks",
         "Good work",
         "k",
         "ok",
@@ -432,7 +427,7 @@
         "login"
       ],
       "responses": [
-        "Go to the NU Laguna student portal at https://onlineapp.nu-laguna.edu.ph/portal/services.php and use the password reset option. \nIf your account is locked, contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "To get back into the student portal:\n1. Go to https://onlineapp.nu-laguna.edu.ph/portal/services.php\n2. Use the **password reset** option\n\nIf your account is **locked**, contact the ITSO (IT Services Office):\n- **Email:** itso@nu-laguna.edu.ph\n- **Phone:** (049) 572-3356"
       ]
     },
     {
@@ -471,7 +466,7 @@
         "olc"
       ],
       "responses": [
-        "Log into your NUIS account using your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nIf a class isn't showing up, check with your instructor in MS Teams, or contact the ITSO at itso@nu-laguna.edu.ph."
+        "To access your online classes:\n1. Log into NUIS with your NU Laguna student account at https://onlineapp.nu-laguna.edu.ph/portal/services.php\n2. If a class isn't showing up, check with your instructor on **MS Teams**\n3. Still missing? Contact the ITSO at itso@nu-laguna.edu.ph"
       ]
     },
     {
@@ -491,7 +486,7 @@
         "email acc"
       ],
       "responses": [
-        "You can reset your student email password through the account recovery page, \nor contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or call (049) 572-3356."
+        "To fix your student email:\n- Reset your password through the **account recovery page**\n- Or contact the ITSO (IT Services Office) at itso@nu-laguna.edu.ph or (049) 572-3356"
       ]
     },
     {
@@ -511,7 +506,7 @@
         "grade"
       ],
       "responses": [
-        "Log into your NUIS account at https://onlineapp.nu-laguna.edu.ph/portal/services.php. \nYou can check your grades in NUIS > Students > View Grades. \nFor more questions regarding your grades, please contact your course professor on MS Teams for a grade consultation."
+        "To check your grades:\n1. Log into NUIS at https://onlineapp.nu-laguna.edu.ph/portal/services.php\n2. Go to **Students > View Grades**\n\nFor questions about a specific grade, message your course professor on **MS Teams** for a grade consultation."
       ]
     },
     {
@@ -533,7 +528,7 @@
         "enrollment"
       ],
       "responses": [
-        "For new transfers, you can enroll or register for classes at https://onlineapp.nu-laguna.edu.ph/quest/home.php. \nFor continuing students, please log in to your NUIS account and go to Students > Online Class Registration / Online Enrollment to enroll for the next semester. \nFor deadlines or add/drop concerns, please contact the Registrar's Office at registrar@nu-laguna.edu.ph or call (049) 572-3356 local 3106."
+        "How to enroll depends on your status:\n- **New transferees:** register at https://onlineapp.nu-laguna.edu.ph/quest/home.php\n- **Continuing students:** log into NUIS and go to **Students > Online Class Registration / Online Enrollment**\n\nFor deadlines or add/drop concerns, contact the Registrar's Office:\n- **Email:** registrar@nu-laguna.edu.ph\n- **Phone:** (049) 572-3356 local 3106"
       ]
     },
     {
@@ -562,20 +557,21 @@
         "admision"
       ],
       "responses": [
-        "You can contact Admissions Office with admissions@nu-laguna.edu.ph, \nor you may fill out a form at https://www.nu.edu.ph/admissions/inquire?campus_id=nu-laguna \nor call (+63) 919-082-1494",
-        "You can reach the Admissions Office at admissions@nu-laguna.edu.ph, \nor call (049) 572-3356 local 3147 / 0919-082-1494. \nYou can also apply online through the NU Laguna portal at https://onlineapp.nu-laguna.edu.ph/quest/home.php"
+        "You can reach the Admissions Office through:\n- **Email:** admissions@nu-laguna.edu.ph\n- **Inquiry form:** https://www.nu.edu.ph/admissions/inquire?campus_id=nu-laguna\n- **Mobile:** (+63) 919-082-1494",
+        "You can reach the Admissions Office through:\n- **Email:** admissions@nu-laguna.edu.ph\n- **Phone:** (049) 572-3356 local 3147 / 0919-082-1494\n- **Apply online:** https://onlineapp.nu-laguna.edu.ph/quest/home.php"
       ]
     },
     {
       "tag": "building_floors",
       "patterns": [
+        "How many floors does college have",
         "size of campus",
         "building size",
-        "How many floors does college have",
         "floors in college",
         "floors in college",
-        "how tall is UNI's College of Engineering college building",
-        "floors"
+        "floors",
+        "how many floors does the main building have",
+        "Ilang floors ang building"
       ],
       "responses": [
         "NU Laguna has total 5 floors"
@@ -584,6 +580,7 @@
     {
       "tag": "program_chair",
       "patterns": [
+        "How do I contact my program chair?",
         "Who is HOD",
         "Where is HOD",
         "it hod",
@@ -595,18 +592,12 @@
         "computer hod",
         "name of computer hod",
         "Sino head ng computer science",
-        "Who is extc HOD",
-        "Where is  extc HOD",
-        "extc hod",
-        "name of extc hod",
-        "Sino head ng ECE department",
         "hod",
         "hod name",
         "who is the hod",
         "Sino head ng department",
         "Who's the department chair for IT?",
         "Sino po ang chairperson ng Computer Science department?",
-        "How do I contact my program chair?",
         "Paano makontak ang department head?",
         "department chair contact",
         "scs hod?",
@@ -625,10 +616,15 @@
         "psychology hod?",
         "ba comm hod?",
         "tm hod?",
-        "tourism hod"
+        "tourism hod",
+        "Who is the CpE program chair",
+        "Where is the computer engineering program chair",
+        "cpe hod",
+        "name of the civil engineering program chair",
+        "Sino head ng CpE department"
       ],
       "responses": [
-        "\nProgram Chairs per College Department: \nSCS: Vincent S. Rivera (vsrivera@nu-laguna.edu.ph) \nSAS: Dr. Carlito Loyola (coloyola@nu-laguna.edu.ph) \nSEA: Bryan L. De Guzman (bldeguzman@nu-laguna.edu.ph) \nSABM: Joel M. Cuadra (jmcuadra@nu-laguna.edu.ph) "
+        "Program Chairs per college department:\n- **SCS:** Vincent S. Rivera (vsrivera@nu-laguna.edu.ph)\n- **SAS:** Dr. Carlito Loyola (coloyola@nu-laguna.edu.ph)\n- **SEA:** Bryan L. De Guzman (bldeguzman@nu-laguna.edu.ph)\n- **SABM:** Joel M. Cuadra (jmcuadra@nu-laguna.edu.ph)"
       ]
     },
     {
@@ -655,6 +651,7 @@
     {
       "tag": "vacation",
       "patterns": [
+        "When is vacation",
         "holidays",
         "when will semester starts",
         "when will semester end",
@@ -664,7 +661,6 @@
         "holiday list",
         "about vacations",
         "about holidays",
-        "When is vacation",
         "When is holidays",
         "how long will be the vacation",
         "Kailan ang bakasyon",
@@ -677,9 +673,9 @@
     {
       "tag": "sports",
       "patterns": [
+        "What sports can I join",
         "sports and games",
         "give sports details",
-        "sports infrastructure",
         "sports facilities",
         "information about sports",
         "Sports activities",
@@ -694,6 +690,7 @@
     {
       "tag": "committee",
       "patterns": [
+        "Is there a student council committee?",
         "what are the different committe in college",
         "different committee in college",
         "Are there any committee in college",
@@ -703,7 +700,6 @@
         "Sino nasa committee",
         "Paano sumali sa isang committee?",
         "List of student committees",
-        "Is there a student council committee?",
         "committee",
         "commitee",
         "student council",
@@ -716,8 +712,8 @@
     {
       "tag": "dormitory",
       "patterns": [
+        "Is there a dorm inside the campus",
         "hostel facility",
-        "hostel servive",
         "hostel location",
         "hostel address",
         "hostel facilities",
@@ -728,14 +724,12 @@
         "do you have hostel",
         "do you guys have hostel",
         "hostel",
-        "hostel capacity",
         "what is the hostel fee",
         "how to get in hostel",
         "what is the hostel address",
         "how far is hostel from college",
         "hostel college distance",
         "where is the hostel",
-        "how big is the hostel",
         "distance between college and hostel",
         "distance between hostel and college",
         "May dorm ba",
@@ -746,7 +740,9 @@
         "hostle",
         "drom",
         "domr",
-        "host"
+        "host",
+        "What is the Dormitel",
+        "Saan ang Dormitel"
       ],
       "responses": [
         "NU Laguna's on-campus accommodation is called the Dormitel, which includes dormitory and hotel-style rooms, located inside the campus."
@@ -769,7 +765,7 @@
         "unif"
       ],
       "responses": [
-        "NU Laguna's regular uniform days are Monday, Tuesday, and Thursday. Students should wear the appropriate uniform for their program, with black shoes. Tourism, Psychology, and Exercise and Sports Science students may wear their respective program uniforms. Friday is for E-Sports uniforms with proper rubber shoes. Wednesday and Saturday are wash days — you may wear civilian clothes but must still follow the student dress code. You can buy uniforms at NU Bulldogs Exchange on campus."
+        "**Uniform schedule at NU Laguna:**\n- **Monday, Tuesday, Thursday:** the regular uniform for your program, with black shoes\n- **Friday:** E-Sports uniform with proper rubber shoes\n- **Wednesday and Saturday:** wash days, civilian clothes allowed (the student dress code still applies)\n\nTourism, Psychology, and Exercise and Sports Science students may wear their program uniforms. You can buy uniforms at **NU Bulldogs Exchange** on campus."
       ]
     },
     {
@@ -788,7 +784,7 @@
         "Ano bawal isuot sa school"
       ],
       "responses": [
-        "On wash days (Wednesday and Saturday) you may wear civilian clothes, but some things aren't allowed on campus: male piercings or earrings, bright or loud hair colors, and vapes or cigarettes. If you're wearing a PE or NSTP uniform, you'll also need to present your Certificate of Registration (COR) to the guard on duty."
+        "On wash days (Wednesday and Saturday) you may wear civilian clothes, but these are **not allowed** on campus:\n- Piercings or earrings for male students\n- Bright or loud hair colors\n- Vapes or cigarettes\n\nIf you're wearing a **PE or NSTP uniform**, present your Certificate of Registration (COR) to the guard on duty."
       ]
     },
     {
@@ -807,7 +803,7 @@
         "May clinic ba sa campus?"
       ],
       "responses": [
-        "NU Laguna's campus facilities include Henry Sy Sr. Hall, the Learning Resource Center (library), an auditorium and lobby area, computer and science laboratories, engineering and architecture labs, and various sports facilities. Ask me about a specific facility (like labs, sports facilities, the library, or the canteen) for more details."
+        "NU Laguna's campus facilities include:\n- Henry Sy Sr. Hall\n- The Learning Resource Center (library)\n- An auditorium and lobby area\n- Computer and science laboratories\n- Engineering and architecture labs\n- Sports facilities\n\nAsk me about a specific facility (labs, sports facilities, the library, or the canteen) for more details."
       ]
     },
     {
@@ -823,7 +819,7 @@
         "Anong laboratories meron"
       ],
       "responses": [
-        "NU Laguna's laboratories include Engineering & Architecture labs, a UTM (Universal Testing Machine) lab, drafting rooms, a Chemistry lab, Computer laboratories, and a Psychology lab, depending on your program."
+        "Depending on your program, NU Laguna's laboratories include:\n- Engineering & Architecture labs\n- UTM (Universal Testing Machine) lab\n- Drafting rooms\n- Chemistry lab\n- Computer laboratories\n- Psychology lab"
       ]
     },
     {
@@ -839,7 +835,7 @@
         "Anong sports facilities meron"
       ],
       "responses": [
-        "NU Laguna's sports facilities include the Alice G. Eduardo Tennis & Aquatic Center, the Hoops Center, the Multi-Sports Center, a High-Performance Gym & Rehab Center, and a Football Pitch."
+        "NU Laguna's sports facilities include:\n- Alice G. Eduardo Tennis & Aquatic Center\n- Hoops Center\n- Multi-Sports Center\n- High-Performance Gym & Rehab Center\n- Football Pitch"
       ]
     },
     {
@@ -862,7 +858,7 @@
         "Anong tinda sa Bulldogs Exchange?"
       ],
       "responses": [
-        "Bulldogs Exchange is the NU Laguna merchandise store. You can buy uniforms and NU merchandise such as tumblers, caps, plushies, T-shirts, sweaters, and jackets. It is located on the ground floor beside the Admissions Office and is open from 8:00 AM to 4:00 PM."
+        "**Bulldogs Exchange** is the NU Laguna merchandise store.\n- **Location:** ground floor, beside the Admissions Office\n- **Hours:** 8:00 AM to 4:00 PM\n- **Sells:** uniforms, tumblers, caps, plushies, T-shirts, sweaters, and jackets"
       ]
     },
     {
@@ -875,7 +871,6 @@
         "courses offered",
         "courses you offer",
         "branches?",
-        "can you tell me the courses available in UNI?",
         "Anong mga kurso meron",
         "Anong course pwede kunin",
         "Ano available na programs",
@@ -883,10 +878,11 @@
         "What programs are offered?",
         "list of programs",
         "what programs do you have",
-        "what degree programs are there"
+        "what degree programs are there",
+        "can you tell me the courses available in NU Laguna?"
       ],
       "responses": [
-        "NU Laguna offers programs under the School of Engineering and Architecture (SEA), School of Accountancy, Business, and Management (SABM), School of Computing Studies (SCS), and School of Arts and Sciences (SAS), plus STEM, HUMSS, ABM, GAS, and Sports strands for Senior High School. Ask me about a specific school (e.g. \"What programs are under SCS?\") for the full list. If you're asking about specific class/subject offerings instead of degree programs, check your NUIS account — from the homepage, select List of Class Offerings."
+        "NU Laguna offers programs under these schools:\n- **SEA:** School of Engineering and Architecture\n- **SABM:** School of Accountancy, Business, and Management\n- **SCS:** School of Computing Studies\n- **SAS:** School of Arts and Sciences\n- **SHS:** Senior High School strands (STEM, HUMSS, ABM, GAS, and Sports)\n\nAsk about a specific school (e.g. \"What programs are under SCS?\") for the full list. For class or subject offerings, check NUIS: from the homepage, select **List of Class Offerings**."
       ]
     },
     {
@@ -903,7 +899,7 @@
         "Anong programs ang meron sa SEA?"
       ],
       "responses": [
-        "The School of Engineering and Architecture (SEA) offers the following programs: BS Civil Engineering, BS Computer Engineering, and BS Architecture."
+        "The **School of Engineering and Architecture (SEA)** offers:\n- BS Civil Engineering\n- BS Computer Engineering\n- BS Architecture"
       ]
     },
     {
@@ -919,7 +915,7 @@
         "Anong programs ang meron sa SABM?"
       ],
       "responses": [
-        "The School of Accountancy, Business, and Management (SABM) offers the following programs: BS Accountancy, BS Accounting Information System, BS Business Administration, and BS Tourism Management."
+        "The **School of Accountancy, Business, and Management (SABM)** offers:\n- BS Accountancy\n- BS Accounting Information System\n- BS Business Administration\n- BS Tourism Management"
       ]
     },
     {
@@ -935,7 +931,7 @@
         "Anong programs ang meron sa SCS?"
       ],
       "responses": [
-        "The School of Computing Studies (SCS) offers the following programs: BS Computer Science, BS Information Systems, and BS Information Technology."
+        "The **School of Computing Studies (SCS)** offers:\n- BS Computer Science\n- BS Information Systems\n- BS Information Technology"
       ]
     },
     {
@@ -951,7 +947,7 @@
         "Anong programs ang meron sa SAS?"
       ],
       "responses": [
-        "The School of Arts and Sciences (SAS) offers the following programs: AB Communication, BS Criminology, BS Exercise and Sports Science, BS Psychology, and BS Multimedia Arts."
+        "The **School of Arts and Sciences (SAS)** offers:\n- AB Communication\n- BS Criminology\n- BS Exercise and Sports Science\n- BS Psychology\n- BS Multimedia Arts"
       ]
     },
     {
@@ -967,32 +963,29 @@
         "Anong strand ang meron sa NU Laguna?"
       ],
       "responses": [
-        "NU Laguna Senior High School offers the following strands: STEM, HUMSS, ABM, GAS, and Sports."
+        "NU Laguna **Senior High School** offers these strands:\n- STEM\n- HUMSS\n- ABM\n- GAS\n- Sports"
       ]
     },
     {
       "tag": "hazing_policy",
       "patterns": [
+        "Is hazing allowed in NU Laguna",
         "ragging",
-        "is ragging practice active in college",
-        "does college have any antiragging facility",
-        "is there any ragging cases",
-        "is ragging done here",
-        "ragging against",
-        "antiragging facility",
-        "ragging juniors",
-        "ragging history",
-        "ragging incidents",
         "May hazing ba dito",
         "Paano mag-report ng bullying",
         "Paano mag-report ng hazing?",
         "Anti-hazing policy ng school",
         "bullying",
-        "bully"
+        "bully",
+        "What is the anti-hazing policy",
+        "How do I report bullying",
+        "Someone is bullying me",
+        "May nambubully sa akin",
+        "hazing"
       ],
       "responses": [
-        "NU Laguna enforces a strict anti-hazing policy in line with RA 8049 (Anti-Hazing Law). To report hazing or bullying, you may approach the Discipline Office or Guidance Office on the ground floor, or email gso@nu-laguna.edu.ph.",
-        "We maintain a zero-tolerance policy on hazing. The Discipline Office and Guidance Office (ground floor) handle these reports, or you can email gso@nu-laguna.edu.ph."
+        "NU Laguna enforces a strict anti-hazing policy in line with **RA 8049 (Anti-Hazing Law)**. To report hazing or bullying:\n- Go to the **Discipline Office** or **Guidance Office** on the ground floor\n- Or email gso@nu-laguna.edu.ph",
+        "We maintain a **zero-tolerance** policy on hazing. You can report it to:\n- The Discipline Office or Guidance Office (ground floor)\n- gso@nu-laguna.edu.ph"
       ]
     },
     {
@@ -1006,7 +999,7 @@
         "Paano mag-report sa Discipline Office"
       ],
       "responses": [
-        "The Discipline Office is on the ground floor, to the left of the elevator near the dugout. Enter the office and proceed straight to the cubicles to report your concern. The Guidance Office is in the same area; after entering, go left and follow the signs for the Guidance Office."
+        "**Discipline Office:**\n1. Go to the ground floor, to the left of the elevator near the dugout\n2. Enter the office and go straight to the cubicles to report your concern\n\n**Guidance Office:** it's in the same area. After entering, go left and follow the signs."
       ]
     }
   ]

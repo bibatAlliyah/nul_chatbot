@@ -1,0 +1,116 @@
+text,intent
+hello po good morning,greeting
+hey there,greeting
+magandang hapon po,greeting
+ok bye na po,goodbye
+see you next time,goodbye
+alis na ako salamat,goodbye
+what do i call you,name
+ano name mo bot,name
+what time does the school open,hours
+bukas ba ang office tuwing sabado,hours
+anong oras nagsasara ang mga office,hours
+what's the school's phone number,number
+pano ko kayo macocontact,number
+hotline ng nu laguna,number
+where exactly is nu laguna,location
+nasaan ang campus,location
+how do i get to the school,location
+any upcoming events this month,event
+may event ba sa school ngayon,event
+where can i see school activities,event
+what papers do i need to submit for admission,document
+anong documents ang dadalhin ko,document
+what time does the library open,library
+can i borrow books from the library,library
+saan ang lrc,library
+where can i buy food on campus,canteen
+saan may kainan dito,canteen
+is there a cafeteria,canteen
+does nu help students find internships,placement
+saan mag apply ng trabaho sa nu,placement
+any job openings at nu,placement
+how can i get a scholarship,scholarship
+may scholarship ba para sa athletes,scholarship
+scholarship requirements,scholarship
+how much is the tuition per sem,fees
+pano magbayad ng tuition online,fees
+magkano babayaran ko ngayong sem,fees
+where can i see my class schedule,syllabus
+saan makikita ang schedule ng klase ko,syllabus
+course syllabus,syllabus
+what can you help me with,task
+ano mga kaya mo,task
+thank you so much,salutation
+salamat po,salutation
+great thanks,salutation
+i can't log in to my portal,portal_login
+forgot portal password po,portal_login
+locked out of student portal,portal_login
+how to connect to the school wifi,wifi_connection
+walang internet sa campus,wifi_connection
+wifi pass,wifi_connection
+where do i access my online class,lms_access
+di ko makita yung class ko online,lms_access
+how to submit assignments online,lms_access
+my school email isn't working,student_email
+pano mag reset ng email password,student_email
+how to log into my nu email,student_email
+where do i check my grades,check_grades
+nasaan ang grades ko,check_grades
+when will final grades be posted,check_grades
+how to enroll for 2nd sem,enrollment_registration
+kailan deadline ng enrollment,enrollment_registration
+can i drop a subject,enrollment_registration
+how do i apply to nu laguna,admission
+admission process for freshmen,admission
+paano mag apply as new student,admission
+how many floors is the main building,building_floors
+ilang palapag ang building,building_floors
+who is the program chair of cs,program_chair
+sino ang chair ng tourism,program_chair
+contact the it department head,program_chair
+when are the final exams,sem
+kailan ang midterms,sem
+exam schedule this sem,sem
+when is semestral break,vacation
+kailan ang christmas break,vacation
+what sports can i join at nu,sports
+may varsity tryouts ba,sports
+how to join student council,committee
+what student committees are there,committee
+is there a dorm inside campus,dormitory
+magkano ang dormitel,dormitory
+where can i stay inside campus,dormitory
+what uniform do we wear on monday,uniform
+required ba ang uniform,uniform
+can i wear sleeveless on wash day,dress_code
+are earrings allowed for guys,dress_code
+bawal ba mag vape sa loob ng campus,dress_code
+what facilities does the campus have,facilities
+anong mga pasilidad ng nu laguna,facilities
+does nu laguna have computer labs,laboratories
+is there a drafting room,laboratories
+may chemistry lab ba,laboratories
+is there a pool on campus,sports_facilities
+saan pwede mag basketball,sports_facilities
+is there a gym for students,sports_facilities
+where can i buy nu merch,bulldogs_exchange
+is there an nu merch store,bulldogs_exchange
+what courses are available at nu laguna,program
+anong programs ang inooffer,program
+what engineering programs are there,sea_programs
+programs in sea,sea_programs
+what business courses do you offer,sabm_programs
+programs in sabm,sabm_programs
+what computing programs are offered,scs_programs
+may computer science ba,scs_programs
+what programs are in arts and sciences,sas_programs
+is psychology offered,sas_programs
+what strands can i take in shs,shs_strands
+may stem strand ba,shs_strands
+how do i report bullying po,hazing_policy
+is hazing allowed in nu,hazing_policy
+may nambubully sakin,hazing_policy
+where is the guidance office located,discipline_office
+saan ako mag rereport sa discipline office,discipline_office

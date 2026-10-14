@@ -2,3 +2,4 @@ flask>=3.0
 sentence-transformers>=3.0
 pandas
 numpy
+matplotlib

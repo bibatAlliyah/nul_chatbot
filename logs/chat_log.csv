@@ -1,0 +1,12 @@
+time,session,id,message,normalized,kind,intent,score,second_intent,gap
+2026-10-14T04:12:05,ddaaea505e49,708f0566dd52,how much is the tuition per semester,how much is the tuition per semester,answer,fees,1.0,sem,0.3917
+2026-10-14T04:12:10,ddaaea505e49,b4921c709c1b,list of courses,list of courses,answer,program,1.0,syllabus,0.2899
+2026-10-14T04:12:19,ddaaea505e49,0d4ea3c3460b,What programs are under SABM?,what programs are under sabm,answer,sabm_programs,1.0,sas_programs,0.2394
+2026-10-14T04:12:22,ddaaea505e49,ffe67f488790,What programs are under SAS?,what programs are under sas,answer,sas_programs,1.0,sabm_programs,0.2394
+2026-10-14T04:12:25,ddaaea505e49,69d5f89d947b,What programs are under SCS?,what programs are under scs,answer,scs_programs,1.0,sas_programs,0.2848
+2026-10-14T04:12:27,ddaaea505e49,b7c3d4c7cbe1,list of courses,list of courses,answer,program,1.0,syllabus,0.2899
+2026-10-14T04:12:36,ddaaea505e49,7a65fcf392db,guide,,guide,,,,
+2026-10-14T04:12:42,ddaaea505e49,25367e4e4c5a,What is Bulldogs Exchange?,what is bulldogs exchange,answer,bulldogs_exchange,1.0,fees,0.5636
+2026-10-14T04:12:45,ddaaea505e49,02f61ec0713f,May gym ba dito,may gym ba dito,answer,sports_facilities,1.0,hazing_policy,0.3158
+2026-10-14T04:12:50,ddaaea505e49,be6b57ba7cce,where is the college located,where is the college located,answer,location,1.0,facilities,0.1532
+2026-10-14T04:12:53,ddaaea505e49,7f40dc46ea3f,Is there a dorm inside the campus,is there a dorm inside the campus,answer,dormitory,1.0,location,0.2702

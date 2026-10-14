@@ -112,6 +112,46 @@
   .bot.error .bubble { border-color: var(--bad); color: var(--bad); }
   .bubble a { color: var(--link); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
   .todo { background: var(--todo-bg); color: var(--todo-text); border-radius: 5px; padding: 1px 5px; font-size: 13px; font-weight: 600; }
+  .bubble p { margin: 0; }
+  .bubble p + p { margin-top: 4px; }
+  .bubble ul, .bubble ol { margin: 6px 0 2px; padding-left: 20px; }
+  .bubble li { margin: 3px 0; padding-left: 2px; }
+  .bubble li::marker { color: var(--muted); }
+  .bubble ol li::marker { font-weight: 600; }
+  .bubble strong { font-weight: 650; }
+  .bubble .gap { height: 8px; }
+
+  /* feedback + related */
+  .after { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 6px 4px 0; }
+  .fb { display: inline-flex; gap: 2px; }
+  .fb button { background: none; border: 1px solid transparent; border-radius: 6px; color: var(--muted); padding: 3px 5px; line-height: 0; }
+  .fb button:hover:not(:disabled) { background: var(--surface-2); color: var(--text); }
+  .fb button svg { width: 15px; height: 15px; }
+  .fb button.on { color: var(--navy); border-color: var(--border); background: var(--surface); }
+  .fb button.on.down { color: var(--bad); }
+  .fb button:disabled:not(.on) { opacity: .35; cursor: default; }
+  .fb .thanks { font-size: 12px; color: var(--muted); align-self: center; margin-left: 4px; }
+  .related-label { font-size: 12px; color: var(--muted); margin: 10px 2px 0; font-weight: 500; }
+  .related-label + .chips { margin-top: 5px; }
+  .chip.small { padding: 5px 11px; font-size: 13px; }
+
+  /* "why this answer" panel */
+  .why-btn { background: none; border: 1px solid var(--border); border-radius: 5px; color: var(--muted); padding: 1px 7px; font-family: inherit; font-size: 11.5px; }
+  .why-btn:hover { color: var(--text); border-color: var(--muted); }
+  .why { margin: 8px 4px 0; padding: 10px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 12.5px; width: min(520px, 100%); }
+  body.hide-meta .why { display: none; }
+  .why h4 { margin: 0 0 6px; font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .why .step { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11.5px; margin-bottom: 10px; line-height: 1.6; }
+  .why .step b { color: var(--text); font-weight: 500; }
+  .why .step .arrow { color: var(--muted); }
+  .why .fix { background: var(--todo-bg); color: var(--todo-text); border-radius: 3px; padding: 0 3px; }
+  .rank { display: grid; grid-template-columns: 18px minmax(0, 1fr) 90px 38px; gap: 2px 8px; align-items: center; }
+  .rank .n { color: var(--muted); font-size: 11px; }
+  .rank .name { font-family: "JetBrains Mono", monospace; font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rank .name.best { font-weight: 600; }
+  .rank .pat { grid-column: 2 / 5; color: var(--muted); font-size: 11.5px; margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rank .val { font-family: "JetBrains Mono", monospace; font-size: 11.5px; text-align: right; }
+  .rank .bar { width: 100%; }
 
   .sender { font-size: 11.5px; color: var(--muted); margin: 0 6px 4px; font-weight: 500; }
 
@@ -216,6 +256,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg>
         <span class="label">Guide</span>
       </button>
+      <a class="hbtn" href="/eval" title="Accuracy, precision, recall, F1 and confusion matrix" style="text-decoration:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+        <span class="label">Evaluation</span>
+      </a>
       <button class="hbtn" id="resetBtn" title="Start a new conversation">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
         <span class="label">New chat</span>
@@ -274,15 +318,41 @@ function escapeHtml(s) {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-// Turns a reply string into safe HTML: escapes it first, then adds links,
-// highlights [TODO: ...] placeholders, and turns \n into line breaks.
+// Formatting inside one line: links, emails, **bold**, [TODO: ...] tags.
+// The text is already HTML-escaped when it gets here.
+function formatInline(s) {
+  s = s.replace(/(https?:\/\/[^\s<*]+[^\s<.,;:!?)*])/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+  s = s.replace(/(^|[\s(])([\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g, '$1<a href="mailto:$2">$2</a>');
+  s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/\[TODO:([^\]]*)\]/g, '<span class="todo" title="Placeholder: real info still missing">&#9888; TODO:$1</span>');
+  return s;
+}
+
+// Turns a reply into safe HTML. Escapes everything first, then reads it
+// line by line: "- item" becomes a bullet, "1. step" a numbered step,
+// a blank line a paragraph break, anything else a normal line.
 function formatReply(text) {
-  const lines = text.split("\n").map((l) => l.trim()).filter((l, i, arr) => l || (i > 0 && i < arr.length - 1));
-  let html = escapeHtml(lines.join("\n"));
-  html = html.replace(/(https?:\/\/[^\s<]+[^\s<.,;:!?)])/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
-  html = html.replace(/(^|[\s(])([\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g, '$1<a href="mailto:$2">$2</a>');
-  html = html.replace(/\[TODO:([^\]]*)\]/g, '<span class="todo" title="Placeholder: real info still missing">&#9888; TODO:$1</span>');
-  return html.replace(/\n/g, "<br>");
+  const lines = escapeHtml(text.trim()).split("\n").map((l) => l.trim());
+  let html = "", list = null, gapPending = false;
+  const closeList = () => { if (list) { html += `</${list}>`; list = null; } };
+  for (const line of lines) {
+    if (!line) { closeList(); gapPending = true; continue; }
+    if (gapPending && html) html += '<div class="gap"></div>';
+    gapPending = false;
+    let m;
+    if ((m = line.match(/^[-•*]\s+(.*)$/))) {
+      if (list !== "ul") { closeList(); html += "<ul>"; list = "ul"; }
+      html += `<li>${formatInline(m[1])}</li>`;
+    } else if ((m = line.match(/^(\d+)[.)]\s+(.*)$/))) {
+      if (list !== "ol") { closeList(); html += `<ol start="${m[1]}">`; list = "ol"; }
+      html += `<li>${formatInline(m[2])}</li>`;
+    } else {
+      closeList();
+      html += `<p>${formatInline(line)}</p>`;
+    }
+  }
+  closeList();
+  return html;
 }
 
 function scrollToBottom() {
@@ -351,8 +421,54 @@ function buildMeta(r) {
     parts.push(`<span>runner-up: ${escapeHtml(r.second_intent)} (gap ${r.gap.toFixed(2)})</span>`);
   }
   if (r.reason) parts.push(`<span>· ${escapeHtml(r.reason)}</span>`);
+  if (r.corrections && r.corrections.length) {
+    parts.push(`<span>typo fixed: ${r.corrections.map(([a, b]) => `${escapeHtml(a)}→${escapeHtml(b)}`).join(", ")}</span>`);
+  }
   meta.innerHTML = parts.join("");
+  if (r.top && r.top.length) {
+    const btn = document.createElement("button");
+    btn.className = "why-btn";
+    btn.textContent = "Why?";
+    btn.title = "Show the NLP pipeline and the top-ranked intents";
+    btn.onclick = () => {
+      const row = meta.parentElement;
+      const open = row.querySelector(".why");
+      if (open) { open.remove(); btn.textContent = "Why?"; return; }
+      meta.after(buildWhy(r));
+      btn.textContent = "Hide";
+      scrollToBottom();
+    };
+    meta.appendChild(btn);
+  }
   return meta;
+}
+
+// The "why this answer" panel: what the text looked like after each pipeline
+// step, then the top intents with their score and the closest training example.
+function buildWhy(r) {
+  const box = document.createElement("div");
+  box.className = "why";
+  const t = CONFIG.thresholds.similarity;
+  let normalized = escapeHtml(r.normalized || "");
+  (r.corrections || []).forEach(([, fixed]) => {
+    normalized = normalized.replace(new RegExp(`\\b${fixed.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`), `<span class="fix">${escapeHtml(fixed)}</span>`);
+  });
+  const ranks = r.top.map((x, i) => `
+      <span class="n">${i + 1}</span>
+      <span class="name ${i === 0 ? "best" : ""}">${escapeHtml(x.intent)}</span>
+      <span class="bar" style="display:block;width:100%"><span class="fill" style="width:${Math.max(0, x.score) * 100}%;background:${x.score >= t ? "var(--ok)" : "var(--bad)"}"></span><span class="mark" style="left:${t * 100}%"></span></span>
+      <span class="val">${x.score.toFixed(2)}</span>
+      <span class="pat">closest example: “${escapeHtml(x.pattern)}”</span>`).join("");
+  box.innerHTML = `
+    <h4>1 · Preprocessing</h4>
+    <div class="step">
+      <span class="arrow">input</span> <b>${escapeHtml(r._asked || "")}</b><br>
+      <span class="arrow">→ lowercase, no punctuation, slang &amp; typos fixed</span><br>
+      <b>${normalized}</b>
+    </div>
+    <h4>2 · Top intents by cosine similarity</h4>
+    <div class="rank">${ranks}</div>`;
+  return box;
 }
 
 /* ---------- rendering a reply ---------- */
@@ -393,9 +509,51 @@ function renderResult(r) {
     row.appendChild(box);
   }
 
+  if (r.related && r.related.length) {
+    const label = document.createElement("div");
+    label.className = "related-label";
+    label.textContent = "Related questions";
+    row.appendChild(label);
+    const box = buildChipList(r.related, false);
+    box.querySelectorAll(".chip").forEach((c) => c.classList.add("small"));
+    row.appendChild(box);
+  }
+
+  if (r.id && r.kind !== "guide") row.appendChild(buildFeedback(r.id));
+
   const meta = buildMeta(r);
   if (meta) row.appendChild(meta);
   scrollToBottom();
+}
+
+const THUMB_UP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>';
+const THUMB_DOWN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/></svg>';
+
+function buildFeedback(id) {
+  const wrap = document.createElement("div");
+  wrap.className = "after";
+  const fb = document.createElement("div");
+  fb.className = "fb";
+  [["up", THUMB_UP, "Helpful"], ["down", THUMB_DOWN, "Not helpful"]].forEach(([value, icon, title]) => {
+    const b = document.createElement("button");
+    b.innerHTML = icon;
+    b.title = title;
+    b.setAttribute("aria-label", title);
+    b.onclick = async () => {
+      fb.querySelectorAll("button").forEach((x) => (x.disabled = true));
+      b.classList.add("on", value);
+      const note = document.createElement("span");
+      note.className = "thanks";
+      note.textContent = "Thanks for the feedback";
+      fb.appendChild(note);
+      try {
+        await fetch("/api/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, value }) });
+      } catch (e) { note.textContent = "Couldn't save feedback"; }
+    };
+    fb.appendChild(b);
+  });
+  wrap.appendChild(fb);
+  return wrap;
 }
 
 function buildChipList(options, scroll) {
@@ -431,6 +589,7 @@ async function send(message, displayText) {
     });
     if (!res.ok) throw new Error(`Server returned ${res.status}`);
     const data = await res.json();
+    data._asked = data.user_text || displayText || message;  // shown in the "Why?" panel
     // Keep the typing dots up for a moment so fast replies don't just flash.
     const wait = Math.max(0, 450 - (Date.now() - started));
     await new Promise((ok) => setTimeout(ok, wait));

@@ -13,11 +13,11 @@ Hi po,greeting
 Kumusta,greeting
 Magandang araw po,greeting
 "Uy, pwede magtanong",greeting
+Goodbye,goodbye
 cya,goodbye
 see you,goodbye
 bye bye,goodbye
 See you later,goodbye
-Goodbye,goodbye
 I am Leaving,goodbye
 Bye,goodbye
 Have a Good day,goodbye
@@ -28,11 +28,11 @@ gtg,goodbye
 Sige salamat po,goodbye
 "Ok thank you po, aalis na ako",goodbye
 Paalam na po,goodbye
+what is your name,name
 name,name
 your name,name
 do you have a name,name
 what are you called,name
-what is your name,name
 what should I call you,name
 whats your name?,name
 what are you,name
@@ -44,11 +44,11 @@ what are you,name
 Ano pangalan mo,name
 Sino ka,name
 Meron ka bang pangalan,name
+what are your hours,hours
 timing of college,hours
 what is college timing,hours
 working days,hours
 when are you guys open,hours
-what are your hours,hours
 hours of operation,hours
 when is the college open,hours
 college timing,hours
@@ -67,13 +67,13 @@ Kailan sarado ang office,hours
 hours,hours
 office hours,hours
 schedule,hours
+Contact number?,number
 more info,number
 contact info,number
 how to contact college,number
 college telephone number,number
 college number,number
 What is your contact no,number
-Contact number?,number
 how to call you,number
 College phone no?,number
 how can i contact you,number
@@ -104,6 +104,7 @@ location,location
 Saan po ang NU Laguna,location
 Ano address ng campus,location
 Paano pumunta dun,location
+what are the events,event
 events organised,event
 list of events,event
 list of events organised in college,event
@@ -112,12 +113,12 @@ What events are conducted in college,event
 Are there any event held at college,event
 Events?,event
 functions,event
-what are the events,event
 tell me about events,event
 what about events,event
 Anong mga event ngayon,event
 May activity ba this week,event
 Kailan susunod na event,event
+what documents do I need for admission,document
 document to bring,document
 documents needed for admision,document
 documents needed at the time of admission,document
@@ -129,7 +130,6 @@ What document are required for admission,document
 Which document to bring for admission,document
 documents,document
 what documents do i need,document
-what documents do I need for admission,document
 documents needed,document
 Anong requirements kailangan,document
 Saan kumuha ng TOR,document
@@ -154,13 +154,13 @@ Paano mangutang ng libro,library
 San po yung LRC,library
 library,library
 lrc,library
+Where is canteen,canteen
 food facilities,canteen
 canteen facilities,canteen
 canteen facility,canteen
 is there any canteen,canteen
 Is there a cafetaria in college,canteen
 Does college have canteen,canteen
-Where is canteen,canteen
 where is cafetaria,canteen
 canteen,canteen
 Food,canteen
@@ -169,11 +169,8 @@ Anong oras bukas ang canteen,canteen
 Saan pwede kumain,canteen
 caf,canteen
 cantten,canteen
+How do I find an internship,placement
 What is college placement,placement
-Which companies visit in college,placement
-What is average package,placement
-companies visit,placement
-package,placement
 About placement,placement
 placement,placement
 recruitment,placement
@@ -182,28 +179,23 @@ May tulong ba sa paghahanap ng trabaho,placement
 Paano mag-apply sa OJT,placement
 ojt,placement
 job,placement
-scholarship,scholarship
+Is there a job fair,placement
+career services,placement
+Where can I apply for a job at NU,placement
 Is scholarship available,scholarship
+scholarship,scholarship
 scholarship engineering,scholarship
 scholarship it,scholarship
 scholarship ce,scholarship
-scholarship mechanical,scholarship
 scholarship civil,scholarship
-scholarship chemical,scholarship
-scholarship for AI/ML,scholarship
 available scholarships,scholarship
 scholarship for computer engineering,scholarship
 scholarship for IT engineering,scholarship
-scholarship for mechanical engineering,scholarship
 scholarship for civil engineering,scholarship
-scholarship for chemical engineering,scholarship
 list of scholarship,scholarship
 comps scholarship,scholarship
 IT scholarship,scholarship
-mechanical scholarship,scholarship
 civil scholarship,scholarship
-chemical scholarship,scholarship
-automobile scholarship,scholarship
 first year scholarship,scholarship
 second year scholarship,scholarship
 third year scholarship,scholarship
@@ -213,6 +205,13 @@ Paano mag-apply ng iskolarship,scholarship
 Sino pwede mag-apply ng scholarship,scholarship
 scholar,scholarship
 scholarship,scholarship
+scholarship for computer science,scholarship
+scholarship for architecture,scholarship
+academic scholarship,scholarship
+athletic scholarship,scholarship
+May scholarship ba para sa varsity,scholarship
+scholarship for psychology,scholarship
+how much is the tuition per semester,fees
 information about fee,fees
 information on fee,fees
 tell me the fee,fees
@@ -227,21 +226,17 @@ fees for first year,fees
 fees,fees
 about the fees,fees
 tell me something about the fees,fees
-What is the fees of hostel,fees
 how much is the fees,fees
-hostel fees,fees
-fees for AC room,fees
-fees for non-AC room,fees
-fees for Ac room for girls,fees
-fees for non-Ac room for girls,fees
-fees for Ac room for boys,fees
-fees for non-Ac room for boys,fees
 Magkano ang tuition,fees
 Paano magbayad ng fees,fees
 Saan magbayad ng tuition,fees
 Pwede po bang installment ang bayad,fees
 tuition,fees
 payment,fees
+Magkano ang miscellaneous fee,fees
+May downpayment ba sa tuition,fees
+Where do I pay my tuition,fees
+Pwede bang magbayad online ng tuition,fees
 Syllabus for IT,syllabus
 what is the Information Technology syllabus,syllabus
 syllabus,syllabus
@@ -263,6 +258,7 @@ Anong tulong pwede mo ibigay,task
 para saan ka,task
 what are you for,task
 task,task
+Thanks,salutation
 okk,salutation
 okie,salutation
 nice work,salutation
@@ -271,7 +267,6 @@ good job,salutation
 thanks for the help,salutation
 Thank You,salutation
 its ok,salutation
-Thanks,salutation
 Good work,salutation
 k,salutation
 ok,salutation
@@ -371,13 +366,15 @@ seats,admission
 Ilan estudyante tinatanggap,admission
 apply,admission
 admision,admission
+How many floors does college have,building_floors
 size of campus,building_floors
 building size,building_floors
-How many floors does college have,building_floors
 floors in college,building_floors
 floors in college,building_floors
-how tall is UNI's College of Engineering college building,building_floors
 floors,building_floors
+how many floors does the main building have,building_floors
+Ilang floors ang building,building_floors
+How do I contact my program chair?,program_chair
 Who is HOD,program_chair
 Where is HOD,program_chair
 it hod,program_chair
@@ -389,18 +386,12 @@ Where is computer HOD,program_chair
 computer hod,program_chair
 name of computer hod,program_chair
 Sino head ng computer science,program_chair
-Who is extc HOD,program_chair
-Where is  extc HOD,program_chair
-extc hod,program_chair
-name of extc hod,program_chair
-Sino head ng ECE department,program_chair
 hod,program_chair
 hod name,program_chair
 who is the hod,program_chair
 Sino head ng department,program_chair
 Who's the department chair for IT?,program_chair
 Sino po ang chairperson ng Computer Science department?,program_chair
-How do I contact my program chair?,program_chair
 Paano makontak ang department head?,program_chair
 department chair contact,program_chair
 scs hod?,program_chair
@@ -420,6 +411,11 @@ psychology hod?,program_chair
 ba comm hod?,program_chair
 tm hod?,program_chair
 tourism hod,program_chair
+Who is the CpE program chair,program_chair
+Where is the computer engineering program chair,program_chair
+cpe hod,program_chair
+name of the civil engineering program chair,program_chair
+Sino head ng CpE department,program_chair
 exam dates,sem
 exam schedule,sem
 When is semester exam,sem
@@ -433,6 +429,7 @@ exam dates,sem
 when is semester,sem
 Kailan magsisimula ang sem,sem
 Ilang units bawat sem,sem
+When is vacation,vacation
 holidays,vacation
 when will semester starts,vacation
 when will semester end,vacation
@@ -442,20 +439,20 @@ Holiday in these year,vacation
 holiday list,vacation
 about vacations,vacation
 about holidays,vacation
-When is vacation,vacation
 When is holidays,vacation
 how long will be the vacation,vacation
 Kailan ang bakasyon,vacation
 Kailan magsisimula ang semestral break,vacation
+What sports can I join,sports
 sports and games,sports
 give sports details,sports
-sports infrastructure,sports
 sports facilities,sports
 information about sports,sports
 Sports activities,sports
 please provide sports and games information,sports
 Anong sports meron,sports
 May varsity ba,sports
+Is there a student council committee?,committee
 what are the different committe in college,committee
 different committee in college,committee
 Are there any committee in college,committee
@@ -465,13 +462,12 @@ how many committee are there in college,committee
 Sino nasa committee,committee
 Paano sumali sa isang committee?,committee
 List of student committees,committee
-Is there a student council committee?,committee
 committee,committee
 commitee,committee
 student council,committee
 comitee,committee
+Is there a dorm inside the campus,dormitory
 hostel facility,dormitory
-hostel servive,dormitory
 hostel location,dormitory
 hostel address,dormitory
 hostel facilities,dormitory
@@ -482,14 +478,12 @@ Where is hostel,dormitory
 do you have hostel,dormitory
 do you guys have hostel,dormitory
 hostel,dormitory
-hostel capacity,dormitory
 what is the hostel fee,dormitory
 how to get in hostel,dormitory
 what is the hostel address,dormitory
 how far is hostel from college,dormitory
 hostel college distance,dormitory
 where is the hostel,dormitory
-how big is the hostel,dormitory
 distance between college and hostel,dormitory
 distance between hostel and college,dormitory
 May dorm ba,dormitory
@@ -501,6 +495,8 @@ hostle,dormitory
 drom,dormitory
 domr,dormitory
 host,dormitory
+What is the Dormitel,dormitory
+Saan ang Dormitel,dormitory
 college dress code,uniform
 college dresscode,uniform
 what is the uniform,uniform
@@ -573,7 +569,6 @@ courses?,program
 courses offered,program
 courses you offer,program
 branches?,program
-can you tell me the courses available in UNI?,program
 Anong mga kurso meron,program
 Anong course pwede kunin,program
 Ano available na programs,program
@@ -582,6 +577,7 @@ What programs are offered?,program
 list of programs,program
 what programs do you have,program
 what degree programs are there,program
+can you tell me the courses available in NU Laguna?,program
 What programs are under SEA?,sea_programs
 What programs are offered by SEA?,sea_programs
 What programs does SEA offer?,sea_programs
@@ -623,22 +619,19 @@ What can I take in senior high school?,shs_strands
 What strands does NU Laguna offer?,shs_strands
 Ano ang strands sa SHS?,shs_strands
 Anong strand ang meron sa NU Laguna?,shs_strands
+Is hazing allowed in NU Laguna,hazing_policy
 ragging,hazing_policy
-is ragging practice active in college,hazing_policy
-does college have any antiragging facility,hazing_policy
-is there any ragging cases,hazing_policy
-is ragging done here,hazing_policy
-ragging against,hazing_policy
-antiragging facility,hazing_policy
-ragging juniors,hazing_policy
-ragging history,hazing_policy
-ragging incidents,hazing_policy
 May hazing ba dito,hazing_policy
 Paano mag-report ng bullying,hazing_policy
 Paano mag-report ng hazing?,hazing_policy
 Anti-hazing policy ng school,hazing_policy
 bullying,hazing_policy
 bully,hazing_policy
+What is the anti-hazing policy,hazing_policy
+How do I report bullying,hazing_policy
+Someone is bullying me,hazing_policy
+May nambubully sa akin,hazing_policy
+hazing,hazing_policy
 Where is the Discipline Office?,discipline_office
 Where is the Guidance Office?,discipline_office
 How do I report a concern to the Discipline Office?,discipline_office
