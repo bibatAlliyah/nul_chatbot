@@ -10,3 +10,22 @@ time,session,id,message,normalized,kind,intent,score,second_intent,gap
 2026-10-14T04:12:45,ddaaea505e49,02f61ec0713f,May gym ba dito,may gym ba dito,answer,sports_facilities,1.0,hazing_policy,0.3158
 2026-10-14T04:12:50,ddaaea505e49,be6b57ba7cce,where is the college located,where is the college located,answer,location,1.0,facilities,0.1532
 2026-10-14T04:12:53,ddaaea505e49,7f40dc46ea3f,Is there a dorm inside the campus,is there a dorm inside the campus,answer,dormitory,1.0,location,0.2702
+2026-10-14T18:14:21,72ce6a2baed4,fc2704011b19,guide,,guide,,,,
+2026-10-14T18:14:40,72ce6a2baed4,7ae8bd1e311b,Is there a student council committee?,is there a student council committee,answer,committee,1.0,location,0.4796
+2026-10-14T18:14:49,72ce6a2baed4,0afc742dc33c,when is sem?,when is sem,fallback,vacation,0.4167,sem,0.0037
+2026-10-14T18:14:53,72ce6a2baed4,91d6ccb8e1bc,sem?,sem,answer,sem,1.0,placement,0.0843
+2026-10-14T18:15:10,72ce6a2baed4,14d93ca33cc1,what are your hours,what are your hours,answer,hours,1.0,syllabus,0.5418
+2026-10-14T18:15:24,72ce6a2baed4,241bc3c0e4d5,Syllabus for IT,syllabus for it,answer,syllabus,1.0,program_chair,0.4628
+2026-10-14T18:15:42,72ce6a2baed4,45f31adc84e0,Can I wear sleeveless clothes?,can i wear sleeveless clothes,answer,dress_code,1.0,uniform,0.4393
+2026-10-14T18:16:17,72ce6a2baed4,76c577382b84,what are your hours,what are your hours,answer,hours,1.0,syllabus,0.5418
+2026-10-14T18:16:22,72ce6a2baed4,ebbde35ed342,exam dates,exam dates,answer,sem,1.0,check_grades,0.3643
+2026-10-14T18:16:25,72ce6a2baed4,15e18e1df446,How do I check my grades,how do i check may grades,answer,check_grades,1.0,sem,0.5385
+2026-10-14T18:16:30,72ce6a2baed4,3eade53c08db,How do I access my online classes,how do i access may online classes,answer,lms_access,1.0,fees,0.4193
+2026-10-14T18:19:35,99ffdf451f94,726350fd85ee,bakasyon,bakasyon,fallback,lms_access,0.8827,placement,0.0102
+2026-10-14T18:19:39,99ffdf451f94,36fc13d6ab23,vacay?,vacay,did_you_mean,salutation,0.6245,lms_access,0.0625
+2026-10-14T18:19:44,99ffdf451f94,9b566e88d5c7,vaca,vaca,fallback,bulldogs_exchange,0.5488,canteen,0.0705
+2026-10-14T18:19:54,99ffdf451f94,020ed6d8e7ab,holiday,holiday,answer,vacation,0.9416,greeting,0.4182
+2026-10-14T18:20:26,99ffdf451f94,a9af08b47ff4,office,office,answer,hours,0.7611,placement,0.1312
+2026-10-14T18:20:39,99ffdf451f94,92c6baaa769b,saan guidance office?,saan guidance office,answer,discipline_office,0.9912,admission,0.4475
+2026-10-14T18:21:31,99ffdf451f94,af21892330f7,when is sem break?,when is sem break,fallback,vacation,0.4858,sem,0.098
+2026-10-14T18:21:45,99ffdf451f94,a620359e6e33,holiday,holiday,answer,vacation,0.9416,greeting,0.4182

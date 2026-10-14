@@ -645,7 +645,7 @@
         "Ilang units bawat sem"
       ],
       "responses": [
-        "Check the Academic Calendar in your NUIS account for exact exam schedules and semester dates. [TODO: confirm the exact NUIS link/section with the Registrar]."
+        "To check this year's Academic Calendar:\n1. Log into your NUIS account at https://onlineapp.nu-laguna.edu.ph/portal/services.php\n2. Go to **Documents & Manuals > Academic Calendar** and click the ℹ️ button to view the calendar"
       ]
     },
     {
@@ -667,7 +667,7 @@
         "Kailan magsisimula ang semestral break"
       ],
       "responses": [
-        "Check the Academic Calendar in your NUIS account for exact semestral break and vacation dates. [TODO: confirm the exact dates/link with the Registrar]."
+        "To check this year's Academic Calendar:\n1. Log into your NUIS account at https://onlineapp.nu-laguna.edu.ph/portal/services.php\n2. Go to **Documents & Manuals > Academic Calendar** and click the ℹ️ button to view the calendar"
       ]
     },
     {
