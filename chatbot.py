@@ -357,12 +357,21 @@ def new_state():
 
 
 def detect_school(cleaned_input, departments):
-    """Looks for a known program/department keyword inside the user's text."""
-    words_in_input = cleaned_input.split()
+    """Looks for a known program/department keyword inside the user's text.
+
+    Short one-word codes (like "eng" or "tm") are only matched as a whole
+    word, not as a substring, so a question containing "english" or "item"
+    does not get wrongly detected as the engineering or tourism department.
+    Multi-word keywords (like "computer science") still match as a phrase
+    inside the sentence, since those are specific enough to be safe.
+    """
+    words_in_input = set(cleaned_input.split())
     for code, info in departments.items():
         for keyword in info["programs"]:
-            # allow multi-word keywords (like "computer science") to match too
-            if keyword in cleaned_input or keyword in words_in_input:
+            if " " in keyword:
+                if keyword in cleaned_input:
+                    return code, info
+            elif keyword in words_in_input:
                 return code, info
     return None, None
 

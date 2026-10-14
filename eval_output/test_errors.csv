@@ -1,0 +1,26 @@
+text,normalized,true,predicted,score,second,gap,decision,matched_pattern
+ok bye na po,ok bye na po,goodbye,salutation,0.9129,greeting,0.0782,did_you_mean,Ok salamat po
+anong oras nagsasara ang mga office,anong oras nagsasara ang mga office,hours,placement,0.7727,event,0.0105,fallback,May tulong ba sa paghahanap ng trabaho
+pano ko kayo macocontact,paano ko kayo macocontact,number,event,0.9122,task,0.0087,fallback,Anong mga event ngayon
+hotline ng nu laguna,hotline ng nu laguna,number,shs_strands,0.6196,location,0.0572,did_you_mean,Anong strand ang meron sa NU Laguna?
+where exactly is nu laguna,where exactly is nu laguna,location,sports_facilities,0.7369,laboratories,0.0376,did_you_mean,What sports facilities does NU Laguna have?
+may event ba sa school ngayon,may event ba sa school ngayon,event,hours,0.7481,event,0.0189,fallback,Hanggang kailan bukas ang school
+anong documents ang dadalhin ko,anong documents ang dadalhin ko,document,vacation,0.7352,portal_login,0.0295,fallback,Kailan ang bakasyon
+saan ang lrc,saan ang lrc,library,document,0.7777,dormitory,0.0258,fallback,Saan kumuha ng TOR
+saan may kainan dito,saan may kainan dito,canteen,bulldogs_exchange,0.7066,document,0.0057,fallback,Saan pwede bumili ng NU merchandise?
+magkano babayaran ko ngayong sem,magkano babayaran ko ngayong sem,fees,greeting,0.8185,task,0.0013,fallback,"Uy, pwede magtanong"
+saan makikita ang schedule ng klase ko,saan makikita ang schedule ng klase ko,syllabus,hours,0.6809,syllabus,0.0067,fallback,schedule
+salamat po,salamat po,salutation,goodbye,0.9387,program_chair,0.1447,answer,Sige salamat po
+di ko makita yung class ko online,di ko makita yung class ko online,lms_access,fees,0.7531,lms_access,0.0663,did_you_mean,Pwede bang magbayad online ng tuition
+nasaan ang grades ko,nasaan ang grades ko,check_grades,goodbye,0.8641,program_chair,0.0337,did_you_mean,Paalam na po
+how do i apply to nu laguna,how do i apply to nu laguna,admission,program,0.7409,sports_facilities,0.0309,did_you_mean,What programs does NU Laguna offer?
+paano mag apply as new student,paano mag apply as new student,admission,fees,0.6537,scholarship,0.0862,answer,Saan magbayad ng tuition
+kailan ang midterms,kailan ang midterms,sem,check_grades,0.6335,vacation,0.0108,fallback,Kailan lalabas ang grades
+magkano ang dormitel,magkano ang dormitel,dormitory,name,0.8409,goodbye,0.0054,fallback,Meron ka bang pangalan
+anong mga pasilidad ng nu laguna,anong mga pasilidad ng nu laguna,facilities,sem,0.8387,lms_access,0.006,fallback,Kailan magsisimula ang sem
+saan pwede mag basketball,saan pwede mag basketball,sports_facilities,enrollment_registration,0.7214,location,0.002,fallback,Paano mag-enroll ulit next sem
+anong programs ang inooffer,anong programs ang inooffer,program,sabm_programs,0.764,scs_programs,0.0111,fallback,Anong programs ang meron sa SABM?
+what business courses do you offer,what business courses do you offer,sabm_programs,program,0.733,sabm_programs,0.1294,answer,courses you offer
+may computer science ba,may computer science ba,scs_programs,program_chair,0.8153,laboratories,0.068,answer,Sino head ng computer science
+is psychology offered,is psychology offered,sas_programs,scholarship,0.8096,program_chair,0.0057,fallback,scholarship for psychology
+may stem strand ba,may sem strand ba,shs_strands,hazing_policy,0.8333,name,0.0222,fallback,May nambubully sa akin

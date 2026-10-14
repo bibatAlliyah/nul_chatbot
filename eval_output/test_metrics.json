@@ -1,0 +1,463 @@
+{
+  "n": 115,
+  "accuracy": 0.7826,
+  "macro": {
+    "precision": 0.822,
+    "recall": 0.7841,
+    "f1": 0.7793
+  },
+  "weighted": {
+    "precision": 0.8232,
+    "recall": 0.7826,
+    "f1": 0.7789
+  },
+  "per_intent": [
+    {
+      "intent": "greeting",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "goodbye",
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714,
+      "support": 3
+    },
+    {
+      "intent": "name",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 2
+    },
+    {
+      "intent": "hours",
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714,
+      "support": 3
+    },
+    {
+      "intent": "number",
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "support": 3
+    },
+    {
+      "intent": "location",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "event",
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "support": 3
+    },
+    {
+      "intent": "document",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 2
+    },
+    {
+      "intent": "library",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "canteen",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "placement",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "scholarship",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "fees",
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714,
+      "support": 3
+    },
+    {
+      "intent": "syllabus",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "task",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "salutation",
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "support": 3
+    },
+    {
+      "intent": "portal_login",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "intent": "wifi_connection",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "intent": "lms_access",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "student_email",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "intent": "check_grades",
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "support": 3
+    },
+    {
+      "intent": "enrollment_registration",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "admission",
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5,
+      "support": 3
+    },
+    {
+      "intent": "building_floors",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "program_chair",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "sem",
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "support": 3
+    },
+    {
+      "intent": "vacation",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 2
+    },
+    {
+      "intent": "sports",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "committee",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "dormitory",
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "support": 3
+    },
+    {
+      "intent": "uniform",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "dress_code",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "intent": "facilities",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 2
+    },
+    {
+      "intent": "laboratories",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    {
+      "intent": "sports_facilities",
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "support": 3
+    },
+    {
+      "intent": "bulldogs_exchange",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 2
+    },
+    {
+      "intent": "program",
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "support": 2
+    },
+    {
+      "intent": "sea_programs",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    {
+      "intent": "sabm_programs",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 2
+    },
+    {
+      "intent": "scs_programs",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 2
+    },
+    {
+      "intent": "sas_programs",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 2
+    },
+    {
+      "intent": "shs_strands",
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 2
+    },
+    {
+      "intent": "hazing_policy",
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 3
+    },
+    {
+      "intent": "discipline_office",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    }
+  ],
+  "labels": [
+    "greeting",
+    "goodbye",
+    "name",
+    "hours",
+    "number",
+    "location",
+    "event",
+    "document",
+    "library",
+    "canteen",
+    "placement",
+    "scholarship",
+    "fees",
+    "syllabus",
+    "task",
+    "salutation",
+    "portal_login",
+    "wifi_connection",
+    "lms_access",
+    "student_email",
+    "check_grades",
+    "enrollment_registration",
+    "admission",
+    "building_floors",
+    "program_chair",
+    "sem",
+    "vacation",
+    "sports",
+    "committee",
+    "dormitory",
+    "uniform",
+    "dress_code",
+    "facilities",
+    "laboratories",
+    "sports_facilities",
+    "bulldogs_exchange",
+    "program",
+    "sea_programs",
+    "sabm_programs",
+    "scs_programs",
+    "sas_programs",
+    "shs_strands",
+    "hazing_policy",
+    "discipline_office"
+  ],
+  "most_confused": [
+    {
+      "true": "goodbye",
+      "predicted": "salutation",
+      "count": 1
+    },
+    {
+      "true": "hours",
+      "predicted": "placement",
+      "count": 1
+    },
+    {
+      "true": "number",
+      "predicted": "event",
+      "count": 1
+    },
+    {
+      "true": "number",
+      "predicted": "shs_strands",
+      "count": 1
+    },
+    {
+      "true": "location",
+      "predicted": "sports_facilities",
+      "count": 1
+    },
+    {
+      "true": "event",
+      "predicted": "hours",
+      "count": 1
+    },
+    {
+      "true": "document",
+      "predicted": "vacation",
+      "count": 1
+    },
+    {
+      "true": "library",
+      "predicted": "document",
+      "count": 1
+    },
+    {
+      "true": "canteen",
+      "predicted": "bulldogs_exchange",
+      "count": 1
+    },
+    {
+      "true": "fees",
+      "predicted": "greeting",
+      "count": 1
+    },
+    {
+      "true": "syllabus",
+      "predicted": "hours",
+      "count": 1
+    },
+    {
+      "true": "salutation",
+      "predicted": "goodbye",
+      "count": 1
+    },
+    {
+      "true": "lms_access",
+      "predicted": "fees",
+      "count": 1
+    },
+    {
+      "true": "check_grades",
+      "predicted": "goodbye",
+      "count": 1
+    },
+    {
+      "true": "admission",
+      "predicted": "fees",
+      "count": 1
+    }
+  ],
+  "behaviour": {
+    "answered_rate": 0.6696,
+    "answered_accuracy": 0.9481,
+    "did_you_mean_rate": 0.1478,
+    "did_you_mean_contains_correct": 0.7059,
+    "fallback_rate": 0.1826,
+    "fallback_but_top1_correct": 6
+  },
+  "thresholds": {
+    "similarity": 0.55,
+    "min_gap": 0.03,
+    "near_miss_gap": 0.08
+  },
+  "mode": "test",
+  "note": "115 held-out questions from test_data.csv",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2"
+}
