@@ -29,3 +29,37 @@ time,session,id,message,normalized,kind,intent,score,second_intent,gap
 2026-10-14T18:20:39,99ffdf451f94,92c6baaa769b,saan guidance office?,saan guidance office,answer,discipline_office,0.9912,admission,0.4475
 2026-10-14T18:21:31,99ffdf451f94,af21892330f7,when is sem break?,when is sem break,fallback,vacation,0.4858,sem,0.098
 2026-10-14T18:21:45,99ffdf451f94,a620359e6e33,holiday,holiday,answer,vacation,0.9416,greeting,0.4182
+2026-10-15T14:53:46,306330375712,9372a21dd033,hello,hello,answer,greeting,1.0,salutation,0.2515
+2026-10-15T14:53:49,306330375712,6ffa86c40dbf,good morning,good morning,fallback,greeting,0.7324,goodbye,0.0143
+2026-10-15T14:53:56,306330375712,6c2b4123fff8,good evening,good evening,fallback,greeting,0.5925,goodbye,0.0034
+2026-10-15T14:53:58,306330375712,4983abed0828,good day,good day,did_you_mean,greeting,1.0,goodbye,0.0693
+2026-10-15T14:54:02,306330375712,e86cca10d157,1,,picked,greeting,,,
+2026-10-15T14:54:06,306330375712,aadd97a0e8c1,How do I find an internship,how do i find an internship,answer,placement,1.0,dormitory,0.5905
+2026-10-15T14:54:10,306330375712,34d560cad392,How do I contact my program chair?,how do i contact may program chair,answer,program_chair,1.0,number,0.435
+2026-10-15T14:54:16,306330375712,4849938d1e85,Is hazing allowed in NU Laguna,is hazing allowed in nu laguna,answer,hazing_policy,1.0,program,0.4829
+2026-10-15T14:54:19,306330375712,b41f5ae14093,How do I contact my program chair?,how do i contact may program chair,answer,program_chair,1.0,number,0.435
+2026-10-15T14:54:21,306330375712,4a9f0ca6f68f,Syllabus for IT,syllabus for it,answer,syllabus,1.0,program_chair,0.4628
+2026-10-15T14:54:24,306330375712,324d7b4f4813,How do I enroll for next semester,how do i enroll for next semester,answer,enrollment_registration,1.0,hours,0.2926
+2026-10-15T14:54:28,306330375712,3d1db237f728,exam dates,exam dates,answer,sem,1.0,check_grades,0.3643
+2026-10-15T14:55:02,306330375712,6188fab44ded,where is dorm?,where is dorm,answer,dormitory,0.8861,location,0.1111
+2026-10-15T14:55:21,306330375712,765ff99e27d5,paano magconnect sa wifi,paano magconnect sa wifi,answer,wifi_connection,0.7696,lms_access,0.3546
+2026-10-15T14:55:29,306330375712,6c663a053d18,sabm,sabm,department,program_chair,0.9551,placement,0.062
+2026-10-15T14:55:33,306330375712,68cd0b11861f,sea,sea,followup,program_chair,,,
+2026-10-15T14:55:35,306330375712,96316fe2eff1,scs,scs,followup,program_chair,,,
+2026-10-15T14:55:37,306330375712,e58d17afa145,shs,shs,followup,program_chair,,,
+2026-10-15T14:55:48,306330375712,23f5938ec3ed,reg,registration,answer,enrollment_registration,1.0,placement,0.4356
+2026-10-15T14:56:03,306330375712,7e618a60da72,How do I access my online classes,how do i access may online classes,answer,lms_access,1.0,fees,0.4193
+2026-10-15T14:56:08,306330375712,4ece18c2e401,what is the process of admission,what is the process of admission,answer,admission,1.0,document,0.351
+2026-10-15T14:56:16,306330375712,2410f3b52bb0,ano proseso ng admission?,ano proseso ng admission,answer,admission,0.8714,enrollment_registration,0.1113
+2026-10-15T14:57:05,306330375712,216ed6f42074,Where is the Discipline Office?,where is the discipline office,answer,discipline_office,1.0,program_chair,0.4605
+2026-10-15T14:57:17,306330375712,15f88d581254,What strands are offered in SHS?,what strands are offered in shs,answer,shs_strands,1.0,scs_programs,0.5487
+2026-10-15T14:57:22,306330375712,9e25525b37ba,What programs are under SAS?,what programs are under sas,answer,sas_programs,1.0,sabm_programs,0.2394
+2026-10-15T14:57:32,306330375712,2377df9b1750,What programs are under SABM?,what programs are under sabm,answer,sabm_programs,1.0,sas_programs,0.2394
+2026-10-15T14:57:41,306330375712,2e14ebb6fc54,What programs are under SCS?,what programs are under scs,answer,scs_programs,1.0,sas_programs,0.2848
+2026-10-15T14:57:45,306330375712,ec1ec6efd07a,What programs are under SEA?,what programs are under sea,answer,sea_programs,1.0,program,0.3937
+2026-10-15T14:57:52,306330375712,537c8c2f8e8c,What is Bulldogs Exchange?,what is bulldogs exchange,answer,bulldogs_exchange,1.0,fees,0.5636
+2026-10-15T14:57:59,306330375712,a2d7d99bffe4,May gym ba dito,may gym ba dito,answer,sports_facilities,1.0,hazing_policy,0.3158
+2026-10-15T14:58:55,306330375712,8ab7f070b605,what are your hours,what are your hours,answer,hours,1.0,syllabus,0.5418
+2026-10-15T14:58:59,306330375712,5f4073956aa5,what is your name,what is your name,answer,name,1.0,program_chair,0.3512
+2026-10-15T14:59:03,306330375712,be66ed2c0184,Contact number?,contact number,answer,number,1.0,location,0.3048
+2026-10-15T14:59:12,306330375712,6c5425e53eea,what are the events,what are the events,answer,event,1.0,greeting,0.5934

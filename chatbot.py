@@ -1,28 +1,9 @@
 # Finals Chatbot: University / Student Information Chatbot for NU Laguna Students
-#
+
 # Run in the terminal:   python chatbot.py          (add --debug to see intent/score)
 # Run the web UI:        python app.py              (then open http://127.0.0.1:5000)
 # Run the evaluation:    python evaluate.py
-#
-# How this file is organised:
-#   1. Loading      -> load_resources() loads the model + data ONCE and returns
-#                      a ChatbotResources object that holds everything.
-#   2. Pipeline     -> preprocess() (lowercase, strip punctuation, slang/Taglish
-#                      normalization, typo correction) and rank_intents()
-#                      (sentence embeddings + cosine similarity). decide() turns
-#                      a ranking into answer / did-you-mean / fallback. The
-#                      evaluation script uses these SAME functions.
-#   3. Thinking     -> get_reply(user_text, state, res) takes one message and
-#                      returns a dict (reply, intent, score, ...). It never
-#                      prints or reads input, so both the terminal and the web
-#                      server can call it.
-#   4. Talking      -> chat_loop(res) is the terminal front end. app.py is the
-#                      web front end. Both just call get_reply().
-#
-# "state" is a small dict that remembers the conversation (what the last
-# department question was about, and any pending "did you mean" options).
-# Every user / browser session gets its own state.
-#
+
 # Responses in intents_merged.json can use simple formatting:
 #   "- item"  -> bullet,   "1. step" -> numbered step,   "**text**" -> bold,
 #   "\n"      -> new line, "\n\n"    -> paragraph break.
