@@ -63,3 +63,26 @@ time,session,id,message,normalized,kind,intent,score,second_intent,gap
 2026-10-15T14:58:59,306330375712,5f4073956aa5,what is your name,what is your name,answer,name,1.0,program_chair,0.3512
 2026-10-15T14:59:03,306330375712,be66ed2c0184,Contact number?,contact number,answer,number,1.0,location,0.3048
 2026-10-15T14:59:12,306330375712,6c5425e53eea,what are the events,what are the events,answer,event,1.0,greeting,0.5934
+2026-10-15T16:30:09,1f5fd27f807a,7cfc704a9af7,hello,hello,answer,greeting,1.0,salutation,0.2515
+2026-10-15T16:30:20,1f5fd27f807a,9ac2ca0d7d1f,How do I find an internship,how do i find an internship,answer,placement,1.0,dormitory,0.5905
+2026-10-15T16:30:37,1f5fd27f807a,3ad625697e6c,internship,internship,answer,placement,0.7772,scholarship,0.1619
+2026-10-15T16:30:56,1f5fd27f807a,a7679e732085,ano ang proseso ng admissions?,ano ang proseso ng admission,answer,admission,0.8847,enrollment_registration,0.182
+2026-10-15T16:31:12,1f5fd27f807a,e5a81ebcbaf8,pano mag connect to the wifi?,paano mag connect to the wifi,answer,wifi_connection,0.7505,portal_login,0.3362
+2026-10-15T16:31:51,1f5fd27f807a,dcd06dde4713,syllabus,syllabus,answer,syllabus,1.0,dormitory,0.272
+2026-10-15T16:32:05,1f5fd27f807a,4687e09eabda,What strands are offered in SHS?,what strands are offered in shs,answer,shs_strands,1.0,scs_programs,0.5487
+2026-10-15T16:32:50,1f5fd27f807a,36039b39302a,reg,registration,answer,enrollment_registration,1.0,placement,0.4356
+2026-10-15T16:32:57,1f5fd27f807a,4067ab0ec014,sem,sem,answer,sem,1.0,placement,0.0843
+2026-10-15T16:33:03,1f5fd27f807a,2bc5dd1bd430,scs,scs,department,program_chair,0.8993,scs_programs,0.0829
+2026-10-15T16:33:25,1f5fd27f807a,ee42e99f333c,uniform,uniform,answer,uniform,1.0,bulldogs_exchange,0.1659
+2026-10-15T16:33:34,1f5fd27f807a,5a67c44bf67c,uniform policy,uniform policy,answer,uniform,0.7146,bulldogs_exchange,0.2193
+2026-10-15T16:33:57,1f5fd27f807a,c8aa3ffa000b,loc for bulldog,loc for bulldogs,answer,bulldogs_exchange,0.8252,program_chair,0.3916
+2026-10-15T16:34:09,1f5fd27f807a,ae4a6c47a0cd,ok,ok,answer,salutation,1.0,placement,0.1501
+2026-10-15T16:34:14,1f5fd27f807a,417404030b6b,k,ka,answer,salutation,1.0,lms_access,0.1448
+2026-10-15T16:34:37,1f5fd27f807a,4c6cd8da3f72,num,num,fallback,placement,0.9272,sem,0.0243
+2026-10-15T16:35:40,1f5fd27f807a,d5157b371e83,anong oras nagsasara ang mga office,anong oras nagsasara ang mga office,fallback,placement,0.7727,event,0.0105
+2026-10-15T16:35:58,1f5fd27f807a,db6fce9d2907,ano course scs,ano course scs,did_you_mean,scs_programs,0.6632,program_chair,0.071
+2026-10-15T16:36:31,1f5fd27f807a,45126521dff5,1,,picked,scs_programs,,,
+2026-10-15T16:39:34,1f5fd27f807a,e6808303024e,ano course scs,ano course scs,did_you_mean,scs_programs,0.6632,program_chair,0.071
+2026-10-15T16:45:48,1f5fd27f807a,c7483e84dbee,canteen,canteen,answer,canteen,1.0,dormitory,0.465
+2026-10-15T16:45:56,1f5fd27f807a,17f64a2270f9,saan kainan,saan kainan,fallback,document,0.7292,task,0.0262
+2026-10-15T16:46:01,1f5fd27f807a,587143e49427,food,food,answer,canteen,1.0,greeting,0.339
